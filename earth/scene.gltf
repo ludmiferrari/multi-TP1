@@ -3,145 +3,259 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 3223,
+      "count": 944,
       "max": [
-        0.999999463558197,
-        0.9999982118606567,
-        1.0
+        71.5979232788086,
+        71.79867553710938,
+        72.0
       ],
       "min": [
-        -0.9999986290931702,
-        -0.999998927116394,
-        -1.0
+        -71.59791564941406,
+        -71.79867553710938,
+        -72.0
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 38676,
+      "byteOffset": 11328,
       "componentType": 5126,
-      "count": 3223,
+      "count": 944,
       "max": [
-        1.0,
-        1.0,
+        0.9944353103637695,
+        0.9972236156463623,
         1.0
       ],
       "min": [
-        -1.0,
-        -1.0,
+        -0.99443519115448,
+        -0.9972235560417175,
         -1.0
       ],
       "type": "VEC3"
     },
     {
-      "bufferView": 1,
+      "bufferView": 3,
       "componentType": 5126,
-      "count": 3223,
+      "count": 944,
       "max": [
         1.0,
+        1.0,
+        0.0373234786093235,
+        1.0
+      ],
+      "min": [
+        -0.9999845027923584,
+        -1.0,
+        -0.037323445081710815,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 944,
+      "max": [
+        0.9999995231628418,
         1.0
       ],
       "min": [
         0.0,
-        0.0
+        2.384185791015625e-07
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 17664,
+      "count": 5040,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 22656,
+      "componentType": 5126,
+      "count": 944,
+      "max": [
+        72.09513854980469,
+        72.29727935791016,
+        72.5
+      ],
+      "min": [
+        -72.09512329101563,
+        -72.29727935791016,
+        -72.5
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 33984,
+      "componentType": 5126,
+      "count": 944,
+      "max": [
+        0.9944353103637695,
+        0.9972236156463623,
+        1.0
+      ],
+      "min": [
+        -0.9944351315498352,
+        -0.9972235560417175,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 7552,
+      "componentType": 5126,
+      "count": 944,
+      "max": [
+        0.9999995231628418,
+        1.0
+      ],
+      "min": [
+        0.0,
+        2.384185791015625e-07
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 20160,
+      "componentType": 5125,
+      "count": 5040,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "Akshat (https://sketchfab.com/shooter24994)",
+      "author": "Gravity Jack (https://sketchfab.com/gravityjack)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/earth-41fc80d85dfd480281f21b74b2de2faa",
+      "source": "https://sketchfab.com/3d-models/earth-e7499c9024444299afb9a01107f97523",
       "title": "Earth"
     },
-    "generator": "Sketchfab-12.65.0",
+    "generator": "Sketchfab-12.68.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 70656,
+      "byteLength": 40320,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 25784,
-      "byteOffset": 70656,
+      "byteLength": 15104,
+      "byteOffset": 40320,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 77352,
-      "byteOffset": 96440,
+      "byteLength": 45312,
+      "byteOffset": 55424,
       "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 15104,
+      "byteOffset": 100736,
+      "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
     }
   ],
   "buffers": [
     {
-      "byteLength": 173792,
+      "byteLength": 115840,
       "uri": "scene.bin"
     }
   ],
-  "extensionsRequired": [
-    "KHR_materials_pbrSpecularGlossiness"
-  ],
-  "extensionsUsed": [
-    "KHR_materials_pbrSpecularGlossiness"
-  ],
   "images": [
     {
-      "uri": "/earth/material.002_diffuse.jpeg"
+      "uri": "textures/earth_baseColor.png"
+    },
+    {
+      "uri": "textures/earth_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/earth_normal.png"
+    },
+    {
+      "uri": "textures/shippingRoutes_baseColor.png"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "extensions": {
-        "KHR_materials_pbrSpecularGlossiness": {
-          "diffuseFactor": [
-            1.0,
-            1.0,
-            1.0,
-            1.0
-          ],
-          "diffuseTexture": {
-            "index": 0
-          },
-          "glossinessFactor": 0.0,
-          "specularFactor": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        }
+      "name": "earth",
+      "normalTexture": {
+        "index": 2
       },
-      "name": "Material.002"
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "shippingRoutes",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
     }
   ],
   "meshes": [
     {
-      "name": "Sphere_Material.002_0",
+      "name": "earth_earth_0",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 1,
             "POSITION": 0,
-            "TEXCOORD_0": 2
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
           },
-          "indices": 3,
+          "indices": 4,
           "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "shippingRoutes_shippingRoutes_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7
+          },
+          "indices": 8,
+          "material": 1,
           "mode": 4
         }
       ]
@@ -194,11 +308,12 @@
         0.0,
         1.0
       ],
-      "name": "8a888f66473549c99c3f97fb5030482f.fbx"
+      "name": "fae8b9b0954d4c05aa3d809c0f15d7c3.fbx"
     },
     {
       "children": [
-        3
+        3,
+        5
       ],
       "name": "RootNode"
     },
@@ -207,28 +322,56 @@
         4
       ],
       "matrix": [
-        100.0,
+        0.9216939168837182,
+        -2.7755575615628914e-17,
+        -0.3879179340782657,
         0.0,
+        -0.3879179340782657,
+        -2.220446049250313e-16,
+        -0.9216939168837183,
         0.0,
+        -2.7755575615628914e-17,
+        1.0000000000000002,
+        -2.220446049250313e-16,
         0.0,
+        0.849853515625,
         0.0,
-        -1.629206793918314e-05,
-        -99.99999999999868,
-        0.0,
-        0.0,
-        99.99999999999868,
-        -1.629206793918314e-05,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
+        -0.348663330078125,
         1.0
       ],
-      "name": "Sphere"
+      "name": "earth"
     },
     {
       "mesh": 0,
-      "name": "Sphere_Material.002_0"
+      "name": "earth_earth_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        0.9216939168837182,
+        -2.7755575615628914e-17,
+        -0.3879179340782657,
+        0.0,
+        -0.3879179340782657,
+        -2.220446049250313e-16,
+        -0.9216939168837183,
+        0.0,
+        -2.7755575615628914e-17,
+        1.0000000000000002,
+        -2.220446049250313e-16,
+        0.0,
+        0.849853515625,
+        0.0,
+        -0.348663330078125,
+        1.0
+      ],
+      "name": "shippingRoutes"
+    },
+    {
+      "mesh": 1,
+      "name": "shippingRoutes_shippingRoutes_0"
     }
   ],
   "samplers": [
@@ -252,6 +395,18 @@
     {
       "sampler": 0,
       "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
     }
   ]
 }
