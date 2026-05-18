@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/paginas.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>Granada</title>
 </head>
 <body>
-    <nav class="nav-tierra m-10"> 
+    <nav class="nav-tierra">
         <model-viewer
             src="earth/scene.gltf"
             camera-controls
@@ -20,12 +20,100 @@
         </model-viewer>
     </nav>
     <main>
-        <section class="flex mb-10">
-            <a href="https://www.youtube.com/watch?v=sOnqjkJTMaA&list=RDsOnqjkJTMaA&start_radio=1"><img src="imgs/granada/michael.gif" alt=""> </a> 
-            <img src="imgs/granada/img-1-gra.gif" alt="">
-        </section>
+        <div class="page-header">
+            <h1>Granada — 1983</h1>
+            <div class="meta">Operation Urgent Fury &nbsp;/&nbsp; Oct 25–27, 1983 &nbsp;/&nbsp; Caribbean &nbsp;/&nbsp; 7,000 troops deployed</div>
+        </div>
+
+        <div class="db-container">
+            <div class="db-cols">
+                <span>Source</span>
+                <span>Type</span>
+                <span>Date</span>
+                <span>Description</span>
+            </div>
+
+            <div class="db-row" data-img="imgs/granada/diario-4-gra.avif" data-caption="US soldiers stand guard over Grenadian prisoners in St George’s" data-label="AP WIRE PHOTO — Prisoners">
+                <span class="source"> Associated Press historic photo archive</span>
+                <span class="type">PHOTOGRAPH</span>
+                <span class="date">OCT 1983</span>
+                <span class="desc">US soldiers stand guard over Grenadian prisoners in St George’s</span>
+            </div>
+
+            <div class="db-row" data-img="imgs/granada/diario-1-gra.webp" data-caption="San Francisco Chronicle front page, October 26, 1983." data-label="San Francisco Chronicle — Front Page">
+                <span class="source">San Francisco Chronicle</span>
+                <span class="type">FRONT PAGE</span>
+                <span class="date">OCT 26 1983</span>
+                <span class="desc">US invades Grenada</span>
+            </div>
+
+            <div class="db-row" data-img="" data-caption="UN General Assembly — 108 nations vote to condemn." data-label="UN VOTE — Resolution ES-6/2">
+                <span class="source">United Nations</span>
+                <span class="type">DOCUMENT</span>
+                <span class="date">NOV 2 1983</span>
+                <span class="desc">General Assembly condemns invasion 108 to 9</span>
+            </div>
+
+            <div class="db-row" data-img="" data-caption="Cuban construction workers killed during the invasion. Havana confirmed 25 dead." data-label="GRANMA — Cuban State Press">
+                <span class="source">Granma (Havana)</span>
+                <span class="type">NEWSPAPER</span>
+                <span class="date">OCT 27 1983</span>
+                <span class="desc">25 Cuban nationals killed — workers, not soldiers</span>
+            </div>
+
+            <div class="db-row" data-img="" data-caption="Point Salines airport — the airstrip Reagan described as a Soviet military threat." data-label="AERIAL — Point Salines Airport">
+                <span class="source">U.S. DoD / FOIA</span>
+                <span class="type">AERIAL PHOTO</span>
+                <span class="date">OCT 1983</span>
+                <span class="desc">Airport Reagan cited as Soviet military threat</span>
+            </div>
+
+            <div class="db-row" data-img="" data-caption="Press pool barred from the island for 48 hours. By the time journalists arrived, fighting was over." data-label="PRESS EXCLUSION — 48hr BLACKOUT">
+                <span class="source">Washington Post</span>
+                <span class="type">REPORT</span>
+                <span class="date">OCT 28 1983</span>
+                <span class="desc">Media blackout — press barred from island for 48hrs</span>
+            </div>
+
+            <div class="db-row" data-img="" data-caption="Maurice Bishop, Prime Minister of Grenada, executed October 19, 1983." data-label="PHOTO — Maurice Bishop">
+                <span class="source">Caribbean Press</span>
+                <span class="type">PHOTOGRAPH</span>
+                <span class="date">OCT 19 1983</span>
+                <span class="desc">PM Maurice Bishop executed by hardline faction</span>
+            </div>
+
+            <div class="db-row" data-img="" data-caption="Reagan addresses the nation to justify the invasion, October 27, 1983." data-label="WHITE HOUSE — Reagan Address">
+                <span class="source">White House / NBC</span>
+                <span class="type">BROADCAST</span>
+                <span class="date">OCT 27 1983</span>
+                <span class="desc">Reagan televised address — justifying the operation</span>
+            </div>
+        </div>
+
+        <div class="viewer" id="viewer">
+            <div class="db-container" style="padding-top:0">
+                <div class="viewer-header" id="viewer-label">— SELECT A ROW —</div>
+                <div class="viewer-placeholder" id="viewer-placeholder">[IMAGE PLACEHOLDER]</div>
+                <img class="viewer-img" id="viewer-img" src="" alt="" style="display:none">
+                <div class="viewer-caption" id="viewer-caption"></div>
+            </div>
+        </div>
+
+<!-- viewer: no tocar -->
+    <div class="viewer" id="viewer">
+        <div class="db-container" style="padding-top:0">
+            <div class="viewer-header" id="viewer-label">— SELECT A ROW —</div>
+            <div class="viewer-placeholder" id="viewer-placeholder">[IMAGE PLACEHOLDER]</div>
+            <img class="viewer-img" id="viewer-img" src="" alt="" style="display:none">
+            <div class="viewer-caption" id="viewer-caption"></div>
+        </div>
+    </div>
+
+    <!-- popup container: no tocar -->
+    <div id="popup-container"></div>
+
     </main>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
-    <script src="js/random-pais.js"></script>
+    <script src="js/pop-ups-g.js"></script>
 </body>
 </html>
