@@ -106,159 +106,159 @@ body {
         padding: 0 40px 40px;
     }
 
-        .viewer.open { display: block; }
+.viewer.open { display: block; }
 
-        .viewer-header {
-            font-size: 0.7rem;
-            color: var(--red);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            padding: 16px 0 12px;
-            border-top: 1px solid #1a1a1a;
-        }
+.viewer-header {
+        font-size: 0.7rem;
+        color: var(--red);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 16px 0 12px;
+        border-top: 1px solid #1a1a1a;
+    }
 
-        .viewer-img {
-            margin: 0 auto;
-            width: 100%;
-            max-width: 800px;
-            display: block;
-            border: 1px solid #1a1a1a;
-            filter: grayscale(20%);
-        }
+.viewer-img {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+        display: block;
+        border: 1px solid #1a1a1a;
+        filter: grayscale(20%);
+    }
 
-        .viewer-placeholder {
-            margin: 0 auto;
-            width: 100%;
-            max-width: 800px;
-            aspect-ratio: 16/9;
-            background: #111;
-            border: 1px solid #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dim);
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-        }
+.viewer-placeholder {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+        aspect-ratio: 16/9;
+        background: #111;
+        border: 1px solid #1a1a1a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--dim);
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
 
-        .viewer-caption {
-            font-size: 0.72rem;
-            color: var(--dim);
-            margin-top: 8px;
-            letter-spacing: 1px;
-        }
+.viewer-caption {
+        font-size: 0.72rem;
+        color: var(--dim);
+        margin-top: 8px;
+        letter-spacing: 1px;
+    }
 
-        /* POPUPS */
-        .popup {
-            position: fixed;
-            background: #0d0d0d;
-            border: 1px solid #2a2a2a;
-            z-index: 200;
-            min-width: 420px;
-            max-width: 560px;
-            box-shadow: 3px 3px 0 var(--red-dim);
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-            cursor: move;
-            user-select: none;
-        }
+/* POPUPS */
+.popup {
+        position: fixed;
+        background: #0d0d0d;
+        border: 1px solid #2a2a2a;
+        z-index: 200;
+        min-width: 420px;
+        max-width: 560px;
+        box-shadow: 3px 3px 0 var(--red-dim);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        cursor: move;
+        user-select: none;
+    }
 
-        .popup.visible {
-            opacity: 1;
-            pointer-events: all;
-        }
+.popup.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
 
-        .popup-bar {
-            background: var(--red);
-            color: #fff;
-            font-family: var(--mono);
-            font-size: 0.72rem;
-            padding: 4px 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: move;
-        }
+.popup-bar {
+        background: var(--red);
+        color: #fff;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        padding: 4px 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: move;
+    }
 
-        .popup-close {
-            background: #0d0d0d;
-            color: var(--red);
-            border: 1px solid var(--red);
-            width: 16px;
-            height: 14px;
-            font-size: 0.65rem;
-            cursor: pointer;
-            font-family: var(--mono);
-            line-height: 1;
-        }
+.popup-close {
+        background: #0d0d0d;
+        color: var(--red);
+        border: 1px solid var(--red);
+        width: 16px;
+        height: 14px;
+        font-size: 0.65rem;
+        cursor: pointer;
+        font-family: var(--mono);
+        line-height: 1;
+    }
 
-        .popup-close:hover { background: var(--red); color: #fff; }
+.popup-close:hover { background: var(--red); color: #fff; }
 
-        .popup-content { padding: 10px 12px; }
+.popup-content { padding: 10px 12px; }
 
-        .popup-content img { width: 100%; display: block; }
+.popup-content img { width: 100%; display: block; }
 
-        .popup-img-placeholder {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #111;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dim);
-            font-size: 0.7rem;
-            letter-spacing: 1px;
-            border: 1px solid #1a1a1a;
-        }
+.popup-img-placeholder {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--dim);
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        border: 1px solid #1a1a1a;
+    }
 
-        .popup-content p {
-            color: var(--text);
-            font-family: var(--mono);
-            font-size: 0.78rem;
-            margin-top: 8px;
-            line-height: 1.6;
-            letter-spacing: 0.5px;
-        }
+.popup-content p {
+        color: var(--text);
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        margin-top: 8px;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+    }
 
-        .blink {
-            color: var(--red);
-            animation: blink 1s step-end infinite;
-        }
+.blink {
+        color: var(--red);
+        animation: blink 1s step-end infinite;
+    }
 
-        .popup-marquee {
-            background: var(--red-dim);
-            color: var(--text);
-            font-family: var(--mono);
-            font-size: 0.72rem;
-            padding: 3px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            letter-spacing: 1px;
-        }
+.popup-marquee {
+        background: var(--red-dim);
+        color: var(--text);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        padding: 3px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        letter-spacing: 1px;
+    }
 
-        .popup-marquee span {
-            display: inline-block;
-            animation: marquee 10s linear infinite;
-        }
+.popup-marquee span {
+        display: inline-block;
+        animation: marquee 10s linear infinite;
+    }
 
-        .popup.returning {
-            transition: top 0.4s ease, left 0.4s ease;
-        }
+.popup.returning {
+        transition: top 0.4s ease, left 0.4s ease;
+    }
 
-        @keyframes marquee {
-            from { transform: translateX(100%); }
-            to { transform: translateX(-100%); }
-        }
+@keyframes marquee {
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+    }
 
-        @keyframes blink { 50% { opacity: 0; } }
+@keyframes blink { 50% { opacity: 0; } }
 
-        @view-transition { navigation: auto; }
+@view-transition { navigation: auto; }
 
-        ::view-transition-old(root) { animation: salida 0.4s ease-in; }
-        ::view-transition-new(root) { animation: entrada 0.4s ease-out; }
+    ::view-transition-old(root) { animation: salida 0.4s ease-in; }
+    ::view-transition-new(root) { animation: entrada 0.4s ease-out; }
 
-        @keyframes salida { to { opacity: 0; transform: translateX(-30px); } }
-        @keyframes entrada { from { opacity: 0; transform: translateX(30px); } }
+@keyframes salida { to { opacity: 0; transform: translateX(-30px); } }
+@keyframes entrada { from { opacity: 0; transform: translateX(30px); } }
