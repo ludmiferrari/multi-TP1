@@ -1,0 +1,298 @@
+/* JAPAN INTERRUPTION STYLES */
+/* 1. Translation screen  2. SCAP Confiscation Notice */
+
+/* ── SHARED OVERLAY ───────────────────────────────── */
+.japon-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+}
+
+.japon-overlay.open {
+    display: flex;
+}
+
+/* ── TRANSLATION SCREEN ───────────────────────────── */
+.translation-box {
+    background: #0a0a0a;
+    border: 1px solid #333;
+    box-shadow: 3px 3px 0 #c1121f;
+    width: 100%;
+    max-width: 520px;
+    font-family: 'Share Tech Mono', monospace;
+    padding: 0;
+}
+
+.translation-bar {
+    background: #1a1a1a;
+    color: #d4d0c8;
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.translation-body {
+    padding: 32px 28px;
+    text-align: center;
+}
+
+.translation-body .t-label {
+    font-size: 0.65rem;
+    color: #555;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.translation-body .t-japanese {
+    font-size: 2rem;
+    color: #d4d0c8;
+    margin-bottom: 8px;
+    letter-spacing: 4px;
+    opacity: 0.6;
+}
+
+.translation-body .t-status {
+    font-size: 0.78rem;
+    color: #d4d0c8;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.translation-body .t-status span {
+    color: #c1121f;
+    animation: blink 1s step-end infinite;
+}
+
+.t-bar-wrap {
+    width: 100%;
+    background: #111;
+    border: 1px solid #222;
+    height: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.t-bar-fill {
+    height: 100%;
+    background: #c1121f;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.t-percent {
+    font-size: 0.72rem;
+    color: #555;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.t-log {
+    text-align: left;
+    font-size: 0.65rem;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 1.9;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 14px;
+}
+
+.t-log .t-log-line {
+    color: #444;
+}
+
+.t-log .t-log-line.active {
+    color: #d4d0c8;
+}
+
+.t-log .t-log-line.error {
+    color: #c1121f;
+}
+
+/* ── CONFISCATION NOTICE ──────────────────────────── */
+.confiscation-box {
+    background: #f5f0e8;
+    border: 2px solid #1a1a1a;
+    box-shadow: 6px 6px 0 #000;
+    width: 100%;
+    max-width: 560px;
+    max-height: 85vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #1a1a1a #e0d8c8;
+    font-family: 'Share Tech Mono', monospace;
+    color: #1a1a1a;
+}
+
+.confiscation-bar {
+    background: #1a1a1a;
+    color: #f5f0e8;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confiscation-body {
+    padding: 28px 32px;
+}
+
+.conf-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 16px;
+}
+
+.conf-header .conf-seal {
+    font-size: 2.4rem;
+    margin-bottom: 6px;
+    opacity: 0.7;
+}
+
+.conf-header .conf-agency {
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.conf-header h2 {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.conf-header .conf-doc {
+    font-size: 0.6rem;
+    color: #888;
+    letter-spacing: 2px;
+}
+
+.conf-body-text {
+    font-size: 0.72rem;
+    line-height: 1.9;
+    color: #2a2a2a;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+}
+
+.conf-body-text strong {
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+.conf-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    margin-bottom: 10px;
+}
+
+.conf-field {
+    margin-bottom: 10px;
+}
+
+.conf-field label {
+    display: block;
+    font-size: 0.58rem;
+    color: #888;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.conf-field .conf-value {
+    font-size: 0.72rem;
+    color: #1a1a1a;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 3px;
+    letter-spacing: 0.5px;
+}
+
+.conf-redacted {
+    display: inline-block;
+    background: #1a1a1a;
+    color: transparent;
+    user-select: none;
+    letter-spacing: 0;
+    padding: 0 4px;
+}
+
+.conf-section-title {
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 4px;
+    margin: 18px 0 12px;
+}
+
+.conf-articles {
+    font-size: 0.68rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 3px solid #1a1a1a;
+}
+
+.conf-appeal {
+    background: #ebe4d4;
+    border: 1px solid #aaa;
+    padding: 12px 14px;
+    font-size: 0.68rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.conf-stamp {
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(139,0,0,0.2);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0;
+    pointer-events: none;
+    border: 3px solid rgba(139,0,0,0.15);
+    padding: 6px;
+    display: inline-block;
+    width: 100%;
+}
+
+.conf-fine-print {
+    font-size: 0.56rem;
+    color: #aaa;
+    line-height: 1.7;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.conf-redirect-msg {
+    font-size: 0.7rem;
+    color: #8b0000;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    min-height: 18px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }

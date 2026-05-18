@@ -1,0 +1,128 @@
+/* CABLE SUBSCRIPTION FORM */
+.cable-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.cable-overlay.open {
+    display: flex;
+}
+ 
+.cable-form {
+    background: #0d0d0d;
+    border: 1px solid var(--red);
+    box-shadow: 4px 4px 0 var(--red-dim);
+    width: 100%;
+    max-width: 520px;
+    font-family: var(--mono);
+    max-height: 85vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--red) #111;
+}
+ 
+.cable-form-bar {
+    background: var(--red);
+    color: #fff;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.cable-form-body {
+    padding: 24px 28px;
+}
+ 
+.cable-form-body h2 {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+ 
+.cable-form-body .cable-sub {
+    font-size: 0.7rem;
+    color: var(--dim);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+ 
+.cable-field {
+    margin-bottom: 14px;
+}
+ 
+.cable-field label {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--red);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+ 
+.cable-field input,
+.cable-field select {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    padding: 7px 10px;
+    outline: none;
+}
+ 
+.cable-field input:focus,
+.cable-field select:focus {
+    border-color: var(--red);
+}
+ 
+.cable-field select option {
+    background: #111;
+}
+ 
+.cable-error {
+    font-size: 0.75rem;
+    color: var(--red);
+    letter-spacing: 1px;
+    min-height: 18px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+ 
+.cable-submit {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+ 
+.cable-submit:hover {
+    background: var(--red);
+    color: #fff;
+}
+ 
+.cable-fine-print {
+    font-size: 0.6rem;
+    color: #333;
+    margin-top: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}

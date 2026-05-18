@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/paginas.css">
+    <link rel="stylesheet" href="css/paginas.css">    
+    <link rel="stylesheet" href="css/suscripcion-cablevision.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>Granada</title>
 </head>
@@ -19,8 +20,10 @@
             exposure="1">
         </model-viewer>
     </nav>
+
     <main>
         <div class="page-header">
+            <div class="label">U.S. Military Intervention</div>
             <h1>Granada — 1983</h1>
             <div class="meta">Operation Urgent Fury &nbsp;/&nbsp; Oct 25–27, 1983 &nbsp;/&nbsp; Caribbean &nbsp;/&nbsp; 7,000 troops deployed</div>
         </div>
@@ -33,11 +36,11 @@
                 <span>Description</span>
             </div>
 
-            <div class="db-row" data-img="imgs/granada/diario-4-gra.avif" data-caption="US soldiers stand guard over Grenadian prisoners in St George’s" data-label="AP WIRE PHOTO — Prisoners">
-                <span class="source"> Associated Press historic photo archive</span>
+            <div class="db-row" data-img="imgs/granada/diario-4-gra.avif" data-caption="US soldiers stand guard over Grenadian prisoners in St George's" data-label="AP WIRE PHOTO — Prisoners">
+                <span class="source">Associated Press historic photo archive</span>
                 <span class="type">PHOTOGRAPH</span>
                 <span class="date">OCT 1983</span>
-                <span class="desc">US soldiers stand guard over Grenadian prisoners in St George’s</span>
+                <span class="desc">US soldiers stand guard over Grenadian prisoners in St George's</span>
             </div>
 
             <div class="db-row" data-img="imgs/granada/diario-1-gra.webp" data-caption="San Francisco Chronicle front page, October 26, 1983." data-label="San Francisco Chronicle — Front Page">
@@ -54,11 +57,11 @@
                 <span class="desc">General Assembly condemns invasion 108 to 9</span>
             </div>
 
-            <div class="db-row" data-img="" data-caption="Cuban construction workers killed during the invasion. Havana confirmed 25 dead." data-label="GRANMA — Cuban State Press">
-                <span class="source">Granma (Havana)</span>
-                <span class="type">NEWSPAPER</span>
-                <span class="date">OCT 27 1983</span>
-                <span class="desc">25 Cuban nationals killed — workers, not soldiers</span>
+            <div class="db-row" data-type="audio" data-audio="imgs/granada/phone-call.wav" data-caption="Reagan phone call to Thatcher (record of conversation) [declassified 2000]" data-label="The Guardian — phone call">
+                <span class="source">The Guardian</span>
+                <span class="type">AUDIO</span>
+                <span class="date">OCT 26 1983</span>
+                <span class="desc">President Reagan apologised to the British prime minister after the US invaded Grenada</span>
             </div>
 
             <div class="db-row" data-img="" data-caption="Point Salines airport — the airstrip Reagan described as a Soviet military threat." data-label="AERIAL — Point Salines Airport">
@@ -99,21 +102,137 @@
             </div>
         </div>
 
-<!-- viewer: no tocar -->
-    <div class="viewer" id="viewer">
-        <div class="db-container" style="padding-top:0">
-            <div class="viewer-header" id="viewer-label">— SELECT A ROW —</div>
-            <div class="viewer-placeholder" id="viewer-placeholder">[IMAGE PLACEHOLDER]</div>
-            <img class="viewer-img" id="viewer-img" src="" alt="" style="display:none">
-            <div class="viewer-caption" id="viewer-caption"></div>
+        <div id="popup-container"></div>
+    </main>
+
+<!-- SUSCRIPCION DE CABLE -->
+    <div class="cable-overlay" id="cable-overlay">
+        <div class="cable-form">
+            <div class="cable-form-bar">
+                <span>CableVision — Subscriber Access Required</span>
+            </div>
+            <div class="cable-form-body">
+                <h2>Subscribe to Unlock</h2>
+                <div class="cable-sub">Premium News Package — $19.95/mo — First month free*</div>
+
+                <div class="cable-field">
+                    <label>Full Legal Name</label>
+                    <input type="text" id="cf-name" placeholder="As it appears on your cable bill">
+                </div>
+                <div class="cable-field">
+                    <label>Cable Box Serial Number</label>
+                    <input type="text" id="cf-serial" placeholder="Found on the back of your CableVision box">
+                </div>
+                <div class="cable-field">
+                    <label>Zip Code of Installation Address</label>
+                    <input type="text" id="cf-zip" placeholder="5-digit zip">
+                </div>
+                <div class="cable-field">
+                    <label>Select Your Package Tier</label>
+                    <select id="cf-tier">
+                        <option value="">— Select —</option>
+                        <option value="basic">Basic (channels 2–13)</option>
+                        <option value="extended">Extended (channels 2–36)</option>
+                        <option value="premium">Premium (includes MTV, HBO, ESPN)</option>
+                        <option value="ultra">Ultra Premium Plus Gold</option>
+                    </select>
+                </div>
+                <div class="cable-field">
+                    <label>Mother's Maiden Name</label>
+                    <input type="text" id="cf-maiden" placeholder="For account verification purposes">
+                </div>
+                <div class="cable-field">
+    <label>Betamax or VHS?</label>
+        <select id="cf-format">
+            <option value="">— Select your home video format —</option>
+            <option value="beta">Betamax (Sony)</option>
+            <option value="vhs">VHS (JVC)</option>
+            <option value="both">Both (please specify primary unit below)</option>
+        </select>
+    </div>
+
+    <div class="cable-field">
+        <label>Number of TV Sets in Household</label>
+        <select id="cf-tvsets">
+            <option value="">— Select —</option>
+            <option value="1">1 — Primary residence only</option>
+            <option value="2">2 — Including den/basement</option>
+            <option value="3">3 or more — Please contact CableVision for multi-unit pricing</option>
+        </select>
+    </div>
+
+    <div class="cable-field">
+        <label>Antenna Type Currently in Use</label>
+        <input type="text" id="cf-antenna" placeholder="e.g. Rabbit ears, rooftop, no antenna">
+    </div>
+
+    <div class="cable-field">
+        <label>Name of Neighbor Who Referred You (if applicable)</label>
+        <input type="text" id="cf-neighbor" placeholder="First and last name of referring neighbor">
+    </div>
+
+    <div class="cable-field">
+        <label>Do You Own or Rent Your Residence?</label>
+        <select id="cf-own">
+            <option value="">— Select —</option>
+            <option value="own">Own</option>
+            <option value="rent">Rent — written landlord authorization required (attach separately)</option>
+            <option value="other">Other — mobile home, RV, or vessel (additional fees apply)</option>
+        </select>
+    </div>
+
+        <div class="cable-field">
+        <label>Preferred Viewing Hours</label>
+        <select id="cf-hours">
+            <option value="">— Select —</option>
+            <option value="morning">6am–12pm</option>
+            <option value="afternoon">12pm–6pm</option>
+            <option value="evening">6pm–11pm (Prime Time)</option>
+            <option value="late">11pm–6am (Late Night surcharge applies)</option>
+        </select>
+    </div>
+
+    <div class="cable-field">
+        <label>Social Security Number of Primary Account Holder</label>
+        <input type="text" id="cf-ssn" placeholder="XXX-XX-XXXX — required for credit verification">
+    </div>
+
+    <div class="cable-field">
+        <label>Name and Breed of Household Pet (if applicable)</label>
+        <input type="text" id="cf-pet" placeholder="e.g. Biscuit, Golden Retriever — for installer safety purposes">
+    </div>
+
+    <div class="cable-field">
+        <label>Estimated Monthly Long-Distance Phone Bill</label>
+        <input type="text" id="cf-phone" placeholder="For bundling eligibility — AT&T customers only">
+    </div>
+
+    <div class="cable-field">
+        <label>Have You Ever Disconnected a Cable Service Without Notice?</label>
+        <select id="cf-disconnect">
+            <option value="">— Select —</option>
+            <option value="no">No</option>
+            <option value="yes">Yes — explanation required on separate sheet</option>
+            <option value="unsure">Unsure — CableVision will verify independently</option>
+        </select>
+    </div>
+                <div class="cable-error" id="cable-error"></div>
+
+                <button class="cable-submit" id="cable-submit">SUBMIT & ACCESS CONTENT</button>
+
+                <div class="cable-fine-print">
+                    *Free trial valid for new subscribers only. Requires 24-month contract. Early termination fee of $240 applies.
+                    CableVision reserves the right to modify or discontinue service at any time without notice.
+                    By submitting this form you agree to receive promotional materials by mail.
+                    Processing may take 5–7 business days. Content access not guaranteed in all areas.
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- popup container: no tocar -->
-    <div id="popup-container"></div>
-
-    </main>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
     <script src="js/pop-ups-g.js"></script>
+    <script src="js/random-pais.js"></script>
+    <script src="js/tierra.js"></script>
 </body>
 </html>

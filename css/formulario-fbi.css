@@ -1,0 +1,223 @@
+/* FBI LOYALTY OATH FORM */
+
+.fbi-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+}
+
+.fbi-overlay.open {
+    display: flex;
+}
+
+.fbi-form {
+    background: #f5f0e8;
+    border: 2px solid #1a1a1a;
+    box-shadow: 6px 6px 0 #000;
+    width: 100%;
+    max-width: 580px;
+    max-height: 85vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #8b0000 #e0d8c8;
+    font-family: 'Share Tech Mono', monospace;
+    color: #1a1a1a;
+}
+
+.fbi-form-bar {
+    background: #1a1a1a;
+    color: #f5f0e8;
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.fbi-form-bar .fbi-seal {
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+.fbi-form-body {
+    padding: 24px 28px;
+}
+
+.fbi-header {
+    text-align: center;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.fbi-header .fbi-doc-number {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.fbi-header h2 {
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.fbi-header .fbi-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.fbi-preamble {
+    font-size: 0.7rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    border-left: 3px solid #8b0000;
+    padding-left: 12px;
+    letter-spacing: 0.5px;
+}
+
+.fbi-field {
+    margin-bottom: 14px;
+}
+
+.fbi-field label {
+    display: block;
+    font-size: 0.65rem;
+    color: #8b0000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.fbi-field input,
+.fbi-field select,
+.fbi-field textarea {
+    width: 100%;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.78rem;
+    padding: 6px 4px;
+    outline: none;
+    border-radius: 0;
+}
+
+.fbi-field textarea {
+    resize: none;
+    height: 60px;
+    border: 1px solid #1a1a1a;
+    padding: 6px 8px;
+}
+
+.fbi-field input:focus,
+.fbi-field select:focus,
+.fbi-field textarea:focus {
+    background: #fffde8;
+    border-bottom-color: #8b0000;
+}
+
+.fbi-field select option {
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.fbi-field .fbi-note {
+    font-size: 0.6rem;
+    color: #888;
+    margin-top: 3px;
+    letter-spacing: 0.5px;
+}
+
+.fbi-section-title {
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 4px;
+    margin: 20px 0 14px;
+}
+
+.fbi-checkbox-field {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    color: #2a2a2a;
+}
+
+.fbi-checkbox-field input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: #8b0000;
+}
+
+.fbi-error {
+    font-size: 0.72rem;
+    color: #8b0000;
+    letter-spacing: 1px;
+    min-height: 18px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fbi-submit {
+    width: 100%;
+    background: #1a1a1a;
+    border: none;
+    color: #f5f0e8;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 11px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.fbi-submit:hover {
+    background: #8b0000;
+}
+
+.fbi-fine-print {
+    font-size: 0.58rem;
+    color: #888;
+    margin-top: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.fbi-stamp {
+    text-align: center;
+    font-size: 1.8rem;
+    color: rgba(139,0,0,0.15);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 16px;
+    font-weight: bold;
+    pointer-events: none;
+}
