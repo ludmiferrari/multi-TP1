@@ -1,8 +1,9 @@
-const paises = ['argentina', 'japon', 'corea', 'alemania', 'grecia', 'iran', 
-'guatemala', 'cuba', 'libano', 'siria', 'venezuela', 'granada', 'pakistan', 
-'irak', 'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait', 
-'republica-dominicana', 'vietnam', 'cambodia', 'laos', 'haiti', 'yemen', 
-'yugoslavia', 'kosovo', 'chile', 'index'];
+const paises = ['japon', 'libano', 'granada', 'vietnam',  'cuba', 
+//'argentina', 'corea', 'alemania', 'grecia', 'iran', 
+//'guatemala', 'siria', 'venezuela', 'pakistan','irak', 'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait', 
+//'republica-dominicana', 'cambodia', 'laos', 'haiti', 'yemen', 
+//'yugoslavia', 'kosovo', 'chile', 'index'
+];
 
 document.querySelector('.nav-tierra model-viewer').addEventListener('click', () => {
     const actual = document.title.toLowerCase()
