@@ -155,7 +155,7 @@ document.getElementById('cable-submit').addEventListener('click', () => {
             if (document.startViewTransition) {
                 document.startViewTransition(() => { window.location.href = 'index.html'; });
             } else {
-                window.location.href = 'index.html';
+                window.location.href = 'libano.html';
             }
         }, 1800);
     }
