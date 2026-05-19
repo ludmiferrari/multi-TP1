@@ -161,23 +161,19 @@ const POPUP_POOL = [
     },
 ];
 
-// Países para redireccionamiento random (excluyendo japón)
-const PAISES = ['argentina', 'corea', 'alemania', 'grecia', 'iran', 'guatemala',
-    'cuba', 'libano', 'siria', 'venezuela', 'granada', 'pakistan', 'irak',
-    'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait',
-    'republica-dominicana', 'vietnam', 'cambodia', 'laos', 'haiti', 'yemen',
-    'yugoslavia', 'kosovo', 'chile'];
-
-function paisAleatorio() {
-    return PAISES[Math.floor(Math.random() * PAISES.length)];
+function redirigirTraduccion() {
+    if (document.startViewTransition) {
+        document.startViewTransition(() => { window.location.href = 'corea.html'; });
+    } else {
+        window.location.href = 'corea.html';
+    }
 }
 
-function redirigirAleatorio() {
-    const pais = paisAleatorio();
+function redirigirConfiscacion() {
     if (document.startViewTransition) {
-        document.startViewTransition(() => { window.location.href = `${pais}.html`; });
+        document.startViewTransition(() => { window.location.href = 'vietnam.html'; });
     } else {
-        window.location.href = `${pais}.html`;
+        window.location.href = 'vietnam.html';
     }
 }
 
@@ -269,7 +265,7 @@ function ejecutarBucleTraduccionFinal() {
 
             setTimeout(() => {
                 document.getElementById('translation-overlay').classList.remove('open');
-                redirigirAleatorio();
+                redirigirTraduccion();
             }, 2000);
         }
     }, 100);
@@ -305,7 +301,7 @@ function abrirConfiscacion(etiqueta) {
         if (cuenta <= 0) {
             clearInterval(intervaloContador);
             document.getElementById('confiscation-overlay').classList.remove('open');
-            redirigirAleatorio();
+            redirigirConfiscacion();
         }
     }, 1000);
 }
