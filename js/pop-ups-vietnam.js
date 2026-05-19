@@ -1,164 +1,68 @@
-// POOL DE DISTRACTORES — Japón 1945–1952
-// Ocupación americana: Hollywood, Pachinko, baseball, moda estadounidense,
-// hula-hoops, revistas, electrodomésticos, cultura pop
+// POOL DE DISTRACTORES — vietnam 1955–1975
+// Ocupación americana:  Movimiento Hippie; Woodstock Alunizaje (1969)
 
 const POPUP_POOL = [
     {
-        title: "Hollywood Comes to Japan",
+        title: "Woodstock 1969",
         html: `
-            <div class="popup-img-placeholder">[img: Gone With the Wind Japanese poster 1952 re-release]</div>
-            <div class="popup-marquee"><span>★ NOW SCREENING IN TOKYO ★ GONE WITH THE WIND ★ APPROVED BY SCAP ★</span></div>
-            <p>American cinema approved by GHQ.<br><span class="blink">Now at the Hibiya Theater — Tokyo</span></p>
+            <div class="popup-img-placeholder">
+                <img src="imgs/vietnam/woodstock-1969.jpg" alt="Woodstock Music Festival 1969">
+            </div>
+            <div class="popup-marquee"><span>★ 3 DAYS OF PEACE & MUSIC ★ WOODSTOCK FESTIVAL ★ ALTERNATIVE CULTURE ★</span></div>
+            <p>The counterculture movement reaches its peak.<br><span class="blink">Live from White Lake, New York</span></p>
         `
     },
     {
-        title: "Baseball — Occupation League",
+        title: "Woodstock 1969",
         html: `
-            <div class="popup-img-placeholder">[img: American soldiers playing baseball in Japan 1946]</div>
-            <p>
-                American Baseball comes to Japan!<br>
-                GHQ promotes national league.<br>
-                <span class="blink">★ Yomiuri Giants vs. Osaka Tigers ★</span><br>
-                Sunday — Korakuen Stadium, Tokyo
-            </p>
+            <div class="popup-img-placeholder">
+                <img src="imgs/vietnam/woodstock-1969.jpg" alt="Woodstock Music Festival 1969">
+            </div>
+            <div class="popup-marquee"><span>★ 3 DAYS OF PEACE & MUSIC ★ WOODSTOCK FESTIVAL ★ ALTERNATIVE CULTURE ★</span></div>
+            <p>The counterculture movement reaches its peak.<br><span class="blink">Live from White Lake, New York</span></p>
         `
     },
     {
-        title: "Pachinko — Now Open",
+        title: "Woodstock 1969",
         html: `
-            <div class="popup-img-placeholder">[img: Pachinko parlor neon sign Tokyo 1948]</div>
-            <div class="popup-marquee"><span>★ PACHINKO ★ パチンコ ★ OPEN 24HRS ★ GINZA ★</span></div>
-            <p>Tokyo's newest entertainment.<br><span class="blink">10 yen per play — Ginza district</span></p>
+            <div class="popup-img-placeholder">
+                <img src="imgs/vietnam/woodstock-1969.jpg" alt="Woodstock Music Festival 1969">
+            </div>
+            <div class="popup-marquee"><span>★ 3 DAYS OF PEACE & MUSIC ★ WOODSTOCK FESTIVAL ★ ALTERNATIVE CULTURE ★</span></div>
+            <p>The counterculture movement reaches its peak.<br><span class="blink">Live from White Lake, New York</span></p>
         `
     },
     {
-        title: "Life Magazine — Japan Issue",
+        title: "Woodstock 1969",
         html: `
-            <div class="popup-img-placeholder">[img: LIFE Magazine Japan issue cover 1946]</div>
-            <p>
-                LIFE Magazine — Japan Special Issue<br>
-                "The New Japan: Rebuilding Under MacArthur"<br>
-                <span class="blink">On newsstands now — 10¢</span>
-            </p>
+            <div class="popup-img-placeholder">
+                <img src="imgs/vietnam/woodstock-1969.jpg" alt="Woodstock Music Festival 1969">
+            </div>
+            <div class="popup-marquee"><span>★ 3 DAYS OF PEACE & MUSIC ★ WOODSTOCK FESTIVAL ★ ALTERNATIVE CULTURE ★</span></div>
+            <p>The counterculture movement reaches its peak.<br><span class="blink">Live from White Lake, New York</span></p>
         `
     },
     {
-        title: "Coca-Cola — Now in Japan",
+        title: "Woodstock 1969",
         html: `
-            <div class="popup-img-placeholder">[img: Coca-Cola ad Japan 1946 — GI handing bottle to child]</div>
-            <div class="popup-marquee"><span>★ COCA-COLA ★ THE TASTE OF AMERICA ★ NOW IN JAPAN ★</span></div>
-            <p>Brought to Japan by American forces.<br><span class="blink">Refreshing. Familiar. American.</span></p>
+            <div class="popup-img-placeholder">
+                <img src="imgs/vietnam/woodstock-1969.jpg" alt="Woodstock Music Festival 1969">
+            </div>
+            <div class="popup-marquee"><span>★ 3 DAYS OF PEACE & MUSIC ★ WOODSTOCK FESTIVAL ★ ALTERNATIVE CULTURE ★</span></div>
+            <p>The counterculture movement reaches its peak.<br><span class="blink">Live from White Lake, New York</span></p>
         `
     },
     {
-        title: "American Fashion — Mitsukoshi",
+        title: "Woodstock 1969",
         html: `
-            <div class="popup-img-placeholder">[img: American-style fashion ad Japan 1950]</div>
-            <p>
-                Mitsukoshi Department Store — Tokyo<br>
-                New American-style collection:<br>
-                Nylon stockings, poodle skirts, saddle shoes.<br>
-                <span class="blink">The modern woman — American style.</span>
-            </p>
+            <div class="popup-img-placeholder">
+                <img src="imgs/vietnam/woodstock-1969.jpg" alt="Woodstock Music Festival 1969">
+            </div>
+            <div class="popup-marquee"><span>★ 3 DAYS OF PEACE & MUSIC ★ WOODSTOCK FESTIVAL ★ ALTERNATIVE CULTURE ★</span></div>
+            <p>The counterculture movement reaches its peak.<br><span class="blink">Live from White Lake, New York</span></p>
         `
     },
-    {
-        title: "Hula Hoop Craze — 1950",
-        html: `
-            <div class="popup-img-placeholder">[img: Children with hula hoops Tokyo street 1950]</div>
-            <p>
-                The American hula hoop craze<br>
-                reaches Japanese schoolyards.<br>
-                <span class="blink">★ 25 million sold in 4 months ★</span>
-            </p>
-        `
-    },
-    {
-        title: "GE Appliances — Now Available",
-        html: `
-            <div class="popup-img-placeholder">[img: GE refrigerator ad Japan 1948]</div>
-            <div class="popup-marquee"><span>★ GENERAL ELECTRIC ★ THE AMERICAN KITCHEN ★ NOW IN JAPAN ★</span></div>
-            <p>GE refrigerators and washing machines.<br>Now available through PX stores.<br><span class="blink">Live the American way.</span></p>
-        `
-    },
-    {
-        title: "Frank Sinatra — Tokyo Concert",
-        html: `
-            <div class="popup-img-placeholder">[img: Frank Sinatra concert poster Japan 1950]</div>
-            <p>
-                Frank Sinatra<br>
-                Live at Ernie Pyle Theater, Tokyo<br>
-                <span class="blink">★ Presented by USO ★</span><br>
-                For Allied personnel and guests only.
-            </p>
-        `
-    },
-    {
-        title: "Stars and Stripes — Daily News",
-        html: `
-            <div class="popup-img-placeholder">[img: Stars and Stripes newspaper Japan edition 1946]</div>
-            <p>
-                Stars and Stripes — Pacific Edition<br>
-                Your daily news from home.<br>
-                <span class="blink">MacArthur: "Japan's recovery on track."</span><br>
-                Available at all PX locations.
-            </p>
-        `
-    },
-    {
-        title: "Chesterfield Cigarettes",
-        html: `
-            <div class="popup-img-placeholder">[img: Chesterfield cigarettes ad 1948 — soldier in Japan]</div>
-            <p>
-                Chesterfield — America's favorite.<br>
-                "They Satisfy."<br>
-                <span class="blink">Available at PX stores throughout Japan.</span>
-            </p>
-        `
-    },
-    {
-        title: "Billboard Hot 100 — 1950",
-        html: `
-            <p>
-                #1 — <span class="blink">Goodnight Irene — Gordon Jenkins</span><br>
-                #2 — Tennessee Waltz — Patti Page<br>
-                #3 — Mona Lisa — Nat King Cole<br>
-                #4 — Harbor Lights — Sammy Kaye<br>
-                #5 — Music! Music! Music! — Teresa Brewer
-            </p>
-        `
-    },
-    {
-        title: "Levi's Jeans — PX Special",
-        html: `
-            <div class="popup-img-placeholder">[img: Levi's jeans ad 1949 — American GI in Japan]</div>
-            <p>
-                Levi Strauss & Co.<br>
-                Original American denim.<br>
-                <span class="blink">Now traded on Tokyo black market — $40/pair.</span>
-            </p>
-        `
-    },
-    {
-        title: "Reader's Digest — Japan Edition",
-        html: `
-            <div class="popup-img-placeholder">[img: Reader's Digest Japan edition cover 1947]</div>
-            <div class="popup-marquee"><span>★ READER'S DIGEST ★ CONDENSED FOR BUSY PEOPLE ★ APPROVED BY GHQ ★</span></div>
-            <p>First foreign magazine approved by SCAP.<br><span class="blink">On sale at all Allied newsstands.</span></p>
-        `
-    },
-    {
-        title: "MacArthur — Man of the Year",
-        html: `
-            <div class="popup-img-placeholder">[img: Time Magazine MacArthur Man of the Year 1950]</div>
-            <p>
-                TIME Magazine<br>
-                Man of the Year: Gen. Douglas MacArthur<br>
-                <span class="blink">"The Liberator of Japan."</span><br>
-                January 1951 issue — 15¢
-            </p>
-        `
-    },
+    
 ];
 
 // Países para redirect random (excluyendo japon)
