@@ -60,6 +60,7 @@ const POPUP_POOL = [
     },
     {
         title: '⚡ URGENTE — Beirut, 23 Oct 1983',
+        link: { href: 'libano.html', texto: '→ LÍBANO 1983' },
         html: `
             <div class="popup-marquee"><span>★ URGENTE ★ BEIRUT ★ 241 MARINES EE.UU. MUERTOS ★ ATENTADO SUICIDA ★ 23 OCT 1983 ★</span></div>
             <p>
@@ -68,8 +69,7 @@ const POPUP_POOL = [
                 <span class="blink">48 horas después — Reagan ordena la invasión de Granada.</span><br><br>
                 ¿Coincidencia?
             </p>
-        `,
-        link: '{ href: "libano.html", texto: "→ LÍBANO 1983" }',
+        `
     },
     {
         title: 'Ejercicios Jane Fonda — VHS',
@@ -189,13 +189,29 @@ function construirPopup(data, posicion, indice) {
     div.style.top = posicion.top;
     div.style.left = posicion.left;
 
+    const linkHtml = data.link
+        ? `<a href="${data.link.href}" style="
+            display:inline-block;
+            margin-top:10px;
+            color:#c1121f;
+            border:1px solid #c1121f;
+            padding:6px 14px;
+            font-size:0.72rem;
+            letter-spacing:2px;
+            text-decoration:none;
+            text-transform:uppercase;
+          ">${data.link.texto}</a>`
+        : '';
+
     div.innerHTML = `
         <div class="popup-bar">
             <span>${data.title}</span>
             <button class="popup-close">x</button>
         </div>
-        <div class="popup-content">${data.html}</div>
+        <div class="popup-content">${data.html}${linkHtml}</div>
     `;
+
+    if (data.link) div.style.zIndex = 500;
 
     div.querySelector('.popup-close').addEventListener('click', () => cerrarPopup(div, posicion));
     hacerArrastrable(div, posicion);

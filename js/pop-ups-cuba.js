@@ -104,10 +104,18 @@ const POPUP_POOL = [
         `
     },
     {
-        title: "Protegé a tu Familia — Refugio Antinuclear",
+        title: '⚡ SIGUIENTE PASO — Panamá',
+        link: { href: 'panama.html', texto: '→ PANAMÁ 1989' },
         html: `
-            <div class="popup-img-placeholder">[img: publicidad refugio antinuclear 1961 — patio trasero]</div>
-            <p>PROTEGÉ A TU FAMILIA.<br>Refugios antinucleares prefabricados — desde $1.995.<br><span class="blink">Los soviéticos están mirando. ¿Estás listo/a?</span></p>
+            <div class="popup-marquee"><span>★ OPERACIÓN CAUSA JUSTA ★ PANAMÁ 1989 ★ RESTAURAR LA DEMOCRACIA ★</span></div>
+            <p>
+                Cuba 1961. Panamá 1989.<br>
+                El mismo argumento, 28 años después.<br><br>
+                <span class="blink">"Restaurar la democracia."</span><br><br>
+                26.000 tropas. Noriega extraditado.<br>
+                500 civiles panameños muertos.<br>
+                El barrio de El Chorrillo, arrasado.
+            </p>
         `
     },
 ];
@@ -277,7 +285,7 @@ function lanzarPopups() {
 // ── CLICK EN RENGLÓN ──────────────────────────────────────────────
 
 function abrirVisor(datosFila) {
-    const { img, audio, caption, label, type } = datosFila;
+    const { img, audio, video ,caption, label, type } = datosFila;
 
     document.getElementById('viewer-label').textContent = '— ' + label + ' —';
     document.getElementById('viewer-caption').textContent = caption;
@@ -314,9 +322,30 @@ function abrirVisor(datosFila) {
         }
         btn.style.display = 'inline-block';
 
+    } else if (type === 'video') {
+    imgVisor.style.display = 'none';
+    placeholder.style.display = 'none';
+    const audioEl = document.getElementById('viewer-audio');
+    if (audioEl) audioEl.style.display = 'none';
+    const btnSig = document.getElementById('audio-next-btn');
+    if (btnSig) btnSig.style.display = 'none';
+
+    let videoEl = document.getElementById('viewer-video');
+    if (!videoEl) {
+        videoEl = document.createElement('video');
+        videoEl.id = 'viewer-video';
+        videoEl.controls = true;
+        videoEl.style.cssText = 'display:block; margin:0 auto; width:100%; max-width:800px; min-height:400px; margin-top:12px; background:#000;';
+        visor.querySelector('.db-container').appendChild(videoEl);
+    }
+    videoEl.src = video;
+    videoEl.style.display = 'block';
+    
     } else if (img) {
         const audioEl = document.getElementById('viewer-audio');
         if (audioEl) audioEl.style.display = 'none';
+        const videoEl = document.getElementById('viewer-video');
+        if (videoEl) videoEl.style.display = 'none';
         const btnSig = document.getElementById('audio-next-btn');
         if (btnSig) btnSig.style.display = 'none';
         imgVisor.src = img;
@@ -326,6 +355,8 @@ function abrirVisor(datosFila) {
     } else {
         const audioEl = document.getElementById('viewer-audio');
         if (audioEl) audioEl.style.display = 'none';
+        const videoEl = document.getElementById('viewer-video');
+        if (videoEl) videoEl.style.display = 'none';
         const btnSig = document.getElementById('audio-next-btn');
         if (btnSig) btnSig.style.display = 'none';
         imgVisor.style.display = 'none';
@@ -352,6 +383,7 @@ document.querySelectorAll('.db-row').forEach(fila => {
             type: fila.dataset.type || 'img',
             img: fila.dataset.img,
             audio: fila.dataset.audio,
+            video: fila.dataset.video,
             caption: fila.dataset.caption,
             label: fila.dataset.label,
         };
