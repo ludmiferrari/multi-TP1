@@ -231,27 +231,20 @@ function abrirTelex() {
 
                 setTimeout(() => {
                     document.getElementById('telex-overlay').classList.remove('open');
-                    redirigirAleatorio();
+                    redirigirG();
                 }, 3000);
             }
         }
     }, 28);
 }
 
-// ── REDIRECCIÓN ALEATORIA ─────────────────────────────────────────
+// ── REDIRECCIÓN A GRANADA ─────────────────────────────────────────
 
-const PAISES = ['argentina', 'japon', 'corea', 'alemania', 'grecia', 'iran',
-    'guatemala', 'cuba', 'siria', 'venezuela', 'granada', 'pakistan', 'irak',
-    'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait',
-    'republica-dominicana', 'vietnam', 'cambodia', 'laos', 'haiti', 'yemen',
-    'yugoslavia', 'kosovo', 'chile'];
-
-function redirigirAleatorio() {
-    const pais = PAISES[Math.floor(Math.random() * PAISES.length)];
+function redirigirG() {
     if (document.startViewTransition) {
-        document.startViewTransition(() => { window.location.href = `${pais}.html`; });
+        document.startViewTransition(() => { window.location.href = 'granada.html'; });
     } else {
-        window.location.href = `${pais}.html`;
+        window.location.href = 'granada.html';
     }
 }
 
