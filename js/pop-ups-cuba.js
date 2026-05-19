@@ -124,9 +124,9 @@ document.getElementById('fbi-submit').addEventListener('click', () => {
         setTimeout(() => {
             document.getElementById('fbi-overlay').classList.remove('open');
             if (document.startViewTransition) {
-                document.startViewTransition(() => { window.location.href = 'index.html'; });
+                document.startViewTransition(() => { window.location.href = 'vietnam.html'; });
             } else {
-                window.location.href = 'index.html';
+                window.location.href = 'vietnam.html';
             }
         }, 2200);
     }
