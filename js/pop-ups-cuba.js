@@ -3,7 +3,7 @@ const POPUP_POOL = [
     {
         title: "El Show de Ed Sullivan — Esta Noche",
         html: `
-            <div class="popup-img-placeholder">[img: promo Ed Sullivan Show 1961]</div>
+            <div class="popup-img-placeholder"><img src="imgs/cuba/ed-sullivan.jpg"></div>
             <div class="popup-marquee"><span>★ EN VIVO ESTA NOCHE ★ THE ED SULLIVAN SHOW ★ CBS ★ 8/7c ★</span></div>
             <p>ESTA NOCHE: Elvis Presley regresa del Ejército.<br><span class="blink">No te lo pierdas — CBS, 8pm</span></p>
         `
@@ -11,90 +11,61 @@ const POPUP_POOL = [
     {
         title: "Blue Hawaii — En Cartelera",
         html: `
-            <div class="popup-img-placeholder">[img: afiche Blue Hawaii 1961 — Elvis Presley]</div>
+            <div class="popup-img-placeholder"><img src="imgs/cuba/blue-hawaii.jpg"></div>
             <p>Blue Hawaii (1961)<br>Con Elvis Presley<br><span class="blink">★ #1 en taquilla ★</span><br>Banda sonora: 20 semanas en el #1</p>
-        `
-    },
-    {
-        title: "Lucky Strike — Es Tostado",
-        html: `
-            <div class="popup-img-placeholder">[img: publicidad cigarrillos Lucky Strike 1961 — médico]</div>
-            <div class="popup-marquee"><span>★ MÁS MÉDICOS FUMAN LUCKY STRIKE ★ ES TOSTADO ★</span></div>
-            <p>Lucky Strike — <span class="blink">el cigarrillo de los campeones.</span><br>Suave, tranquilo, satisfactorio.</p>
         `
     },
     {
         title: "Camel Cigarrillos",
         html: `
-            <div class="popup-img-placeholder">[img: publicidad Camel 1961]</div>
+            <div class="popup-img-placeholder">
+            <video width="640" height="360" controls autoplay muted loop>
+                <source src="imgs/cuba/camel.mp4" type="video/mp4">
+            </video>
+            </div>
             <p>"Caminaría una milla por un Camel."<br><span class="blink">El mejor tabaco que el dinero puede comprar.</span><br>Disponible en tu farmacia local.</p>
         `
     },
     {
         title: "NASA — Proyecto Mercury",
         html: `
-            <div class="popup-img-placeholder">[img: lanzamiento Freedom 7 Alan Shepard mayo 1961]</div>
+            <div class="popup-img-placeholder"><img src="imgs/cuba/shepard.avif"></div>
             <div class="popup-marquee"><span>★ AMERICA ALCANZA LAS ESTRELLAS ★ PROYECTO MERCURY ★ NASA ★</span></div>
             <p>Alan Shepard — primer americano en el espacio.<br><span class="blink">Freedom 7 — 5 de mayo de 1961</span></p>
         `
     },
     {
-        title: "Kennedy — Elegimos ir a la Luna",
-        html: `
-            <div class="popup-img-placeholder">[img: discurso Kennedy Universidad Rice 1962]</div>
-            <p>"Elegimos ir a la Luna."<br>— Presidente Kennedy, 12 sep 1962<br><span class="blink">★ Programa Apollo — $25 mil millones ★</span></p>
-        `
-    },
-    {
         title: "Leave It to Beaver — CBS",
         html: `
-            <div class="popup-img-placeholder">[img: still Leave It to Beaver 1961]</div>
+            <div class="popup-img-placeholder"><img src="imgs/cuba/beaver.webp"></div>
             <p>Leave It to Beaver<br>La familia favorita de América — cada semana en CBS.<br><span class="blink">ESTA NOCHE: Beaver se mete en problemas otra vez.</span></p>
         `
     },
     {
         title: "Los Picapiedras — ABC",
         html: `
-            <div class="popup-img-placeholder">[img: promo Los Picapiedras 1961]</div>
+            <div class="popup-img-placeholder">
+            <video width="640" height="360" controls autoplay muted loop>
+                <source src="imgs/cuba/picapiedras.mp4" type="video/mp4">
+            </video>
+            </div>
             <div class="popup-marquee"><span>★ YABBA DABBA DOO ★ LOS PICAPIEDRAS ★ VIERNES EN ABC ★</span></div>
             <p>La familia moderna de la Edad de Piedra.<br><span class="blink">Nuevo episodio ESTA NOCHE — 8:30/7:30c</span></p>
         `
     },
     {
-        title: "GE — Vive Mejor Eléctricamente",
-        html: `
-            <div class="popup-img-placeholder">[img: publicidad electrodomésticos GE 1961 — cocina]</div>
-            <p>General Electric — "Vive Mejor Eléctricamente"<br>Nueva heladera, lavarropas y cocina.<br><span class="blink">La cocina americana moderna — ahora accesible.</span></p>
-        `
-    },
-    {
         title: "Chevrolet Impala — 1961",
         html: `
-            <div class="popup-img-placeholder">[img: publicidad Chevrolet Impala 1961]</div>
+            <div class="popup-img-placeholder"><img src="imgs/cuba/chevrolet.jpg"></div>
             <div class="popup-marquee"><span>★ RECORRE EE.UU. EN TU CHEVROLET ★ IMPALA 1961 ★</span></div>
             <p>El Chevrolet Impala 1961.<br>Más estilo. Más potencia.<br><span class="blink">Desde $2.597.</span></p>
         `
     },
     {
-        title: "Mel's Diner — Abierto 24hs",
-        html: `
-            <div class="popup-img-placeholder">[img: cartel neón diner americano 1961]</div>
-            <p>MEL'S DRIVE-IN<br>Hamburguesas — Batidos — Torta<br><span class="blink">★ ABIERTO LAS 24 HORAS ★</span><br>Ruta 66 — Salida 14</p>
-        `
-    },
-    {
         title: "TV Guide — Esta Semana",
         html: `
-            <div class="popup-img-placeholder">[img: tapa TV Guide abril 1961]</div>
+            <div class="popup-img-placeholder"><img src=""></div>
             <p>ESTA SEMANA EN TV:<br>Lun — Gunsmoke (CBS)<br>Mié — Perry Mason (CBS)<br>Vie — <span class="blink">Los Picapiedras (ABC)</span><br>Dom — Ed Sullivan Show (CBS)</p>
-        `
-    },
-    {
-        title: "Coca-Cola — Tomá una Coca",
-        html: `
-            <div class="popup-img-placeholder">[img: publicidad Coca-Cola 1961 — mostrador diner]</div>
-            <div class="popup-marquee"><span>★ TODO VA MEJOR CON COCA-COLA ★</span></div>
-            <p><span class="blink">Refrescate.</span><br>Coca-Cola bien fría — 5¢ en tu fuente de sodas local.</p>
         `
     },
     {
@@ -311,15 +282,27 @@ function abrirVisor(datosFila) {
         audioEl.src = audio;
         audioEl.style.display = 'block';
 
-        let btn = document.getElementById('audio-next-btn');
-        if (!btn) {
-            btn = document.createElement('a');
-            btn.id = 'audio-next-btn';
-            btn.href = 'guatemala.html';
-            btn.className = 'next-btn';
-            btn.textContent = 'GUATEMALA 1954 →';
-            visor.querySelector('.db-container').appendChild(btn);
-        }
+        const btnViejo = document.getElementById('audio-next-btn');
+        if (btnViejo) btnViejo.remove();
+
+        const btnContenedor = document.createElement('div');
+        btnContenedor.id = 'audio-next-btn';
+        btnContenedor.style.cssText = 'display:flex; gap:12px; margin-top:16px;';
+
+        const btnLibano = document.createElement('a');
+        btnLibano.href = 'libano.html';
+        btnLibano.className = 'next-btn';
+        btnLibano.textContent = 'LÍBANO 1982 →';
+
+        const btnVietnam = document.createElement('a');
+        btnVietnam.href = 'vietnam.html';
+        btnVietnam.className = 'next-btn';
+        btnVietnam.textContent = 'VIETNAM 1964 →';
+
+        btnContenedor.appendChild(btnLibano);
+        btnContenedor.appendChild(btnVietnam);
+        visor.querySelector('.db-container').appendChild(btnContenedor);
+        
         btn.style.display = 'inline-block';
 
     } else if (type === 'video') {

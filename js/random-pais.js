@@ -1,4 +1,4 @@
-const paises = ['argentina', 'japan', 'corea', 'alemania', 'grecia', 'iran', 
+const paises = ['argentina', 'japo n', 'corea', 'alemania', 'grecia', 'iran', 
 'guatemala', 'cuba', 'libano', 'siria', 'venezuela', 'granada', 'pakistan', 
 'irak', 'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait', 
 'republica-dominicana', 'vietnam', 'cambodia', 'laos', 'haiti', 'yemen', 
