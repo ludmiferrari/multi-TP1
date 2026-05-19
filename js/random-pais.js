@@ -1,8 +1,8 @@
-const paises = ['japon', 'libano', 'granada', 'vietnam',  'cuba', 
+const paises = ['japon', 'libano', 'granada', 'vietnam',  'cuba', 'index', 
 //'argentina', 'corea', 'alemania', 'grecia', 'iran', 
 //'guatemala', 'siria', 'venezuela', 'pakistan','irak', 'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait', 
 //'republica-dominicana', 'cambodia', 'laos', 'haiti', 'yemen', 
-//'yugoslavia', 'kosovo', 'chile', 'index'
+//'yugoslavia', 'kosovo', 'chile'
 ];
 
 document.querySelector('.nav-tierra model-viewer').addEventListener('click', () => {
