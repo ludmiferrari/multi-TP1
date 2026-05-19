@@ -18,7 +18,6 @@ body {
 .Hotspot {
     background-color: rgb(193, 18, 31);
     padding: 8px;
-    border-radius: 25px;
     font-weight: bold;
 }
 
