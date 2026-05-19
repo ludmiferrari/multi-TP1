@@ -1,75 +1,81 @@
-// POOL DE DISTRACTORES
+// POOL DE DISTRACTORES — Granada 1983
 const POPUP_POOL = [
     {
-        title: 'MTV — Now Playing',
+        title: 'MTV — En Reproducción',
         html: `
             <div class="popup-img-placeholder"><a href="https://www.youtube.com/watch?v=sOnqjkJTMaA&list=RDsOnqjkJTMaA&start_radio=1"><img src="imgs/granada/thriller-michael-jackson.gif"></a></div>
-            <div class="popup-marquee"><span>★ WORLD PREMIERE ★ MICHAEL JACKSON — THRILLER ★ DIRECTED BY JOHN LANDIS ★</span></div>
-            <p><span class="blink">▶ NOW PLAYING</span> — Thriller (14 min. version)</p>
+            <div class="popup-marquee"><span>★ ESTRENO MUNDIAL ★ MICHAEL JACKSON — THRILLER ★ DIRIGIDO POR JOHN LANDIS ★</span></div>
+            <p><span class="blink">▶ EN REPRODUCCIÓN</span> — Thriller (versión de 14 min.)</p>
         `
     },
     {
-        title: 'Billboard Hot 100 — Oct. 29 1983',
+        title: 'Billboard Hot 100 — 29 Oct 1983',
         html: `
             <p>
                 #1 — <span class="blink">Thriller — Michael Jackson</span><br>
-                #2 — Billy Jean - Michael Jackson<br>
-                #3 — Every breath you take - The Police<br>
-                #4 — Hungry like the wolf — Duran Duran<br>
-                #5 — Girls Just Want to Have Fun - Cindy Lauper
+                #2 — Billie Jean — Michael Jackson<br>
+                #3 — Every Breath You Take — The Police<br>
+                #4 — Hungry Like the Wolf — Duran Duran<br>
+                #5 — Girls Just Want to Have Fun — Cyndi Lauper
             </p>
         `
     },
     {
-        title: 'REWATCH THE SERIES FINALE - M*A*S*H',
+        title: 'REVIVILO — Final de Serie M*A*S*H',
         html: `
             <div class="popup-img-placeholder"><img src="imgs/granada/mash-finale.jpg"></div>
-            <p>TONIGHT on CBS: M*A*S*H series finale<br><span class="blink">121.6 MILLION VIEWERS ALREADY WATCHED IT</span></p>
+            <p>ESTA NOCHE en CBS: Final de serie M*A*S*H<br><span class="blink">121,6 MILLONES DE ESPECTADORES YA LO VIERON</span></p>
         `
     },
     {
-        title: 'Now In Stores',
+        title: 'Ya en Tiendas',
         html: `
             <div class="popup-img-placeholder"><img src="imgs/granada/star-wars.jpeg"></div>
-            <p>Return of the Jedi — Now on VHS!<br><span class="blink">★ At your local video store ★</span></p>
+            <p>El Retorno del Jedi — ¡Ya en VHS!<br><span class="blink">★ En tu videoclub más cercano ★</span></p>
         `
     },
     {
-        title: "You've Got Mail",
+        title: "Tenés un Correo",
         html: `
             <p>
-                From: MTV_Newsletter<br>
-                Subj: <span class="blink">MJ BREAKS RECORDS!</span><br><br>
-                Thriller: 21 weeks at #1.<br>
-                First artist — 5 top-10 singles<br>
-                from a single album. History made.
+                De: MTV_Newsletter<br>
+                Asunto: <span class="blink">¡MJ ROMPE RÉCORDS!</span><br><br>
+                Thriller: 21 semanas en el #1.<br>
+                Primer artista con 5 singles en el top 10<br>
+                de un mismo álbum. La historia fue escrita.
             </p>
         `
     },
     {
-        title: 'Pepsi Challenge — 1983',
+        title: 'El Desafío Pepsi — 1983',
         html: `
             <div class="popup-img-placeholder">
                 <video width="640" height="360" controls autoplay muted loop>
                     <source src="imgs/granada/pepsi.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="popup-marquee"><span>★ THE PEPSI CHALLENGE ★ CAN YOU TELL THE DIFFERENCE? ★</span></div>
-            <p>Michael Jackson signs $5M deal with Pepsi.<br><span class="blink">The choice of a new generation.</span></p>
+            <div class="popup-marquee"><span>★ EL DESAFÍO PEPSI ★ ¿PODÉS NOTAR LA DIFERENCIA? ★</span></div>
+            <p>Michael Jackson firma contrato de $5M con Pepsi.<br><span class="blink">La elección de una nueva generación.</span></p>
         `
     },
     {
-        title: 'Atari 2600 — Holiday 1983',
+        title: '⚡ URGENTE — Beirut, 23 Oct 1983',
         html: `
-            <div class="popup-img-placeholder">[img: Atari 2600 Christmas ad 1983]</div>
-            <p>NEW: Pac-Man for Atari 2600!<br>E.T. The Game — available now.<br><span class="blink">★ The perfect gift ★</span></p>
-        `
+            <div class="popup-marquee"><span>★ URGENTE ★ BEIRUT ★ 241 MARINES EE.UU. MUERTOS ★ ATENTADO SUICIDA ★ 23 OCT 1983 ★</span></div>
+            <p>
+                241 soldados americanos muertos en Beirut.<br>
+                Mayor pérdida en un solo día desde Iwo Jima.<br><br>
+                <span class="blink">48 horas después — Reagan ordena la invasión de Granada.</span><br><br>
+                ¿Coincidencia?
+            </p>
+        `,
+        link: '{ href: "libano.html", texto: "→ LÍBANO 1983" }',
     },
     {
-        title: 'Jane Fonda Workout — VHS',
+        title: 'Ejercicios Jane Fonda — VHS',
         html: `
             <div class="popup-img-placeholder"><img src="imgs/granada/jane-fonda.jpg"></div>
-            <p>Jane Fonda's Workout<br>Best-selling VHS of 1983.<br><span class="blink">Feel the burn!</span></p>
+            <p>Ejercicios con Jane Fonda<br>El VHS más vendido de 1983.<br><span class="blink">¡Sentí el ardor!</span></p>
         `
     },
     {
@@ -80,64 +86,53 @@ const POPUP_POOL = [
                     <source src="imgs/granada/nuggets.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="popup-marquee"><span>★ YOU DESERVE A BREAK TODAY ★ McDONALD'S ★</span></div>
-            <p><span class="blink">Introducing: McNuggets!</span><br>Now at a McDonald's near you.</p>
+            <div class="popup-marquee"><span>★ TE MERECÉS UN DESCANSO HOY ★ McDONALD'S ★</span></div>
+            <p><span class="blink">¡Presentamos: McNuggets!</span><br>Ahora en tu McDonald's más cercano.</p>
         `
     },
     {
-        title: 'Flashdance — Now Playing',
+        title: 'Flashdance — En Cartelera',
         html: `
             <div class="popup-img-placeholder"><img src="imgs/granada/flashdance.jpg"></div>
-            <p>Flashdance (1983)<br>Soundtrack: 6x Platinum<br><span class="blink">What a feeling!</span> — Irene Cara</p>
+            <p>Flashdance (1983)<br>Banda sonora: 6x Platino<br><span class="blink">¡Qué sensación!</span> — Irene Cara</p>
         `
     },
     {
-        title: 'Cabbage Patch Kids — Sold Out!',
+        title: 'Cabbage Patch Kids — ¡Agotado!',
         html: `
-            <div class="popup-img-placeholder">[img: Cabbage Patch Kids ad 1983]</div>
-            <p>Christmas 1983 — Store riots reported.<br>Cabbage Patch Kids: <span class="blink">SOLD OUT nationwide.</span><br>Order now for January delivery.</p>
-        `
-    },
-    {
-        title: 'Sony Walkman — New Model',
-        html: `
-            <div class="popup-img-placeholder">[img: Sony Walkman WM-20 ad 1983]</div>
-            <p>Sony Walkman WM-20<br>Now lighter. Now smaller.<br><span class="blink">Take your music anywhere.</span></p>
-        `
-    },
-    {
-        title: 'Pac-Man Fever!',
-        html: `
-            <div class="popup-img-placeholder">[img: Pac-Man arcade flyer 1983]</div>
-            <div class="popup-marquee"><span>★ PAC-MAN ★ DONKEY KONG ★ FROGGER ★ GALAGA ★ ARCADE HITS ★</span></div>
-            <p>America's #1 obsession.<br><span class="blink">Insert coin to continue.</span></p>
+            <div class="popup-img-placeholder">
+            <video width="640" height="360" controls autoplay muted loop>
+                <source src="imgs/granada/cabbage.mp4" type="video/mp4">
+            </video>
+            </div>
+            <p>Navidad 1983 — Se reportan disturbios en tiendas.<br>Cabbage Patch Kids: <span class="blink">AGOTADO en todo el país.</span><br>Pedí ahora para entrega en enero.</p>
         `
     },
     {
         title: 'Olivia Newton-John — Physical',
         html: `
-            <div class="popup-img-placeholder">[img: Olivia Newton-John Physical music video still]</div>
-            <p>Physical — Olivia Newton-John<br>10 weeks at #1 — still charting.<br><span class="blink">▶ On heavy rotation on MTV</span></p>
+            <div class="popup-img-placeholder">"><img src="imgs/granada/newton.jpg"></div>
+            <p>Physical — Olivia Newton-John<br>10 semanas en el #1 — sigue en los charts.<br><span class="blink">▶ En rotación pesada en MTV</span></p>
         `
     },
 ];
 
-// CABLE FORM — mensajes de error secuenciales
-const CABLE_ERRORS = [
-    "ERROR: Cable box serial not found in our system. Please check the sticker on the back of your unit.",
-    "ERROR: Zip code does not match installation address on file. Contact CableVision at 1-800-CABLEVISION.",
-    "ACCESS DENIED — Your account has been flagged for suspicious activity. You are being redirected.",
+// FORMULARIO DE CABLE — mensajes de error secuenciales
+const ERRORES_CABLE = [
+    "ERROR: Número de serie del decodificador no encontrado en nuestro sistema. Verificá el sticker en la parte trasera del equipo.",
+    "ERROR: El código postal no coincide con el domicilio de instalación registrado. Contactá a CableVision al 1-800-CABLEVISION.",
+    "ACCESO DENEGADO — Tu cuenta fue marcada por actividad sospechosa. Siendo redirigido/a.",
 ];
 
-let cableAttempts = 0;
-let pendingRowData = null;
-let activePopups = [];
+let intentosCable = 0;
+let datosPendientes = null;
+let popupsActivos = [];
 
-// ── CABLE FORM LOGIC ──────────────────────────────────────────────
+// ── LÓGICA DEL FORMULARIO DE CABLE ───────────────────────────────
 
-function openCableForm(rowData) {
-    pendingRowData = rowData;
-    cableAttempts = 0;
+function abrirFormularioCable(datosFila) {
+    datosPendientes = datosFila;
+    intentosCable = 0;
     document.getElementById('cable-error').textContent = '';
     document.getElementById('cf-name').value = '';
     document.getElementById('cf-serial').value = '';
@@ -148,13 +143,13 @@ function openCableForm(rowData) {
 }
 
 document.getElementById('cable-submit').addEventListener('click', () => {
-    cableAttempts++;
+    intentosCable++;
     const errorEl = document.getElementById('cable-error');
 
-    if (cableAttempts < 3) {
-        errorEl.textContent = CABLE_ERRORS[cableAttempts - 1];
+    if (intentosCable < 3) {
+        errorEl.textContent = ERRORES_CABLE[intentosCable - 1];
     } else {
-        errorEl.textContent = CABLE_ERRORS[2];
+        errorEl.textContent = ERRORES_CABLE[2];
         setTimeout(() => {
             document.getElementById('cable-overlay').classList.remove('open');
             if (document.startViewTransition) {
@@ -166,18 +161,33 @@ document.getElementById('cable-submit').addEventListener('click', () => {
     }
 });
 
-// ── POPUP LOGIC ───────────────────────────────────────────────────
+document.getElementById('cable-close').addEventListener('click', () => {
+    document.getElementById('cable-overlay').classList.remove('open');
+    const paises = ['argentina', 'japon', 'corea', 'alemania', 'grecia', 'iran',
+        'guatemala', 'cuba', 'libano', 'siria', 'venezuela', 'pakistan',
+        'irak', 'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait',
+        'republica-dominicana', 'vietnam', 'cambodia', 'laos', 'haiti', 'yemen',
+        'yugoslavia', 'kosovo', 'chile'];
+    const aleatorio = paises[Math.floor(Math.random() * paises.length)];
+    if (document.startViewTransition) {
+        document.startViewTransition(() => { window.location.href = `${aleatorio}.html`; });
+    } else {
+        window.location.href = `${aleatorio}.html`;
+    }
+});
 
-function shuffle(arr) {
+// ── LÓGICA DE POPUPS ──────────────────────────────────────────────
+
+function mezclar(arr) {
     return [...arr].sort(() => Math.random() - 0.5);
 }
 
-function buildPopup(data, position, index) {
+function construirPopup(data, posicion, indice) {
     const div = document.createElement('div');
     div.className = 'popup';
-    div.id = 'popup-dyn-' + index;
-    div.style.top = position.top;
-    div.style.left = position.left;
+    div.id = 'popup-dyn-' + indice;
+    div.style.top = posicion.top;
+    div.style.left = posicion.left;
 
     div.innerHTML = `
         <div class="popup-bar">
@@ -187,17 +197,17 @@ function buildPopup(data, position, index) {
         <div class="popup-content">${data.html}</div>
     `;
 
-    div.querySelector('.popup-close').addEventListener('click', () => closePopup(div, position));
-    makeDraggable(div, position);
+    div.querySelector('.popup-close').addEventListener('click', () => cerrarPopup(div, posicion));
+    hacerArrastrable(div, posicion);
     return div;
 }
 
-function closePopup(el, homePosition) {
+function cerrarPopup(el, posicionInicial) {
     el.classList.remove('visible');
     setTimeout(() => {
         el.classList.add('returning');
-        el.style.top = homePosition.top;
-        el.style.left = homePosition.left;
+        el.style.top = posicionInicial.top;
+        el.style.left = posicionInicial.left;
         el.style.right = 'auto';
         el.style.transform = 'none';
         setTimeout(() => {
@@ -207,14 +217,14 @@ function closePopup(el, homePosition) {
     }, 500);
 }
 
-function makeDraggable(popup, homePosition) {
-    const bar = popup.querySelector('.popup-bar');
-    let dragging = false, sx, sy, ox, oy;
+function hacerArrastrable(popup, posicionInicial) {
+    const barra = popup.querySelector('.popup-bar');
+    let arrastrando = false, sx, sy, ox, oy;
 
-    bar.addEventListener('mousedown', (e) => {
+    barra.addEventListener('mousedown', (e) => {
         if (e.target.classList.contains('popup-close')) return;
         popup.classList.remove('returning');
-        dragging = true;
+        arrastrando = true;
         sx = e.clientX; sy = e.clientY;
         const r = popup.getBoundingClientRect();
         ox = r.left; oy = r.top;
@@ -225,66 +235,66 @@ function makeDraggable(popup, homePosition) {
     });
 
     document.addEventListener('mousemove', (e) => {
-        if (!dragging) return;
+        if (!arrastrando) return;
         popup.style.left = (ox + e.clientX - sx) + 'px';
         popup.style.top = (oy + e.clientY - sy) + 'px';
     });
 
     document.addEventListener('mouseup', () => {
-        if (!dragging) return;
-        dragging = false;
+        if (!arrastrando) return;
+        arrastrando = false;
         popup.classList.add('returning');
-        popup.style.top = homePosition.top;
-        popup.style.left = homePosition.left;
+        popup.style.top = posicionInicial.top;
+        popup.style.left = posicionInicial.left;
         popup.style.right = 'auto';
         popup.style.transform = 'none';
         setTimeout(() => popup.classList.remove('returning'), 600);
     });
 }
 
-function spawnPopups() {
-    activePopups.forEach(p => p.remove());
-    activePopups = [];
+function lanzarPopups() {
+    popupsActivos.forEach(p => p.remove());
+    popupsActivos = [];
 
-    const container = document.getElementById('popup-container');
+    const contenedor = document.getElementById('popup-container');
 
-    const POSITIONS = [
-        { top: '10vh', left: '5vw' },
-        { top: '15vh', left: '55vw' },
-        { top: '40vh', left: '8vw' },
-        { top: '35vh', left: '50vw' },
-        { top: '65vh', left: '15vw' },
-        { top: '60vh', left: '58vw' },
-        { top: '80vh', left: '35vw' },
+    const POSICIONES = [
+        { top: '10vh', left: '2vw' },
+        { top: '10vh', left: '45vw' },
+        { top: '40vh', left: '2vw' },
+        { top: '40vh', left: '45vw' },
+        { top: '68vh', left: '2vw' },
+        { top: '68vh', left: '45vw' },
+        { top: '25vh', left: '25vw' },
     ];
 
-    const selected = shuffle(POPUP_POOL).slice(0, 5);
-    const positions = shuffle(POSITIONS).slice(0, 5);
+    const seleccionados = mezclar(POPUP_POOL).slice(0, 5);
+    const posiciones = mezclar(POSICIONES).slice(0, 5);
 
-    selected.forEach((data, i) => {
-        const popup = buildPopup(data, positions[i], i);
-        container.appendChild(popup);
-        activePopups.push(popup);
+    seleccionados.forEach((data, i) => {
+        const popup = construirPopup(data, posiciones[i], i);
+        contenedor.appendChild(popup);
+        popupsActivos.push(popup);
         setTimeout(() => popup.classList.add('visible'), i * 1000);
     });
 }
 
-// ── ROW CLICK ─────────────────────────────────────────────────────
+// ── CLICK EN RENGLÓN ──────────────────────────────────────────────
 
-function openViewer(rowData) {
-    const { img, audio, caption, label, type } = rowData;
+function abrirVisor(datosFila) {
+    const { img, audio, caption, label, type } = datosFila;
 
     document.getElementById('viewer-label').textContent = '— ' + label + ' —';
     document.getElementById('viewer-caption').textContent = caption;
 
-    const viewer = document.getElementById('viewer');
-    const viewerImg = document.getElementById('viewer-img');
+    const visor = document.getElementById('viewer');
+    const imgVisor = document.getElementById('viewer-img');
     const placeholder = document.getElementById('viewer-placeholder');
 
-    viewer.classList.add('open');
+    visor.classList.add('open');
 
     if (type === 'audio') {
-        viewerImg.style.display = 'none';
+        imgVisor.style.display = 'none';
         placeholder.style.display = 'none';
 
         let audioEl = document.getElementById('viewer-audio');
@@ -293,7 +303,7 @@ function openViewer(rowData) {
             audioEl.id = 'viewer-audio';
             audioEl.controls = true;
             audioEl.style.cssText = 'display:block; margin: 0 auto; width:100%; max-width:800px; margin-top:12px;';
-            viewer.querySelector('.db-container').appendChild(audioEl);
+            visor.querySelector('.db-container').appendChild(audioEl);
         }
         audioEl.src = audio;
         audioEl.style.display = 'block';
@@ -305,63 +315,63 @@ function openViewer(rowData) {
             btn.href = 'cuba.html';
             btn.className = 'next-btn';
             btn.textContent = 'CUBA 1961 →';
-            viewer.querySelector('.db-container').appendChild(btn);
+            visor.querySelector('.db-container').appendChild(btn);
         }
         btn.style.display = 'inline-block';
 
     } else if (img) {
         const audioEl = document.getElementById('viewer-audio');
         if (audioEl) audioEl.style.display = 'none';
-        const nextBtn = document.getElementById('audio-next-btn');
-        if (nextBtn) nextBtn.style.display = 'none';
-        viewerImg.src = img;
-        viewerImg.style.display = 'block';
+        const btnSig = document.getElementById('audio-next-btn');
+        if (btnSig) btnSig.style.display = 'none';
+        imgVisor.src = img;
+        imgVisor.style.display = 'block';
         placeholder.style.display = 'none';
 
     } else {
         const audioEl = document.getElementById('viewer-audio');
         if (audioEl) audioEl.style.display = 'none';
-        const nextBtn = document.getElementById('audio-next-btn');
-        if (nextBtn) nextBtn.style.display = 'none';
-        viewerImg.style.display = 'none';
+        const btnSig = document.getElementById('audio-next-btn');
+        if (btnSig) btnSig.style.display = 'none';
+        imgVisor.style.display = 'none';
         placeholder.style.display = 'flex';
-        placeholder.textContent = '[IMAGE — ' + label + ']';
+        placeholder.textContent = '[IMAGEN — ' + label + ']';
     }
 
-    viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     if (type === 'img' && img) {
-        spawnPopups();
+        lanzarPopups();
     } else {
-        activePopups.forEach(p => p.remove());
-        activePopups = [];
+        popupsActivos.forEach(p => p.remove());
+        popupsActivos = [];
     }
 }
 
-document.querySelectorAll('.db-row').forEach(row => {
-    row.addEventListener('click', () => {
-        document.querySelectorAll('.db-row').forEach(r => r.classList.remove('active'));
-        row.classList.add('active');
+document.querySelectorAll('.db-row').forEach(fila => {
+    fila.addEventListener('click', () => {
+        document.querySelectorAll('.db-row').forEach(f => f.classList.remove('active'));
+        fila.classList.add('active');
 
-        const rowData = {
-            type: row.dataset.type || 'img',
-            img: row.dataset.img,
-            audio: row.dataset.audio,
-            caption: row.dataset.caption,
-            label: row.dataset.label,
+        const datosFila = {
+            type: fila.dataset.type || 'img',
+            img: fila.dataset.img,
+            audio: fila.dataset.audio,
+            caption: fila.dataset.caption,
+            label: fila.dataset.label,
         };
 
         // audio y placeholder: nunca formulario
-        if (rowData.type === 'audio' || !rowData.img) {
-            openViewer(rowData);
+        if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
             return;
         }
 
-        // 50% chance: formulario o popups
+        // 50% de probabilidad: formulario de cable o popups
         if (Math.random() < 0.5) {
-            openCableForm(rowData);
+            abrirFormularioCable(datosFila);
         } else {
-            openViewer(rowData);
+            abrirVisor(datosFila);
         }
     });
 });
