@@ -160,6 +160,11 @@ a {
         letter-spacing: 1px;
     }
 
+#viewer-video {
+    background: #000;
+    min-height: 400px;
+} 
+
 /* POPUPS */
 .popup {
         position: fixed;
