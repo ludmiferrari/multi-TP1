@@ -163,16 +163,10 @@ document.getElementById('cable-submit').addEventListener('click', () => {
 
 document.getElementById('cable-close').addEventListener('click', () => {
     document.getElementById('cable-overlay').classList.remove('open');
-    const paises = ['argentina', 'japon', 'corea', 'alemania', 'grecia', 'iran',
-        'guatemala', 'cuba', 'libano', 'siria', 'venezuela', 'pakistan',
-        'irak', 'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait',
-        'republica-dominicana', 'vietnam', 'cambodia', 'laos', 'haiti', 'yemen',
-        'yugoslavia', 'kosovo', 'chile'];
-    const aleatorio = paises[Math.floor(Math.random() * paises.length)];
     if (document.startViewTransition) {
-        document.startViewTransition(() => { window.location.href = `${aleatorio}.html`; });
+        document.startViewTransition(() => { window.location.href = 'libano.html'; });
     } else {
-        window.location.href = `${aleatorio}.html`;
+        window.location.href = 'libano.html';
     }
 });
 
