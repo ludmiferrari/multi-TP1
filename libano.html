@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paginas.css">
+    <link rel="stylesheet" href="css/telex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Líbano</title>
+</head>
+<body>
+
+    <nav class="nav-tierra">
+        <model-viewer
+            src="earth/scene.gltf"
+            camera-controls
+            auto-rotate
+            interaction-prompt="none"
+            shadow-intensity="1"
+            environment-image="neutral"
+            exposure="1">
+        </model-viewer>
+    </nav>
+
+    <div class="page-header">
+        <div class="label">Intervención Militar EE.UU.</div>
+        <h1>Líbano — 1982–1984</h1>
+        <div class="meta">Fuerza Multinacional en el Líbano &nbsp;/&nbsp; 1982–1984 &nbsp;/&nbsp; Beirut &nbsp;/&nbsp; Apoyo a ocupación israelí</div>
+    </div>
+
+    <div class="db-container">
+        <div class="db-cols">
+            <span>Fuente</span>
+            <span>Tipo</span>
+            <span>Fecha</span>
+            <span>Descripción</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/libano/marines.jpg" data-caption="Marines estadounidenses desembarcan en Beirut, agosto de 1982." data-label="AP WIRE FOTO — Desembarco Marines">
+            <span class="source">Associated Press</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">AGO 1982</span>
+            <span class="desc">Marines estadounidenses desembarcan en Beirut como parte de la FMN</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/libano/masacre.jpg" data-caption="Masacre de Sabra y Chatila — 16 al 18 de septiembre de 1982. Milicias falangistas, con cobertura israelí, asesinan entre 800 y 3.500 civiles palestinos." data-label="FOTOGRAFÍA — Sabra y Chatila">
+            <span class="source">Associated Press / Magnum Photos</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">18 SEP 1982</span>
+            <span class="desc">Masacre de Sabra y Chatila — entre 800 y 3.500 civiles asesinados</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/libano/memorial.jpg" data-caption="Reagan anuncia la retirada de los Marines de Beirut, febrero de 1984." data-label="CASA BLANCA — Retirada de Beirut">
+            <span class="source">Casa Blanca / NBC</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">7 FEB 1984</span>
+            <span class="desc">Reagan anuncia retirada — llamada "redisplieguie", no retirada</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/libano/amnistia.jpg" data-caption="investigación uregente a Ariel Sharon como responsable indirecto de la masacre de Sabra y Chatila." data-label="AMNISTIA INTERNACIONAL - TRIBUNAL  JUDICIAL">
+            <span class="source">Amnistia Internacional</span>
+            <span class="type">DOCUMENTO</span>
+            <span class="date"> 3 OCT 2001</span>
+            <span class="desc">Ariel Sharon declarado responsable indirecto de la masacre</span>
+        </div>
+
+        <div class="db-row" data-img="" data-caption="Portada Time" data-label="Time Magazine - Masacre en Beirut">
+            <span class="source">TIME</span>
+            <span class="type">TAPA DE REVISTA</span>
+            <span class="date">31 OCT 1983</span>
+            <span class="desc">EE.UU. sabía de presencia de milicias en los campos antes de la masacre</span>
+        </div>
+
+        <div class="db-row" data-type="audio" data-audio="imgs/libano/reagan-beirut.mp3" data-caption="Discurso de Reagan sobre el atentado en Beirut — 23 de octubre de 1983 [grabación desclasificada]" data-label="REAGAN — Discurso Beirut 23 Oct">
+            <span class="source">Casa Blanca / Archivo Nacional</span>
+            <span class="type">AUDIO</span>
+            <span class="date">23 OCT 1983</span>
+            <span class="desc">Reagan anuncia el atentado — mismo día que planifica la invasión de Granada</span>
+        </div>
+    </div>
+
+    <div class="viewer" id="viewer">
+        <div class="db-container" style="padding-top:0">
+            <div class="viewer-header" id="viewer-label">— ELEGÍ UN ARCHIVO —</div>
+            <div class="viewer-placeholder" id="viewer-placeholder">[IMAGEN NO DISPONIBLE]</div>
+            <img class="viewer-img" id="viewer-img" src="" alt="" style="display:none">
+            <div class="viewer-caption" id="viewer-caption"></div>
+        </div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <!-- PANTALLA DE TELEX -->
+    <div class="telex-overlay" id="telex-overlay">
+        <div class="telex-box">
+            <div class="telex-bar">
+                <span>AP TELEX — BEIRUT BUREAU</span>
+                <span id="telex-hora">23:47 LOCAL</span>
+            </div>
+            <div class="telex-header">
+                <div>SERVICIO DE PRENSA ASOCIADA &nbsp;/&nbsp; DESPACHO URGENTE</div>
+                <div class="telex-meta" id="telex-meta">DE: BEIRUT &nbsp;/&nbsp; PARA: NUEVA YORK &nbsp;/&nbsp; PRIORIDAD: URGENTE</div>
+            </div>
+            <div class="telex-body">
+                <div class="telex-noise"></div>
+                <div class="telex-text" id="telex-text"></div>
+                <span class="telex-cursor" id="telex-cursor"></span>
+            </div>
+            <div class="telex-status ok" id="telex-status">— TRANSMITIENDO —</div>
+        </div>
+    </div>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+    <script src="js/pop-ups-libano.js"></script>
+    <script src="js/random-pais.js"></script>
+    <script src="js/tierra.js"></script>
+</body>
+</html>

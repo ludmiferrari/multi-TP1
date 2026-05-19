@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/paginas.css">
-    <link rel="stylesheet" href="css/japon-interrupcion.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>Vietnam</title>
 </head>
@@ -70,102 +69,6 @@
 
     <div id="popup-container"></div>
 
-    <!-- TRANSLATION SCREEN OVERLAY -->
-    <div class="japon-overlay" id="translation-overlay">
-        <div class="translation-box">
-            <div class="translation-bar">
-                <span>SCAP Translation Bureau — Tokyo</span>
-                <span>GHQ/SCAP 1947</span>
-            </div>
-            <div class="translation-body">
-                <div class="t-label">Document Translation in Progress</div>
-                <div class="t-japanese" id="t-japanese">占領期間</div>
-                <div class="t-status">Status: <span id="t-status-text">Initializing...</span></div>
-                <div class="t-bar-wrap">
-                    <div class="t-bar-fill" id="t-bar-fill"></div>
-                </div>
-                <div class="t-percent" id="t-percent">0%</div>
-                <div class="t-log" id="t-log">
-                    <div class="t-log-line" id="tlog-1">— Loading character set...</div>
-                    <div class="t-log-line" id="tlog-2">— Detecting document language...</div>
-                    <div class="t-log-line" id="tlog-3">— Cross-referencing SCAP glossary...</div>
-                    <div class="t-log-line" id="tlog-4">— Applying censorship filters...</div>
-                    <div class="t-log-line" id="tlog-5">— Verifying security clearance...</div>
-                    <div class="t-log-line" id="tlog-6">— Translation complete. Preparing output...</div>
-                    <div class="t-log-line error" id="tlog-7" style="display:none">— ERROR: Output flagged. Restarting process.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CONFISCATION NOTICE OVERLAY -->
-    <div class="japon-overlay" id="confiscation-overlay">
-        <div class="confiscation-box">
-            <div class="confiscation-bar">
-                <span>Supreme Commander Allied Powers — GHQ Tokyo</span>
-                <span>SCAP/CCD</span>
-            </div>
-            <div class="confiscation-body">
-
-                <div class="conf-header">
-                    <div class="conf-seal">★</div>
-                    <div class="conf-agency">Supreme Commander for the Allied Powers &nbsp;/&nbsp; Civil Censorship Detachment</div>
-                    <h2>Notice of Material Confiscation</h2>
-                    <div class="conf-doc">Form CCD-7 &nbsp;/&nbsp; Revised October 1946 &nbsp;/&nbsp; GHQ Tokyo</div>
-                </div>
-
-                <div class="conf-body-text">
-                    Pursuant to <strong>SCAPIN-33</strong> (Press Code for Japan, September 19, 1945) and <strong>SCAPIN-16</strong> (Removal of Restrictions on Freedom of Thought), the material requested by the above-named party has been identified as containing content in violation of Allied Occupation directives and has been <strong>confiscated and placed under restricted access</strong> by order of the Civil Censorship Detachment, GHQ/SCAP.
-                </div>
-
-                <div class="conf-field-row">
-                    <div class="conf-field">
-                        <label>Confiscation Order No.</label>
-                        <div class="conf-value" id="conf-order-no">CCD-<span id="conf-order-num">——</span></div>
-                    </div>
-                    <div class="conf-field">
-                        <label>Date of Confiscation</label>
-                        <div class="conf-value" id="conf-date">——</div>
-                    </div>
-                </div>
-
-                <div class="conf-field">
-                    <label>Material Description</label>
-                    <div class="conf-value" id="conf-material">——</div>
-                </div>
-
-                <div class="conf-field">
-                    <label>Grounds for Confiscation</label>
-                    <div class="conf-value" id="conf-grounds">——</div>
-                </div>
-
-                <div class="conf-section-title">Applicable Directives</div>
-
-                <div class="conf-articles">
-                    Article 2(d) — Material that may disturb public tranquility.<br>
-                    Article 4(a) — Criticism, direct or implied, of Allied Forces or SCAP.<br>
-                    Article 4(f) — References to <span class="conf-redacted">atomic bomb casualties or effects</span> not approved by CCD.<br>
-                    Article 6(b) — Content deemed prejudicial to the objectives of the Allied Occupation.<br>
-                    Article 9 — Material originating from or relating to <span class="conf-redacted">suppressed organizations</span>.
-                </div>
-
-                <div class="conf-section-title">Right of Appeal</div>
-
-                <div class="conf-appeal">
-                    The affected party may submit a formal appeal to the Civil Censorship Detachment, Attention: Review Board, GHQ Building 8, Tokyo. Appeals must be submitted in writing within 14 calendar days of this notice. Processing time: <strong>180 business days</strong>. The CCD's decision on appeal is final and not subject to further review. Submission of an appeal does not guarantee return of confiscated materials.
-                </div>
-
-                <div class="conf-stamp">CONFISCATED</div>
-
-                <div class="conf-redirect-msg" id="conf-redirect-msg"></div>
-
-                <div class="conf-fine-print">
-                    This notice is issued under the authority of General Douglas MacArthur, Supreme Commander for the Allied Powers. Interference with confiscation proceedings constitutes a violation of Occupation law and may result in arrest by Military Police. All confiscated materials become property of GHQ/SCAP and will not be returned unless ordered by the Review Board. This document must be retained by the recipient for a period of not less than three years.
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
     <script src="js/pop-ups-vietnam.js"></script>
