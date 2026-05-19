@@ -16,6 +16,18 @@ body {
     min-height: 100vh;
     }
 
+a {
+    display:inline-block;
+    margin-top:10px;
+    color:#c1121f;
+    border:1px solid #c1121f;
+    padding:6px 14px;
+    font-size:0.72rem;
+    letter-spacing:2px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
 .nav-tierra {
         display: flex;
         justify-content: center;

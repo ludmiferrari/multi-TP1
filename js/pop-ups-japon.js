@@ -1,118 +1,118 @@
 // POOL DE DISTRACTORES — Japón 1945–1952
-// Ocupación americana: Hollywood, Pachinko, baseball, moda estadounidense,
+// Ocupación americana: Hollywood, Pachinko, béisbol, moda estadounidense,
 // hula-hoops, revistas, electrodomésticos, cultura pop
 
 const POPUP_POOL = [
     {
-        title: "Hollywood Comes to Japan",
+        title: "Hollywood llega a Japón",
         html: `
-            <div class="popup-img-placeholder">[img: Gone With the Wind Japanese poster 1952 re-release]</div>
-            <div class="popup-marquee"><span>★ NOW SCREENING IN TOKYO ★ GONE WITH THE WIND ★ APPROVED BY SCAP ★</span></div>
-            <p>American cinema approved by GHQ.<br><span class="blink">Now at the Hibiya Theater — Tokyo</span></p>
+            <div class="popup-img-placeholder">[img: afiche japonés Lo que el viento se llevó 1952]</div>
+            <div class="popup-marquee"><span>★ EN CARTELERA EN TOKIO ★ LO QUE EL VIENTO SE LLEVÓ ★ APROBADO POR SCAP ★</span></div>
+            <p>Cine americano aprobado por GHQ.<br><span class="blink">Ahora en el Teatro Hibiya — Tokio</span></p>
         `
     },
     {
-        title: "Baseball — Occupation League",
+        title: "Béisbol — Liga de Ocupación",
         html: `
-            <div class="popup-img-placeholder">[img: American soldiers playing baseball in Japan 1946]</div>
+            <div class="popup-img-placeholder">[img: soldados americanos jugando béisbol en Japón 1946]</div>
             <p>
-                American Baseball comes to Japan!<br>
-                GHQ promotes national league.<br>
+                ¡El béisbol americano llega a Japón!<br>
+                GHQ promueve la liga nacional.<br>
                 <span class="blink">★ Yomiuri Giants vs. Osaka Tigers ★</span><br>
-                Sunday — Korakuen Stadium, Tokyo
+                Domingo — Estadio Korakuen, Tokio
             </p>
         `
     },
     {
-        title: "Pachinko — Now Open",
+        title: "Pachinko — Ahora Abierto",
         html: `
-            <div class="popup-img-placeholder">[img: Pachinko parlor neon sign Tokyo 1948]</div>
-            <div class="popup-marquee"><span>★ PACHINKO ★ パチンコ ★ OPEN 24HRS ★ GINZA ★</span></div>
-            <p>Tokyo's newest entertainment.<br><span class="blink">10 yen per play — Ginza district</span></p>
+            <div class="popup-img-placeholder">[img: cartel neón sala de pachinko Tokio 1948]</div>
+            <div class="popup-marquee"><span>★ PACHINKO ★ パチンコ ★ ABIERTO 24HS ★ GINZA ★</span></div>
+            <p>El entretenimiento más nuevo de Tokio.<br><span class="blink">10 yenes por jugada — Ginza</span></p>
         `
     },
     {
-        title: "Life Magazine — Japan Issue",
+        title: "Revista LIFE — Edición Japón",
         html: `
-            <div class="popup-img-placeholder">[img: LIFE Magazine Japan issue cover 1946]</div>
+            <div class="popup-img-placeholder">[img: tapa revista LIFE edición Japón 1946]</div>
             <p>
-                LIFE Magazine — Japan Special Issue<br>
-                "The New Japan: Rebuilding Under MacArthur"<br>
-                <span class="blink">On newsstands now — 10¢</span>
+                Revista LIFE — Edición Especial Japón<br>
+                "El Nuevo Japón: Reconstrucción bajo MacArthur"<br>
+                <span class="blink">En kioscos ahora — 10¢</span>
             </p>
         `
     },
     {
-        title: "Coca-Cola — Now in Japan",
+        title: "Coca-Cola — Ahora en Japón",
         html: `
-            <div class="popup-img-placeholder">[img: Coca-Cola ad Japan 1946 — GI handing bottle to child]</div>
-            <div class="popup-marquee"><span>★ COCA-COLA ★ THE TASTE OF AMERICA ★ NOW IN JAPAN ★</span></div>
-            <p>Brought to Japan by American forces.<br><span class="blink">Refreshing. Familiar. American.</span></p>
+            <div class="popup-img-placeholder">[img: publicidad Coca-Cola Japón 1946 — soldado le da botella a niño]</div>
+            <div class="popup-marquee"><span>★ COCA-COLA ★ EL SABOR DE AMERICA ★ AHORA EN JAPÓN ★</span></div>
+            <p>Traída a Japón por las fuerzas americanas.<br><span class="blink">Refrescante. Familiar. Americana.</span></p>
         `
     },
     {
-        title: "American Fashion — Mitsukoshi",
+        title: "Moda Americana — Mitsukoshi",
         html: `
-            <div class="popup-img-placeholder">[img: American-style fashion ad Japan 1950]</div>
+            <div class="popup-img-placeholder">[img: publicidad moda estilo americano Japón 1950]</div>
             <p>
-                Mitsukoshi Department Store — Tokyo<br>
-                New American-style collection:<br>
-                Nylon stockings, poodle skirts, saddle shoes.<br>
-                <span class="blink">The modern woman — American style.</span>
+                Tienda Mitsukoshi — Tokio<br>
+                Nueva colección estilo americano:<br>
+                Medias de nylón, faldas de caniche, zapatos saddle.<br>
+                <span class="blink">La mujer moderna — estilo americano.</span>
             </p>
         `
     },
     {
-        title: "Hula Hoop Craze — 1950",
+        title: "Furor del Hula-Hoop — 1950",
         html: `
-            <div class="popup-img-placeholder">[img: Children with hula hoops Tokyo street 1950]</div>
+            <div class="popup-img-placeholder">[img: niños con hula-hoops en calle de Tokio 1950]</div>
             <p>
-                The American hula hoop craze<br>
-                reaches Japanese schoolyards.<br>
-                <span class="blink">★ 25 million sold in 4 months ★</span>
+                El furor del hula-hoop americano<br>
+                llega a los patios de las escuelas japonesas.<br>
+                <span class="blink">★ 25 millones vendidos en 4 meses ★</span>
             </p>
         `
     },
     {
-        title: "GE Appliances — Now Available",
+        title: "Electrodomésticos GE — Ya Disponibles",
         html: `
-            <div class="popup-img-placeholder">[img: GE refrigerator ad Japan 1948]</div>
-            <div class="popup-marquee"><span>★ GENERAL ELECTRIC ★ THE AMERICAN KITCHEN ★ NOW IN JAPAN ★</span></div>
-            <p>GE refrigerators and washing machines.<br>Now available through PX stores.<br><span class="blink">Live the American way.</span></p>
+            <div class="popup-img-placeholder">[img: publicidad heladera GE Japón 1948]</div>
+            <div class="popup-marquee"><span>★ GENERAL ELECTRIC ★ LA COCINA AMERICANA ★ AHORA EN JAPÓN ★</span></div>
+            <p>Heladeras y lavarropas GE.<br>Disponibles en tiendas PX.<br><span class="blink">Viví a la americana.</span></p>
         `
     },
     {
-        title: "Frank Sinatra — Tokyo Concert",
+        title: "Frank Sinatra — Concierto en Tokio",
         html: `
-            <div class="popup-img-placeholder">[img: Frank Sinatra concert poster Japan 1950]</div>
+            <div class="popup-img-placeholder">[img: afiche concierto Frank Sinatra Japón 1950]</div>
             <p>
                 Frank Sinatra<br>
-                Live at Ernie Pyle Theater, Tokyo<br>
-                <span class="blink">★ Presented by USO ★</span><br>
-                For Allied personnel and guests only.
+                En vivo en el Teatro Ernie Pyle, Tokio<br>
+                <span class="blink">★ Presentado por USO ★</span><br>
+                Solo para personal aliado e invitados.
             </p>
         `
     },
     {
-        title: "Stars and Stripes — Daily News",
+        title: "Stars and Stripes — Noticias Diarias",
         html: `
-            <div class="popup-img-placeholder">[img: Stars and Stripes newspaper Japan edition 1946]</div>
+            <div class="popup-img-placeholder">[img: diario Stars and Stripes edición Japón 1946]</div>
             <p>
-                Stars and Stripes — Pacific Edition<br>
-                Your daily news from home.<br>
-                <span class="blink">MacArthur: "Japan's recovery on track."</span><br>
-                Available at all PX locations.
+                Stars and Stripes — Edición Pacífico<br>
+                Las noticias de tu país, todos los días.<br>
+                <span class="blink">MacArthur: "La recuperación de Japón va bien."</span><br>
+                Disponible en todos los puestos PX.
             </p>
         `
     },
     {
-        title: "Chesterfield Cigarettes",
+        title: "Cigarrillos Chesterfield",
         html: `
-            <div class="popup-img-placeholder">[img: Chesterfield cigarettes ad 1948 — soldier in Japan]</div>
+            <div class="popup-img-placeholder">[img: publicidad Chesterfield 1948 — soldado en Japón]</div>
             <p>
-                Chesterfield — America's favorite.<br>
-                "They Satisfy."<br>
-                <span class="blink">Available at PX stores throughout Japan.</span>
+                Chesterfield — el favorito de América.<br>
+                "Satisfacen."<br>
+                <span class="blink">Disponibles en tiendas PX en todo Japón.</span>
             </p>
         `
     },
@@ -129,51 +129,51 @@ const POPUP_POOL = [
         `
     },
     {
-        title: "Levi's Jeans — PX Special",
+        title: "Jeans Levi's — Especial PX",
         html: `
-            <div class="popup-img-placeholder">[img: Levi's jeans ad 1949 — American GI in Japan]</div>
+            <div class="popup-img-placeholder">[img: publicidad Levi's 1949 — soldado americano en Japón]</div>
             <p>
                 Levi Strauss & Co.<br>
-                Original American denim.<br>
-                <span class="blink">Now traded on Tokyo black market — $40/pair.</span>
+                Denim americano original.<br>
+                <span class="blink">Ahora en mercado negro de Tokio — $40 el par.</span>
             </p>
         `
     },
     {
-        title: "Reader's Digest — Japan Edition",
+        title: "Reader's Digest — Edición Japón",
         html: `
-            <div class="popup-img-placeholder">[img: Reader's Digest Japan edition cover 1947]</div>
-            <div class="popup-marquee"><span>★ READER'S DIGEST ★ CONDENSED FOR BUSY PEOPLE ★ APPROVED BY GHQ ★</span></div>
-            <p>First foreign magazine approved by SCAP.<br><span class="blink">On sale at all Allied newsstands.</span></p>
+            <div class="popup-img-placeholder">[img: tapa Reader's Digest edición Japón 1947]</div>
+            <div class="popup-marquee"><span>★ READER'S DIGEST ★ RESUMIDO PARA GENTE OCUPADA ★ APROBADO POR GHQ ★</span></div>
+            <p>Primera revista extranjera aprobada por SCAP.<br><span class="blink">A la venta en todos los kioscos aliados.</span></p>
         `
     },
     {
-        title: "MacArthur — Man of the Year",
+        title: "MacArthur — Hombre del Año",
         html: `
-            <div class="popup-img-placeholder">[img: Time Magazine MacArthur Man of the Year 1950]</div>
+            <div class="popup-img-placeholder">[img: tapa TIME Magazine MacArthur Hombre del Año 1950]</div>
             <p>
-                TIME Magazine<br>
-                Man of the Year: Gen. Douglas MacArthur<br>
-                <span class="blink">"The Liberator of Japan."</span><br>
-                January 1951 issue — 15¢
+                Revista TIME<br>
+                Hombre del Año: Gral. Douglas MacArthur<br>
+                <span class="blink">"El Libertador de Japón."</span><br>
+                Edición enero 1951 — 15¢
             </p>
         `
     },
 ];
 
-// Países para redirect random (excluyendo japon)
+// Países para redireccionamiento random (excluyendo japón)
 const PAISES = ['argentina', 'corea', 'alemania', 'grecia', 'iran', 'guatemala',
     'cuba', 'libano', 'siria', 'venezuela', 'granada', 'pakistan', 'irak',
     'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait',
     'republica-dominicana', 'vietnam', 'cambodia', 'laos', 'haiti', 'yemen',
     'yugoslavia', 'kosovo', 'chile'];
 
-function randomPais() {
+function paisAleatorio() {
     return PAISES[Math.floor(Math.random() * PAISES.length)];
 }
 
-function redirectRandom() {
-    const pais = randomPais();
+function redirigirAleatorio() {
+    const pais = paisAleatorio();
     if (document.startViewTransition) {
         document.startViewTransition(() => { window.location.href = `${pais}.html`; });
     } else {
@@ -181,156 +181,147 @@ function redirectRandom() {
     }
 }
 
-let activePopups = [];
-let translationInterval = null;
-let currentRowLabel = '';
+let popupsActivos = [];
+let intervaloTraduccion = null;
 
-// ── TRANSLATION SCREEN ────────────────────────────────────────────
+// ── PANTALLA DE TRADUCCIÓN ────────────────────────────────────────
 
-const JAPANESE_PHRASES = ['占領期間', '検閲', '原子爆弾', '降伏文書', '連合国軍', '秘密文書'];
-const LOG_MESSAGES = [
-    '— Loading character set...',
-    '— Detecting document language...',
-    '— Cross-referencing SCAP glossary...',
-    '— Applying censorship filters...',
-    '— Verifying security clearance...',
-    '— Translation complete. Preparing output...',
+const FRASES_JAPONESAS = ['占領期間', '検閲', '原子爆弾', '降伏文書', '連合国軍', '秘密文書'];
+const MENSAJES_LOG = [
+    '— Cargando conjunto de caracteres...',
+    '— Detectando idioma del documento...',
+    '— Cotejando con glosario SCAP...',
+    '— Aplicando filtros de censura...',
+    '— Verificando habilitación de seguridad...',
+    '— Traducción completa. Preparando salida...',
 ];
 
-function openTranslation() {
+function abrirTraduccion() {
     document.getElementById('translation-overlay').classList.add('open');
-    runTranslationLoop();
+    ejecutarBucleTraduccion();
 }
 
-function runTranslationLoop() {
-    let percent = 0;
-    let logStep = 0;
+function ejecutarBucleTraduccion() {
+    let porcentaje = 0;
+    let pasoLog = 0;
 
-    // reset
     document.getElementById('t-bar-fill').style.width = '0%';
     document.getElementById('t-percent').textContent = '0%';
-    document.getElementById('t-status-text').textContent = 'Initializing...';
+    document.getElementById('t-status-text').textContent = 'Inicializando...';
     document.getElementById('tlog-7').style.display = 'none';
     for (let i = 1; i <= 6; i++) {
         document.getElementById('tlog-' + i).classList.remove('active');
     }
 
-    // random japanese phrase
     document.getElementById('t-japanese').textContent =
-        JAPANESE_PHRASES[Math.floor(Math.random() * JAPANESE_PHRASES.length)];
+        FRASES_JAPONESAS[Math.floor(Math.random() * FRASES_JAPONESAS.length)];
 
-    if (translationInterval) clearInterval(translationInterval);
+    if (intervaloTraduccion) clearInterval(intervaloTraduccion);
 
-    translationInterval = setInterval(() => {
-        percent += Math.random() * 3 + 0.5;
+    intervaloTraduccion = setInterval(() => {
+        porcentaje += Math.random() * 3 + 0.5;
+        if (porcentaje > 99) porcentaje = 99;
 
-        if (percent > 99) percent = 99;
+        document.getElementById('t-bar-fill').style.width = porcentaje + '%';
+        document.getElementById('t-percent').textContent = Math.floor(porcentaje) + '%';
 
-        document.getElementById('t-bar-fill').style.width = percent + '%';
-        document.getElementById('t-percent').textContent = Math.floor(percent) + '%';
-
-        // activate log lines progressively
-        const step = Math.floor((percent / 99) * 6);
-        if (step > logStep && step <= 6) {
-            logStep = step;
-            document.getElementById('tlog-' + logStep).classList.add('active');
-            document.getElementById('t-status-text').textContent = LOG_MESSAGES[logStep - 1].replace('— ', '');
+        const paso = Math.floor((porcentaje / 99) * 6);
+        if (paso > pasoLog && paso <= 6) {
+            pasoLog = paso;
+            document.getElementById('tlog-' + pasoLog).classList.add('active');
+            document.getElementById('t-status-text').textContent = MENSAJES_LOG[pasoLog - 1].replace('— ', '');
         }
 
-        // when reaching 99, restart
-        if (percent >= 99) {
-            clearInterval(translationInterval);
+        if (porcentaje >= 99) {
+            clearInterval(intervaloTraduccion);
             setTimeout(() => {
                 document.getElementById('tlog-7').style.display = 'block';
-                document.getElementById('t-status-text').textContent = 'ERROR — Restarting...';
-
+                document.getElementById('t-status-text').textContent = 'ERROR — Reiniciando...';
                 setTimeout(() => {
-                    // after 2 restarts, redirect
-                    runTranslationLoopFinal();
+                    ejecutarBucleTraduccionFinal();
                 }, 2000);
             }, 800);
         }
     }, 120);
 }
 
-function runTranslationLoopFinal() {
-    let percent = 0;
+function ejecutarBucleTraduccionFinal() {
+    let porcentaje = 0;
     document.getElementById('t-bar-fill').style.width = '0%';
     document.getElementById('t-percent').textContent = '0%';
     document.getElementById('tlog-7').style.display = 'none';
-    document.getElementById('t-status-text').textContent = 'Reinitializing...';
+    document.getElementById('t-status-text').textContent = 'Reinicializando...';
     for (let i = 1; i <= 6; i++) {
         document.getElementById('tlog-' + i).classList.remove('active');
     }
 
-    translationInterval = setInterval(() => {
-        percent += Math.random() * 4 + 1;
-        if (percent > 99) percent = 99;
+    intervaloTraduccion = setInterval(() => {
+        porcentaje += Math.random() * 4 + 1;
+        if (porcentaje > 99) porcentaje = 99;
 
-        document.getElementById('t-bar-fill').style.width = percent + '%';
-        document.getElementById('t-percent').textContent = Math.floor(percent) + '%';
+        document.getElementById('t-bar-fill').style.width = porcentaje + '%';
+        document.getElementById('t-percent').textContent = Math.floor(porcentaje) + '%';
 
-        if (percent >= 99) {
-            clearInterval(translationInterval);
+        if (porcentaje >= 99) {
+            clearInterval(intervaloTraduccion);
             document.getElementById('tlog-7').style.display = 'block';
-            document.getElementById('t-status-text').textContent = 'ACCESS DENIED — REDIRECTING';
+            document.getElementById('t-status-text').textContent = 'ACCESO DENEGADO — REDIRIGIENDO';
 
             setTimeout(() => {
                 document.getElementById('translation-overlay').classList.remove('open');
-                redirectRandom();
+                redirigirAleatorio();
             }, 2000);
         }
     }, 100);
 }
 
-// ── CONFISCATION NOTICE ───────────────────────────────────────────
+// ── AVISO DE CONFISCACIÓN ─────────────────────────────────────────
 
-const CONFISCATION_GROUNDS = [
-    "Content references atomic bomb casualties — prohibited under Article 4(f) SCAPIN-33.",
-    "Material critical of Allied Occupation policy — prohibited under Article 4(a) SCAPIN-33.",
-    "Document contains suppressed testimony from civilian population — Article 2(d).",
-    "References to pre-Occupation Japanese government — Article 6(b) SCAPIN-33.",
-    "Material originated from organization on SCAP prohibited list — Article 9.",
+const MOTIVOS_CONFISCACION = [
+    "El contenido hace referencia a bajas de la bomba atómica — prohibido bajo el Artículo 4(f) SCAPIN-33.",
+    "Material crítico de la política de Ocupación Aliada — prohibido bajo el Artículo 4(a) SCAPIN-33.",
+    "El documento contiene testimonios suprimidos de la población civil — Artículo 2(d).",
+    "Referencias al gobierno japonés de pre-Ocupación — Artículo 6(b) SCAPIN-33.",
+    "Material originado en organización de la lista prohibida del SCAP — Artículo 9.",
 ];
 
-function openConfiscation(label) {
-    const orderNum = Math.floor(Math.random() * 90000) + 10000;
-    const grounds = CONFISCATION_GROUNDS[Math.floor(Math.random() * CONFISCATION_GROUNDS.length)];
+function abrirConfiscacion(etiqueta) {
+    const numeroOrden = Math.floor(Math.random() * 90000) + 10000;
+    const motivo = MOTIVOS_CONFISCACION[Math.floor(Math.random() * MOTIVOS_CONFISCACION.length)];
 
-    document.getElementById('conf-order-num').textContent = orderNum;
-    document.getElementById('conf-date').textContent = 'October 1946 — Tokyo';
-    document.getElementById('conf-material').textContent = label;
-    document.getElementById('conf-grounds').textContent = grounds;
+    document.getElementById('conf-order-num').textContent = numeroOrden;
+    document.getElementById('conf-date').textContent = 'Octubre 1946 — Tokio';
+    document.getElementById('conf-material').textContent = etiqueta;
+    document.getElementById('conf-grounds').textContent = motivo;
     document.getElementById('conf-redirect-msg').textContent = '';
 
     document.getElementById('confiscation-overlay').classList.add('open');
 
-    // auto-redirect after 8 seconds
-    let countdown = 8;
-    const countInterval = setInterval(() => {
-        countdown--;
+    let cuenta = 8;
+    const intervaloContador = setInterval(() => {
+        cuenta--;
         document.getElementById('conf-redirect-msg').textContent =
-            `Redirecting in ${countdown}s...`;
-        if (countdown <= 0) {
-            clearInterval(countInterval);
+            `Redirigiendo en ${cuenta}s...`;
+        if (cuenta <= 0) {
+            clearInterval(intervaloContador);
             document.getElementById('confiscation-overlay').classList.remove('open');
-            redirectRandom();
+            redirigirAleatorio();
         }
     }, 1000);
 }
 
-// ── POPUP LOGIC ───────────────────────────────────────────────────
+// ── LÓGICA DE POPUPS ──────────────────────────────────────────────
 
-function shuffle(arr) {
+function mezclar(arr) {
     return [...arr].sort(() => Math.random() - 0.5);
 }
 
-function buildPopup(data, position, index) {
+function construirPopup(data, posicion, indice) {
     const div = document.createElement('div');
     div.className = 'popup';
-    div.id = 'popup-dyn-' + index;
-    div.style.top = position.top;
-    div.style.left = position.left;
+    div.id = 'popup-dyn-' + indice;
+    div.style.top = posicion.top;
+    div.style.left = posicion.left;
 
     div.innerHTML = `
         <div class="popup-bar">
@@ -340,17 +331,17 @@ function buildPopup(data, position, index) {
         <div class="popup-content">${data.html}</div>
     `;
 
-    div.querySelector('.popup-close').addEventListener('click', () => closePopup(div, position));
-    makeDraggable(div, position);
+    div.querySelector('.popup-close').addEventListener('click', () => cerrarPopup(div, posicion));
+    hacerArrastrable(div, posicion);
     return div;
 }
 
-function closePopup(el, homePosition) {
+function cerrarPopup(el, posicionInicial) {
     el.classList.remove('visible');
     setTimeout(() => {
         el.classList.add('returning');
-        el.style.top = homePosition.top;
-        el.style.left = homePosition.left;
+        el.style.top = posicionInicial.top;
+        el.style.left = posicionInicial.left;
         el.style.right = 'auto';
         el.style.transform = 'none';
         setTimeout(() => {
@@ -360,14 +351,14 @@ function closePopup(el, homePosition) {
     }, 500);
 }
 
-function makeDraggable(popup, homePosition) {
-    const bar = popup.querySelector('.popup-bar');
-    let dragging = false, sx, sy, ox, oy;
+function hacerArrastrable(popup, posicionInicial) {
+    const barra = popup.querySelector('.popup-bar');
+    let arrastrando = false, sx, sy, ox, oy;
 
-    bar.addEventListener('mousedown', (e) => {
+    barra.addEventListener('mousedown', (e) => {
         if (e.target.classList.contains('popup-close')) return;
         popup.classList.remove('returning');
-        dragging = true;
+        arrastrando = true;
         sx = e.clientX; sy = e.clientY;
         const r = popup.getBoundingClientRect();
         ox = r.left; oy = r.top;
@@ -378,66 +369,66 @@ function makeDraggable(popup, homePosition) {
     });
 
     document.addEventListener('mousemove', (e) => {
-        if (!dragging) return;
+        if (!arrastrando) return;
         popup.style.left = (ox + e.clientX - sx) + 'px';
         popup.style.top = (oy + e.clientY - sy) + 'px';
     });
 
     document.addEventListener('mouseup', () => {
-        if (!dragging) return;
-        dragging = false;
+        if (!arrastrando) return;
+        arrastrando = false;
         popup.classList.add('returning');
-        popup.style.top = homePosition.top;
-        popup.style.left = homePosition.left;
+        popup.style.top = posicionInicial.top;
+        popup.style.left = posicionInicial.left;
         popup.style.right = 'auto';
         popup.style.transform = 'none';
         setTimeout(() => popup.classList.remove('returning'), 600);
     });
 }
 
-function spawnPopups() {
-    activePopups.forEach(p => p.remove());
-    activePopups = [];
+function lanzarPopups() {
+    popupsActivos.forEach(p => p.remove());
+    popupsActivos = [];
 
-    const container = document.getElementById('popup-container');
+    const contenedor = document.getElementById('popup-container');
 
-    const POSITIONS = [
-        { top: '10vh', left: '5vw' },
-        { top: '15vh', left: '55vw' },
-        { top: '40vh', left: '8vw' },
-        { top: '35vh', left: '50vw' },
-        { top: '65vh', left: '15vw' },
-        { top: '60vh', left: '58vw' },
-        { top: '80vh', left: '35vw' },
+    const POSICIONES = [
+        { top: '10vh', left: '2vw' },
+        { top: '10vh', left: '45vw' },
+        { top: '40vh', left: '2vw' },
+        { top: '40vh', left: '45vw' },
+        { top: '68vh', left: '2vw' },
+        { top: '68vh', left: '45vw' },
+        { top: '25vh', left: '25vw' },
     ];
 
-    const selected = shuffle(POPUP_POOL).slice(0, 5);
-    const positions = shuffle(POSITIONS).slice(0, 5);
+    const seleccionados = mezclar(POPUP_POOL).slice(0, 5);
+    const posiciones = mezclar(POSICIONES).slice(0, 5);
 
-    selected.forEach((data, i) => {
-        const popup = buildPopup(data, positions[i], i);
-        container.appendChild(popup);
-        activePopups.push(popup);
+    seleccionados.forEach((data, i) => {
+        const popup = construirPopup(data, posiciones[i], i);
+        contenedor.appendChild(popup);
+        popupsActivos.push(popup);
         setTimeout(() => popup.classList.add('visible'), i * 1000);
     });
 }
 
-// ── ROW CLICK ─────────────────────────────────────────────────────
+// ── CLICK EN RENGLÓN ──────────────────────────────────────────────
 
-function openViewer(rowData) {
-    const { img, audio, caption, label, type } = rowData;
+function abrirVisor(datosFila) {
+    const { img, audio, caption, label, type } = datosFila;
 
     document.getElementById('viewer-label').textContent = '— ' + label + ' —';
     document.getElementById('viewer-caption').textContent = caption;
 
-    const viewer = document.getElementById('viewer');
-    const viewerImg = document.getElementById('viewer-img');
+    const visor = document.getElementById('viewer');
+    const imgVisor = document.getElementById('viewer-img');
     const placeholder = document.getElementById('viewer-placeholder');
 
-    viewer.classList.add('open');
+    visor.classList.add('open');
 
     if (type === 'audio') {
-        viewerImg.style.display = 'none';
+        imgVisor.style.display = 'none';
         placeholder.style.display = 'none';
 
         let audioEl = document.getElementById('viewer-audio');
@@ -446,7 +437,7 @@ function openViewer(rowData) {
             audioEl.id = 'viewer-audio';
             audioEl.controls = true;
             audioEl.style.cssText = 'display:block; margin: 0 auto; width:100%; max-width:800px; margin-top:12px;';
-            viewer.querySelector('.db-container').appendChild(audioEl);
+            visor.querySelector('.db-container').appendChild(audioEl);
         }
         audioEl.src = audio;
         audioEl.style.display = 'block';
@@ -457,67 +448,67 @@ function openViewer(rowData) {
             btn.id = 'audio-next-btn';
             btn.href = 'corea.html';
             btn.className = 'next-btn';
-            btn.textContent = 'NEXT — KOREA 1950 →';
-            viewer.querySelector('.db-container').appendChild(btn);
+            btn.textContent = 'COREA 1950 →';
+            visor.querySelector('.db-container').appendChild(btn);
         }
         btn.style.display = 'inline-block';
 
     } else if (img) {
         const audioEl = document.getElementById('viewer-audio');
         if (audioEl) audioEl.style.display = 'none';
-        const nextBtn = document.getElementById('audio-next-btn');
-        if (nextBtn) nextBtn.style.display = 'none';
-        viewerImg.src = img;
-        viewerImg.style.display = 'block';
+        const btnSig = document.getElementById('audio-next-btn');
+        if (btnSig) btnSig.style.display = 'none';
+        imgVisor.src = img;
+        imgVisor.style.display = 'block';
         placeholder.style.display = 'none';
 
     } else {
         const audioEl = document.getElementById('viewer-audio');
         if (audioEl) audioEl.style.display = 'none';
-        const nextBtn = document.getElementById('audio-next-btn');
-        if (nextBtn) nextBtn.style.display = 'none';
-        viewerImg.style.display = 'none';
+        const btnSig = document.getElementById('audio-next-btn');
+        if (btnSig) btnSig.style.display = 'none';
+        imgVisor.style.display = 'none';
         placeholder.style.display = 'flex';
-        placeholder.textContent = '[IMAGE — ' + label + ']';
+        placeholder.textContent = '[IMAGEN — ' + label + ']';
     }
 
-    viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     if (type === 'img' && img) {
-        spawnPopups();
+        lanzarPopups();
     } else {
-        activePopups.forEach(p => p.remove());
-        activePopups = [];
+        popupsActivos.forEach(p => p.remove());
+        popupsActivos = [];
     }
 }
 
-document.querySelectorAll('.db-row').forEach(row => {
-    row.addEventListener('click', () => {
-        document.querySelectorAll('.db-row').forEach(r => r.classList.remove('active'));
-        row.classList.add('active');
+document.querySelectorAll('.db-row').forEach(fila => {
+    fila.addEventListener('click', () => {
+        document.querySelectorAll('.db-row').forEach(f => f.classList.remove('active'));
+        fila.classList.add('active');
 
-        const rowData = {
-            type: row.dataset.type || 'img',
-            img: row.dataset.img,
-            audio: row.dataset.audio,
-            caption: row.dataset.caption,
-            label: row.dataset.label,
+        const datosFila = {
+            type: fila.dataset.type || 'img',
+            img: fila.dataset.img,
+            audio: fila.dataset.audio,
+            caption: fila.dataset.caption,
+            label: fila.dataset.label,
         };
 
         // audio y placeholder: nunca interrupciones
-        if (rowData.type === 'audio' || !rowData.img) {
-            openViewer(rowData);
+        if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
             return;
         }
 
         // random entre 3 opciones
-        const roll = Math.random();
-        if (roll < 0.33) {
-            openTranslation();
-        } else if (roll < 0.66) {
-            openConfiscation(rowData.label);
+        const sorteo = Math.random();
+        if (sorteo < 0.33) {
+            abrirTraduccion();
+        } else if (sorteo < 0.66) {
+            abrirConfiscacion(datosFila.label);
         } else {
-            openViewer(rowData);
+            abrirVisor(datosFila);
         }
     });
 });
