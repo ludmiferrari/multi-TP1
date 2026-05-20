@@ -1,5 +1,5 @@
-// POOL DE DISTRACTORES — vietnam 1955–1975
-// Ocupación americana:  Movimiento Hippie; Woodstock Alunizaje (1969)
+// POOL DE DISTRACTORES — Grecia 1947-1949
+// Ocupación americana:  
 
 const POPUP_POOL = [
     {

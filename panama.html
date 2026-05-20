@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paginas.css">
+    <link rel="stylesheet" href="css/cnn-interrupcion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Panamá</title>
+</head>
+<body>
+
+    <nav class="nav-tierra">
+        <model-viewer
+            src="earth/scene.gltf"
+            camera-controls
+            auto-rotate
+            interaction-prompt="none"
+            shadow-intensity="1"
+            environment-image="neutral"
+            exposure="1">
+        </model-viewer>
+    </nav>
+
+    <div class="page-header">
+        <div class="label">Intervención Militar EE.UU.</div>
+        <h1>Panamá — 1989</h1>
+        <div class="meta">Operación Causa Justa &nbsp;/&nbsp; 20 Dic 1989 – 31 Ene 1990 &nbsp;/&nbsp; Ciudad de Panamá &nbsp;/&nbsp; 27.000 tropas desplegadas</div>
+    </div>
+
+    <div class="db-container">
+        <div class="db-cols">
+            <span>Fuente</span>
+            <span>Tipo</span>
+            <span>Fecha</span>
+            <span>Descripción</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/panama/invasion-tropas.jpg" data-caption="Tropas del Ejército de EE.UU. avanzan por las calles de Ciudad de Panamá, 20 de diciembre de 1989." data-label="AP WIRE FOTO — Tropas en Ciudad de Panamá">
+            <span class="source">Associated Press</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">20 DIC 1989</span>
+            <span class="desc">27.000 tropas desplegadas — mayor operación desde Vietnam</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/panama/noriega-cia.jpg" data-caption="Manuel Noriega, jefe de la Guardia Nacional panameña, en los años en que operó como informante pagado de la CIA." data-label="FOTOGRAFÍA — Noriega / CIA">
+            <span class="source">Departamento de Defensa EE.UU. / FOIA</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">1970–1986</span>
+            <span class="desc">Noriega: informante pagado de la CIA durante 16 años antes de ser el objetivo</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/panama/el-chorrillo.jpg" data-caption="El barrio de El Chorrillo, Ciudad de Panamá, arrasado por bombardeos e incendios durante la invasión. Estimado: 2.000 a 4.000 civiles desplazados." data-label="FOTOGRAFÍA — El Chorrillo">
+            <span class="source">Reuters / Archivo</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">21 DIC 1989</span>
+            <span class="desc">El Chorrillo arrasado — entre 500 y 1.000 civiles panameños muertos</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/panama/new-york-times.jpg" data-caption="The New York Times, primera plana, 21 de diciembre de 1989. 'EE.UU. invade Panamá'." data-label="THE NEW YORK TIMES — Primera Plana">
+            <span class="source">The New York Times</span>
+            <span class="type">PRIMERA PLANA</span>
+            <span class="date">21 DIC 1989</span>
+            <span class="desc">EE.UU. invade Panamá — Bush justifica la operación como defensa de ciudadanos americanos</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/panama/bush-discurso.jpg" data-caption="El presidente George H.W. Bush anuncia la invasión de Panamá desde la Casa Blanca, madrugada del 20 de diciembre de 1989." data-label="CASA BLANCA — Discurso de Bush">
+            <span class="source">Casa Blanca / CNN</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">20 DIC 1989</span>
+            <span class="desc">Bush anuncia cuatro objetivos: proteger ciudadanos, defender el Canal, restaurar democracia, capturar a Noriega</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/panama/noriega-rendicion.jpg" data-caption="Manuel Noriega se rinde a las autoridades estadounidenses el 3 de enero de 1990, tras refugiarse en la Nunciatura Apostólica." data-label="FOTOGRAFÍA — Rendición de Noriega">
+            <span class="source">Associated Press</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">3 ENE 1990</span>
+            <span class="desc">Noriega se rinde tras 10 días de música heavy metal a todo volumen frente a la Nunciatura</span>
+        </div>
+
+        <div class="db-row" data-img="" data-caption="Resolución de la Asamblea General de la ONU condenando la invasión de Panamá como violación flagrante del derecho internacional, diciembre de 1989." data-label="ONU — Resolución 44/240">
+            <span class="source">Naciones Unidas / Archivo</span>
+            <span class="type">DOCUMENTO</span>
+            <span class="date">29 DIC 1989</span>
+            <span class="desc">ONU condena la invasión 75 votos a 20 — EE.UU., Reino Unido y Francia vetaron en el Consejo de Seguridad</span>
+        </div>
+
+        <div class="db-row" data-type="audio" data-audio="imgs/panama/bush-address.mp3" data-caption="Discurso completo de George H.W. Bush anunciando la Operación Causa Justa — 20 de diciembre de 1989." data-label="BUSH — Discurso Operación Causa Justa">
+            <span class="source">Casa Blanca / Archivo Nacional</span>
+            <span class="type">AUDIO</span>
+            <span class="date">20 DIC 1989</span>
+            <span class="desc">Bush anuncia la invasión en cadena nacional — "Causa Justa"</span>
+        </div>
+
+    </div>
+
+    <div class="viewer" id="viewer">
+        <div class="db-container" style="padding-top:0">
+            <div class="viewer-header" id="viewer-label">— ELEGÍ UN ARCHIVO —</div>
+            <div class="viewer-placeholder" id="viewer-placeholder">[IMAGEN NO DISPONIBLE]</div>
+            <img class="viewer-img" id="viewer-img" src="" alt="" style="display:none">
+            <div class="viewer-caption" id="viewer-caption"></div>
+        </div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <!-- INTERRUPCIÓN DE SEÑAL CNN -->
+    <div class="cnn-overlay" id="cnn-overlay">
+        <div class="cnn-static" id="cnn-static"></div>
+        <div class="cnn-bars" id="cnn-bars">
+            <div class="bar" style="background:#fff"></div>
+            <div class="bar" style="background:#ff0"></div>
+            <div class="bar" style="background:#0ff"></div>
+            <div class="bar" style="background:#0f0"></div>
+            <div class="bar" style="background:#f0f"></div>
+            <div class="bar" style="background:#f00"></div>
+            <div class="bar" style="background:#00f"></div>
+            <div class="bar" style="background:#111"></div>
+        </div>
+        <div class="cnn-message" id="cnn-message">
+            <div class="cnn-logo">CNN</div>
+            <div class="cnn-breaking">TRANSMISIÓN INTERRUMPIDA</div>
+            <div class="cnn-text" id="cnn-text"></div>
+            <div class="cnn-redirect" id="cnn-redirect"></div>
+        </div>
+    </div>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+    <script src="js/pop-ups-panama.js"></script>
+    <script src="js/random-pais.js"></script>
+    <script src="js/tierra.js"></script>
+</body>
+</html>
