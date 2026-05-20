@@ -6,15 +6,15 @@ const POPUP_POOL = [
     {
         title: "Hollywood llega a Japón",
         html: `
-            <div class="popup-img-placeholder">[img: afiche japonés Lo que el viento se llevó 1952]</div>
+            <div class="popup-img-placeholder"></div>
             <div class="popup-marquee"><span>★ EN CARTELERA EN TOKIO ★ LO QUE EL VIENTO SE LLEVÓ ★ APROBADO POR SCAP ★</span></div>
             <p>Cine americano aprobado por GHQ.<br><span class="blink">Ahora en el Teatro Hibiya — Tokio</span></p>
         `
     },
     {
-        title: "Béisbol — Liga de Ocupación",
+        title: "Beisbol — Liga de Ocupación",
         html: `
-            <div class="popup-img-placeholder">[img: soldados americanos jugando béisbol en Japón 1946]</div>
+            <div class="popup-img-placeholder"><img src="imgs/japan/beisbol.webp"></div>
             <p>
                 ¡El béisbol americano llega a Japón!<br>
                 GHQ promueve la liga nacional.<br>
@@ -26,20 +26,9 @@ const POPUP_POOL = [
     {
         title: "Pachinko — Ahora Abierto",
         html: `
-            <div class="popup-img-placeholder">[img: cartel neón sala de pachinko Tokio 1948]</div>
+            <div class="popup-img-placeholder"><img src="imgs/japan/pachinko.jpg"></div>
             <div class="popup-marquee"><span>★ PACHINKO ★ パチンコ ★ ABIERTO 24HS ★ GINZA ★</span></div>
             <p>El entretenimiento más nuevo de Tokio.<br><span class="blink">10 yenes por jugada — Ginza</span></p>
-        `
-    },
-    {
-        title: "Revista LIFE — Edición Japón",
-        html: `
-            <div class="popup-img-placeholder">[img: tapa revista LIFE edición Japón 1946]</div>
-            <p>
-                Revista LIFE — Edición Especial Japón<br>
-                "El Nuevo Japón: Reconstrucción bajo MacArthur"<br>
-                <span class="blink">En kioscos ahora — 10¢</span>
-            </p>
         `
     },
     {
@@ -53,11 +42,10 @@ const POPUP_POOL = [
     {
         title: "Moda Americana — Mitsukoshi",
         html: `
-            <div class="popup-img-placeholder">[img: publicidad moda estilo americano Japón 1950]</div>
+            <div class="popup-img-placeholder"><img src="imgs/japan/moda.webp"></div>
             <p>
                 Tienda Mitsukoshi — Tokio<br>
-                Nueva colección estilo americano:<br>
-                Medias de nylón, faldas de caniche, zapatos saddle.<br>
+                Nueva colección de trajes de baño americanos<br>
                 <span class="blink">La mujer moderna — estilo americano.</span>
             </p>
         `
@@ -65,54 +53,11 @@ const POPUP_POOL = [
     {
         title: "Furor del Hula-Hoop — 1950",
         html: `
-            <div class="popup-img-placeholder">[img: niños con hula-hoops en calle de Tokio 1950]</div>
+            <div class="popup-img-placeholder"><img src="imgs/japan/hula.webp"></div>
             <p>
                 El furor del hula-hoop americano<br>
                 llega a los patios de las escuelas japonesas.<br>
                 <span class="blink">★ 25 millones vendidos en 4 meses ★</span>
-            </p>
-        `
-    },
-    {
-        title: "Electrodomésticos GE — Ya Disponibles",
-        html: `
-            <div class="popup-img-placeholder">[img: publicidad heladera GE Japón 1948]</div>
-            <div class="popup-marquee"><span>★ GENERAL ELECTRIC ★ LA COCINA AMERICANA ★ AHORA EN JAPÓN ★</span></div>
-            <p>Heladeras y lavarropas GE.<br>Disponibles en tiendas PX.<br><span class="blink">Viví a la americana.</span></p>
-        `
-    },
-    {
-        title: "Frank Sinatra — Concierto en Tokio",
-        html: `
-            <div class="popup-img-placeholder">[img: afiche concierto Frank Sinatra Japón 1950]</div>
-            <p>
-                Frank Sinatra<br>
-                En vivo en el Teatro Ernie Pyle, Tokio<br>
-                <span class="blink">★ Presentado por USO ★</span><br>
-                Solo para personal aliado e invitados.
-            </p>
-        `
-    },
-    {
-        title: "Stars and Stripes — Noticias Diarias",
-        html: `
-            <div class="popup-img-placeholder">[img: diario Stars and Stripes edición Japón 1946]</div>
-            <p>
-                Stars and Stripes — Edición Pacífico<br>
-                Las noticias de tu país, todos los días.<br>
-                <span class="blink">MacArthur: "La recuperación de Japón va bien."</span><br>
-                Disponible en todos los puestos PX.
-            </p>
-        `
-    },
-    {
-        title: "Cigarrillos Chesterfield",
-        html: `
-            <div class="popup-img-placeholder">[img: publicidad Chesterfield 1948 — soldado en Japón]</div>
-            <p>
-                Chesterfield — el favorito de América.<br>
-                "Satisfacen."<br>
-                <span class="blink">Disponibles en tiendas PX en todo Japón.</span>
             </p>
         `
     },
@@ -129,22 +74,11 @@ const POPUP_POOL = [
         `
     },
     {
-        title: "Jeans Levi's — Especial PX",
+        title: "Nueva Feria Estadounidense!",
         html: `
-            <div class="popup-img-placeholder">[img: publicidad Levi's 1949 — soldado americano en Japón]</div>
-            <p>
-                Levi Strauss & Co.<br>
-                Denim americano original.<br>
-                <span class="blink">Ahora en mercado negro de Tokio — $40 el par.</span>
-            </p>
-        `
-    },
-    {
-        title: "Reader's Digest — Edición Japón",
-        html: `
-            <div class="popup-img-placeholder">[img: tapa Reader's Digest edición Japón 1947]</div>
-            <div class="popup-marquee"><span>★ READER'S DIGEST ★ RESUMIDO PARA GENTE OCUPADA ★ APROBADO POR GHQ ★</span></div>
-            <p>Primera revista extranjera aprobada por SCAP.<br><span class="blink">A la venta en todos los kioscos aliados.</span></p>
+            <div class="popup-img-placeholder"><img src="imgs/japan/feria.webp"></div>
+            <div class="popup-marquee"><span>★ FERIA USA ★ DONDE PODES VER LO MEJOR DE LA CULTURA AMERICANA ★</span></div>
+            <p>Primera revista extranjera aprobada por SCAP.<br><span class="blink">Abierto de Lunes a Viernes</span></p>
         `
     },
     // ── CONEXIÓN CON OTRO PAÍS ─────────────────────────────────────
