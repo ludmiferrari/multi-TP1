@@ -242,7 +242,9 @@ function lanzarPopups() {
         { top: '25vh', left: '25vw' },
     ];
 
-    const seleccionados = mezclar(POPUP_POOL).slice(0, 5);
+    const conexion = POPUP_POOL.find(p => p.link);
+    const resto = mezclar(POPUP_POOL.filter(p => !p.link)).slice(0, 4);
+    const seleccionados = mezclar([conexion, ...resto]);
     const posiciones = mezclar(POSICIONES).slice(0, 5);
 
     seleccionados.forEach((data, i) => {

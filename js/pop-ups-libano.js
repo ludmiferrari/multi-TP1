@@ -111,16 +111,17 @@ const POPUP_POOL = [
     },
     // ── CONEXIÓN CON OTRO PAÍS ─────────────────────────────────────
     {
-        title: '⚡ SIGUIENTE — Granada, 25 Oct 1983',
-        link: { href: 'granada.html', texto: '→ GRANADA 1983' },
+        title: '⚡ CONEXIÓN — Teherán, 1953',
+        link: { href: 'iran.html', texto: '→ IRÁN 1953' },
         html: `
-            <div class="popup-marquee"><span>★ URGENTE ★ 48 HORAS DESPUÉS ★ EE.UU. INVADE GRANADA ★ 25 OCT 1983 ★</span></div>
+            <div class="popup-marquee"><span>★ OPERACIÓN AJAX ★ CIA / MI6 ★ GOLPE DE ESTADO ★ IRÁN 1953 ★</span></div>
             <p>
-                241 Marines muertos en Beirut el 23 de octubre.<br><br>
-                <span class="blink">48 horas después — Reagan invade Granada.</span><br><br>
-                La opinión pública desviada.<br>
-                La prensa, excluida 48hs de la isla.<br>
-                Beirut, fuera de los titulares.
+                Beirut 1982. Teherán 1953.<br>
+                La misma región. La misma lógica.<br><br>
+                <span class="blink">Mossadegh derrocado. El Sha, restaurado.</span><br><br>
+                Primera operación encubierta exitosa de la CIA<br>
+                en Medio Oriente.<br>
+                El antecedente directo de todo lo que vino después.
             </p>
         `
     },

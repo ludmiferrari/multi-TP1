@@ -59,19 +59,6 @@ const POPUP_POOL = [
         `
     },
     {
-        title: '⚡ URGENTE — Beirut, 23 Oct 1983',
-        link: { href: 'libano.html', texto: '→ LÍBANO 1983' },
-        html: `
-            <div class="popup-marquee"><span>★ URGENTE ★ BEIRUT ★ 241 MARINES EE.UU. MUERTOS ★ ATENTADO SUICIDA ★ 23 OCT 1983 ★</span></div>
-            <p>
-                241 soldados americanos muertos en Beirut.<br>
-                Mayor pérdida en un solo día desde Iwo Jima.<br><br>
-                <span class="blink">48 horas después — Reagan ordena la invasión de Granada.</span><br><br>
-                ¿Coincidencia?
-            </p>
-        `
-    },
-    {
         title: 'Ejercicios Jane Fonda — VHS',
         html: `
             <div class="popup-img-placeholder"><img src="imgs/granada/jane-fonda.jpg"></div>
@@ -115,6 +102,23 @@ const POPUP_POOL = [
             <p>Physical — Olivia Newton-John<br>10 semanas en el #1 — sigue en los charts.<br><span class="blink">▶ En rotación pesada en MTV</span></p>
         `
     },
+    // ── CONEXIÓN CON OTRO PAÍS ─────────────────────────────────────
+    {
+    title: '⚡ URGENTE — La Habana, 17 Abr 1961',
+    link: { href: 'cuba.html', texto: '→ CUBA 1961' },
+    html: `
+        <div class="popup-marquee"><span>★ OPERACIÓN ZAPATA ★ CIA ★ BAHÍA DE COCHINOS ★ CARIBE ★ 1961 ★</span></div>
+        <p>
+            Granada 1983. Cuba 1961.<br>
+            El mismo Caribe. La misma doctrina.<br><br>
+            <span class="blink">"Eliminar el comunismo del hemisferio."</span><br><br>
+            1.400 exiliados entrenados por la CIA.<br>
+            Derrota en 72 horas.<br>
+            Kennedy asume responsabilidad en público.<br>
+            La CIA, nunca.
+        </p>
+    `
+    },
 ];
 
 // FORMULARIO DE CABLE — mensajes de error secuenciales
@@ -153,7 +157,7 @@ document.getElementById('cable-submit').addEventListener('click', () => {
         setTimeout(() => {
             document.getElementById('cable-overlay').classList.remove('open');
             if (document.startViewTransition) {
-                document.startViewTransition(() => { window.location.href = 'index.html'; });
+                document.startViewTransition(() => { window.location.href = 'libano.html'; });
             } else {
                 window.location.href = 'libano.html';
             }
@@ -278,7 +282,9 @@ function lanzarPopups() {
         { top: '25vh', left: '25vw' },
     ];
 
-    const seleccionados = mezclar(POPUP_POOL).slice(0, 5);
+    const conexion = POPUP_POOL.find(p => p.link);
+    const resto = mezclar(POPUP_POOL.filter(p => !p.link)).slice(0, 4);
+    const seleccionados = mezclar([conexion, ...resto]);
     const posiciones = mezclar(POSICIONES).slice(0, 5);
 
     seleccionados.forEach((data, i) => {

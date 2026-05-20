@@ -147,15 +147,19 @@ const POPUP_POOL = [
             <p>Primera revista extranjera aprobada por SCAP.<br><span class="blink">A la venta en todos los kioscos aliados.</span></p>
         `
     },
+    // ── CONEXIÓN CON OTRO PAÍS ─────────────────────────────────────
     {
-        title: "MacArthur — Hombre del Año",
+        title: '⚡ PARALELO — Berlín, 1945',
+        link: { href: 'alemania.html', texto: '→ ALEMANIA 1945' },
         html: `
-            <div class="popup-img-placeholder">[img: tapa TIME Magazine MacArthur Hombre del Año 1950]</div>
+            <div class="popup-marquee"><span>★ OCUPACIÓN ALIADA ★ BERLÍN 1945 ★ ZONA AMERICANA ★</span></div>
             <p>
-                Revista TIME<br>
-                Hombre del Año: Gral. Douglas MacArthur<br>
-                <span class="blink">"El Libertador de Japón."</span><br>
-                Edición enero 1951 — 15¢
+                Tokio 1945. Berlín 1945.<br>
+                Dos ocupaciones. Un mismo manual.<br><br>
+                <span class="blink">Censura de prensa. Purga política. Nueva constitución.</span><br><br>
+                En Alemania: desnazificación.<br>
+                En Japón: desmilitarización.<br>
+                En ambos casos — la narrativa, escrita por el vencedor.
             </p>
         `
     },
@@ -319,13 +323,29 @@ function construirPopup(data, posicion, indice) {
     div.style.top = posicion.top;
     div.style.left = posicion.left;
 
+    const linkHtml = data.link
+        ? `<a href="${data.link.href}" style="
+            display:inline-block;
+            margin-top:10px;
+            color:#c1121f;
+            border:1px solid #c1121f;
+            padding:6px 14px;
+            font-size:0.72rem;
+            letter-spacing:2px;
+            text-decoration:none;
+            text-transform:uppercase;
+          ">${data.link.texto}</a>`
+        : '';
+
     div.innerHTML = `
         <div class="popup-bar">
             <span>${data.title}</span>
             <button class="popup-close">x</button>
         </div>
-        <div class="popup-content">${data.html}</div>
+        <div class="popup-content">${data.html}${linkHtml}</div>
     `;
+
+    if (data.link) div.style.zIndex = 500;
 
     div.querySelector('.popup-close').addEventListener('click', () => cerrarPopup(div, posicion));
     hacerArrastrable(div, posicion);
@@ -398,7 +418,9 @@ function lanzarPopups() {
         { top: '25vh', left: '25vw' },
     ];
 
-    const seleccionados = mezclar(POPUP_POOL).slice(0, 5);
+    const conexion = POPUP_POOL.find(p => p.link);
+    const resto = mezclar(POPUP_POOL.filter(p => !p.link)).slice(0, 4);
+    const seleccionados = mezclar([conexion, ...resto]);
     const posiciones = mezclar(POSICIONES).slice(0, 5);
 
     seleccionados.forEach((data, i) => {
