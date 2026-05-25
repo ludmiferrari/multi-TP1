@@ -9,6 +9,16 @@
     --mono: 'Share Tech Mono', monospace;
     }
 
+footer{
+    background-color: #0A0A0A;
+}
+
+footer button{
+    all: unset;
+    color: #0A0A0A;
+    cursor: pointer;
+}
+
 body {
     background: var(--bg);
     color: var(--text);

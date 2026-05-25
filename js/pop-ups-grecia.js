@@ -1,5 +1,6 @@
+// =========================================================================
 // POOL DE DISTRACTORES — Grecia 1947-1949
-// Ocupación americana:  
+// =========================================================================
 
 const POPUP_POOL = [
     {
@@ -21,17 +22,56 @@ const POPUP_POOL = [
             <div class="popup-marquee"><span>★ 3 DAYS OF PEACE & MUSIC ★ WOODSTOCK FESTIVAL ★ ALTERNATIVE CULTURE ★</span></div>
             <p>The counterculture movement reaches its peak.<br><span class="blink">Live from White Lake, New York</span></p>
         `
-    },
-    
+    }
 ];
 
-// Países para redirect random (excluyendo vietnam)
-const PAISES = ['argentina', 'corea', 'alemania', 'grecia', 'iran', 'guatemala',
+// Países para redirect random (excluyendo grecia)
+const PAISES = [
+    'argentina', 'corea', 'alemania', 'vietnam', 'iran', 'guatemala',
     'cuba', 'libano', 'siria', 'venezuela', 'granada', 'pakistan', 'irak',
     'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait',
     'republica-dominicana', 'japon', 'cambodia', 'laos', 'haiti', 'yemen',
-    'yugoslavia', 'kosovo', 'chile'];
+    'yugoslavia', 'kosovo', 'chile'
+];
 
+// =========================================================================
+// VARIABLES DE ESTADO GLOBAL
+// =========================================================================
+let activePopups = [];
+let translationInterval = null;
+let currentRowLabel = '';
+let distractoresBloqueados = false; // <- Controla si el botón fue pulsado
+
+// =========================================================================
+// LÓGICA DEL BOTÓN DEL FOOTER (BLOQUEAR DISTRACTORES)
+// =========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const botonBloquear = document.querySelector('footer button');
+    
+    if (botonBloquear) {
+        botonBloquear.addEventListener('click', () => {
+            distractoresBloqueados = true;
+            
+            // Feedback visual de que se activó el bloqueo
+            
+            botonBloquear.disabled = true;
+            botonBloquear.style.backgroundColor = "#000000"; 
+            botonBloquear.style.cursor = "default";
+
+            // Limpieza inmediata de lo que esté abierto en pantalla
+            activePopups.forEach(p => p.remove());
+            activePopups = [];
+            
+            if (translationInterval) {
+                clearInterval(translationInterval);
+            }
+        });
+    }
+});
+
+// =========================================================================
+// NAVEGACIÓN Y AUXILIARES
+// =========================================================================
 function randomPais() {
     return PAISES[Math.floor(Math.random() * PAISES.length)];
 }
@@ -45,16 +85,13 @@ function redirectRandom() {
     }
 }
 
-let activePopups = [];
-let translationInterval = null;
-let currentRowLabel = '';
-
-// ── POPUP LOGIC ───────────────────────────────────────────────────
-
 function shuffle(arr) {
     return [...arr].sort(() => Math.random() - 0.5);
 }
 
+// =========================================================================
+// LÓGICA DE POPUPS (DISTRACTORES)
+// =========================================================================
 function buildPopup(data, position, index) {
     const div = document.createElement('div');
     div.className = 'popup';
@@ -152,8 +189,9 @@ function spawnPopups() {
     });
 }
 
-// ── ROW CLICK ─────────────────────────────────────────────────────
-
+// =========================================================================
+// VISUALIZADOR DE CONTENIDO (VIEWER) Y EVENTOS CLICK
+// =========================================================================
 function openViewer(rowData) {
     const { img, audio, caption, label, type } = rowData;
 
@@ -213,7 +251,8 @@ function openViewer(rowData) {
 
     viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type === 'img' && img) {
+    // Si los distractores están bloqueados, NO creamos popups bajo ninguna circunstancia
+    if (type === 'img' && img && !distractoresBloqueados) {
         spawnPopups();
     } else {
         activePopups.forEach(p => p.remove());
@@ -221,6 +260,7 @@ function openViewer(rowData) {
     }
 }
 
+// Asignación de eventos a las filas
 document.querySelectorAll('.db-row').forEach(row => {
     row.addEventListener('click', () => {
         document.querySelectorAll('.db-row').forEach(r => r.classList.remove('active'));
@@ -234,13 +274,19 @@ document.querySelectorAll('.db-row').forEach(row => {
             label: row.dataset.label,
         };
 
-        // audio y placeholder: nunca interrupciones
+        // Si es audio o no tiene imagen, la experiencia siempre es limpia
         if (rowData.type === 'audio' || !rowData.img) {
             openViewer(rowData);
             return;
         }
 
-        // random entre 3 opciones
+        // SI EL BOTÓN FUE ACTIVADO: Saltamos la ruleta y vamos directo al visor
+        if (distractoresBloqueados) {
+            openViewer(rowData);
+            return;
+        }
+
+        // Ruleta de interferencias original (Solo se ejecuta si distractoresBloqueados es false)
         const roll = Math.random();
         if (roll < 0.33) {
             openTranslation();
