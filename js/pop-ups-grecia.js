@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Feedback visual de que se activó el bloqueo
             
             botonBloquear.disabled = true;
-            botonBloquear.style.backgroundColor = "#000000"; 
+            
             botonBloquear.style.cursor = "default";
 
             // Limpieza inmediata de lo que esté abierto en pantalla
