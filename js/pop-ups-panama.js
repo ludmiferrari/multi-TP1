@@ -106,7 +106,7 @@ const POPUP_POOL = [
     {
         title: 'Back to the Future II — En Cartelera',
         html: `
-            <div class="popup-img-placeholder"><img src="imgs/panama/bttf2.jpg" alt="Back to the Future II"></div>
+            <div class="popup-img-placeholder"><img src="imgs/panama/back-to-the-future.jpg" alt="Back to the Future II"></div>
             <p>
                 Volver al Futuro II (1989)<br>
                 22 de noviembre — estreno mundial.<br>
@@ -117,7 +117,7 @@ const POPUP_POOL = [
     {
         title: "McDonald's — ¿Estás Listo para el Mac Tonight?",
         html: `
-            <div class="popup-img-placeholder"><img src="imgs/panama/mcdonalds89.jpg" alt="McDonalds 1989"></div>
+            <div class="popup-img-placeholder"><img src="imgs/panama/mcdonals89.jpg" alt="McDonalds 1989"></div>
             <div class="popup-marquee"><span>★ McDONALD'S ★ MÁS DE 50 BILLONES SERVIDOS ★</span></div>
             <p>
                 La primera cadena de comida rápida<br>
@@ -130,7 +130,7 @@ const POPUP_POOL = [
     {
         title: 'The Simpsons — Estreno Fox',
         html: `
-            <div class="popup-img-placeholder"><img src="imgs/panama/simpsons.jpg" alt="The Simpsons"></div>
+            <div class="popup-img-placeholder"><img src="imgs/panama/the-simpsons.jpg" alt="The Simpsons"></div>
             <div class="popup-marquee"><span>★ ESTRENO ★ THE SIMPSONS ★ FOX ★ 17 DIC 1989 ★</span></div>
             <p>
                 Primer episodio: "Simpsons Roasting on an Open Fire"<br>
