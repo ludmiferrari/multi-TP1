@@ -1,5 +1,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* selección de texto habilitada en contenido */
+body, p, span, h1, h2, h3, .desc, .source, .type, .date, .meta, .viewer-caption, .viewer-header, .page-header {
+    user-select: text;
+    -webkit-user-select: text;
+}
+
 :root {
     --bg: #0a0a0a;
     --red: #c1121f;
@@ -9,14 +15,8 @@
     --mono: 'Share Tech Mono', monospace;
     }
 
-footer{
+footer {
     background-color: #0A0A0A;
-}
-
-footer button{
-    all: unset;
-    color: #0A0A0A;
-    cursor: pointer;
 }
 
 body {
