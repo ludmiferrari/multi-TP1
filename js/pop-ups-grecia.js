@@ -32,18 +32,6 @@ const POPUP_POOL = [
         `
     },
     {
-        title: 'Plan Marshall — Ayuda a Europa',
-        html: `
-            <div class="popup-img-placeholder"><img src="imgs/grecia/marshall-plan.jpg" alt="Plan Marshall"></div>
-            <div class="popup-marquee"><span>★ PLAN MARSHALL ★ RECONSTRUCCIÓN DE EUROPA ★ $13.000 MILLONES ★</span></div>
-            <p>
-                El Plan Marshall entra en vigor.<br>
-                16 países europeos beneficiados.<br>
-                <span class="blink">Condición: purgar comunistas del gobierno.</span>
-            </p>
-        `
-    },
-    {
         title: 'Gentleman\'s Agreement — En Cartelera',
         html: `
             <div class="popup-img-placeholder"><img src="imgs/grecia/gentlemans.jpg" alt="Gentleman's Agreement"></div>
@@ -55,17 +43,7 @@ const POPUP_POOL = [
             </p>
         `
     },
-    {
-        title: 'Revista LIFE — Grecia en Crisis',
-        html: `
-            <div class="popup-img-placeholder"><img src="imgs/grecia/life-greece.jpg" alt="LIFE Magazine"></div>
-            <p>
-                Revista LIFE — Marzo 1947<br>
-                "Grecia: El primer frente de la Guerra Fría"<br>
-                <span class="blink">En kioscos ahora — 10¢</span>
-            </p>
-        `
-    },
+
     {
         title: 'Jackie Robinson — Primera Base',
         html: `
@@ -94,7 +72,7 @@ const POPUP_POOL = [
     {
         title: 'Radio Free Europe — En el Aire',
         html: `
-            <div class="popup-img-placeholder"><img src="imgs/grecia/radio-free.jpg" alt="Radio Free Europe"></div>
+            <div class="popup-img-placeholder"><img src="imgs/grecia/radio-free.jpeg" alt="Radio Free Europe"></div>
             <div class="popup-marquee"><span>★ RADIO FREE EUROPE ★ FINANCIADA POR LA CIA ★ DESDE 1949 ★</span></div>
             <p>
                 Radio Free Europe — fundada 1949.<br>
@@ -116,20 +94,9 @@ const POPUP_POOL = [
         `
     },
     {
-        title: 'Camel Cigarrillos — El Favorito',
-        html: `
-            <div class="popup-img-placeholder"><img src="imgs/grecia/camel47.jpg" alt="Camel"></div>
-            <p>
-                "Más médicos fuman Camel<br>
-                que cualquier otra marca."<br>
-                <span class="blink">— Publicidad Camel, 1947</span>
-            </p>
-        `
-    },
-    {
         title: 'HUAC — Lista Negra de Hollywood',
         html: `
-            <div class="popup-img-placeholder"><img src="imgs/grecia/huac.jpg" alt="HUAC"></div>
+            <div class="popup-img-placeholder"><img src="imgs/grecia/huac.gif" alt="HUAC"></div>
             <div class="popup-marquee"><span>★ HUAC ★ LOS DIEZ DE HOLLYWOOD ★ LISTA NEGRA ★ 1947 ★</span></div>
             <p>
                 El Comité de Actividades Antiamericanas<br>

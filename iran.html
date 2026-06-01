@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paginas.css">
+    <link rel="stylesheet" href="css/savak-verificacion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Irán</title>
+</head>
+<body>
+
+    <nav class="nav-tierra">
+        <model-viewer
+            src="earth/scene.gltf"
+            camera-controls
+            auto-rotate
+            interaction-prompt="none"
+            shadow-intensity="1"
+            environment-image="neutral"
+            exposure="1">
+        </model-viewer>
+    </nav>
+
+    <div class="page-header">
+        <div class="label">Intervención Encubierta EE.UU.</div>
+        <h1>Irán — 1953</h1>
+        <div class="meta">Operación Ajax &nbsp;/&nbsp; 19 Ago 1953 &nbsp;/&nbsp; Teherán &nbsp;/&nbsp; CIA / MI6 — Primer golpe de estado de la CIA en Medio Oriente</div>
+    </div>
+
+    <div class="db-container">
+        <div class="db-cols">
+            <span>Fuente</span>
+            <span>Tipo</span>
+            <span>Fecha</span>
+            <span>Descripción</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/iran/mossadegh.jpg" data-caption="Mohammad Mossadegh, Primer Ministro de Irán, elegido democráticamente en 1951. Nationalizó la industria petrolera iraní, hasta entonces controlada por la Anglo-Iranian Oil Company (hoy BP). Derrocado por la CIA el 19 de agosto de 1953." data-label="AP WIRE FOTO — Mohammad Mossadegh">
+            <span class="source">Associated Press</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">1951–1953</span>
+            <span class="desc">Mossadegh — primer ministro electo que nacionalizó el petróleo iraní</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/iran/manifestantes.jpg" data-caption="Manifestantes pagados por la CIA en las calles de Teherán el 19 de agosto de 1953. La CIA contrató matones y agitadores para simular una revuelta popular contra Mossadegh." data-label="AP WIRE FOTO — Manifestantes Teherán">
+            <span class="source">Associated Press</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">19 AGO 1953</span>
+            <span class="desc">Manifestantes pagados por la CIA simulando revuelta popular</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/iran/savak.jpg" data-caption="Agentes de la SAVAK — policía secreta del Sha creada y entrenada por la CIA y el Mossad tras el golpe de 1953. Responsable de la tortura y desaparición de miles de opositores." data-label="FOTOGRAFÍA — SAVAK">
+            <span class="source">Archivo Histórico Iraní / FOIA</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">1957–1979</span>
+            <span class="desc">SAVAK — policía secreta creada por la CIA tras el golpe — miles de torturados</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/iran/cia.jpg" data-caption="Confesión oficial de la CIA — documento desclasificado en 2013 confirmando que la agencia planeó y ejecutó el golpe contra Mossadegh. Primera admisión pública en 60 años." data-label="CIA — Confesión Oficial 2013">
+            <span class="source">CIA / The National Security Archive</span>
+            <span class="type">DOCUMENTO</span>
+            <span class="date">2013</span>
+            <span class="desc">CIA admite oficialmente haber organizado el golpe — 60 años después</span>
+        </div>
+
+    </div>
+
+    <div class="viewer" id="viewer">
+        <div class="db-container" style="padding-top:0">
+            <div class="viewer-header" id="viewer-label">— ELEGÍ UN ARCHIVO —</div>
+            <div class="viewer-placeholder" id="viewer-placeholder">[IMAGEN NO DISPONIBLE]</div>
+            <img class="viewer-img" id="viewer-img" src="" alt="" style="display:none">
+            <div class="viewer-caption" id="viewer-caption"></div>
+        </div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <!-- VERIFICACIÓN DE LEALTAD AL SHA — SAVAK -->
+    <div class="savak-overlay" id="savak-overlay" style="display:none">
+        <div class="savak-box">
+            <div class="savak-bar">
+                <span>SAVAK — Sāzemān-e Ettelā'āt va Amniyat-e Keshvar</span>
+                <span class="savak-seal">☆</span>
+            </div>
+            <div class="savak-body">
+
+                <div class="savak-header">
+                    <div class="savak-docnum">Formulario SV-3 &nbsp;/&nbsp; Verificación Obligatoria de Lealtad &nbsp;/&nbsp; República Imperial de Irán</div>
+                    <h2>Confirmación de Identidad y Lealtad</h2>
+                    <div class="savak-subtitle">Requerido para acceder a materiales de prensa, archivos públicos o información gubernamental — Decreto Imperial 1957</div>
+                </div>
+
+                <div class="savak-preamble">
+                    Por orden de Su Majestad Imperial Mohammad Reza Shah Pahlavi, Shahanshah de Irán, todo ciudadano o visitante que solicite acceso a materiales informativos clasificados o sensibles deberá completar el presente proceso de verificación de lealtad. El incumplimiento constituye evidencia prima facie de actividad subversiva y será derivado a la oficina correspondiente de la SAVAK para investigación.
+                </div>
+
+                <!-- PASO 1: verificación de imagen -->
+                <div class="savak-paso" id="savak-paso-1">
+                    <div class="savak-paso-titulo">Paso 1 de 3 — Verificación Visual</div>
+                    <div class="savak-instruccion">Seleccioná todas las imágenes que muestren actividad comunista o subversiva contraria a la Corona Imperial:</div>
+                    <div class="savak-grid" id="savak-grid">
+                        <div class="savak-img-item" data-correcto="false"><div class="savak-img-placeholder">📰</div><div class="savak-img-label">Reunión de trabajadores</div></div>
+                        <div class="savak-img-item" data-correcto="true"><div class="savak-img-placeholder">📚</div><div class="savak-img-label">Biblioteca pública</div></div>
+                        <div class="savak-img-item" data-correcto="false"><div class="savak-img-placeholder">🎭</div><div class="savak-img-label">Teatro universitario</div></div>
+                        <div class="savak-img-item" data-correcto="true"><div class="savak-img-placeholder">✊</div><div class="savak-img-label">Manifestación pacífica</div></div>
+                        <div class="savak-img-item" data-correcto="false"><div class="savak-img-placeholder">🗞️</div><div class="savak-img-label">Periódico opositor</div></div>
+                        <div class="savak-img-item" data-correcto="true"><div class="savak-img-placeholder">🎓</div><div class="savak-img-label">Graduación universitaria</div></div>
+                    </div>
+                    <div class="savak-msg" id="savak-msg-1"></div>
+                    <button class="savak-btn" id="savak-btn-1">VERIFICAR SELECCIÓN</button>
+                </div>
+
+                <!-- PASO 2: dial de lealtad -->
+                <div class="savak-paso" id="savak-paso-2" style="display:none">
+                    <div class="savak-paso-titulo">Paso 2 de 3 — Calibración de Lealtad</div>
+                    <div class="savak-instruccion">Mantené el indicador en la zona LEAL por 3 segundos continuos para confirmar tu lealtad a la Corona:</div>
+                    <div class="savak-dial-wrap">
+                        <div class="savak-dial-track">
+                            <div class="savak-dial-zona peligro">SUBVERSIVO</div>
+                            <div class="savak-dial-zona neutral">NEUTRAL</div>
+                            <div class="savak-dial-zona leal">LEAL</div>
+                        </div>
+                        <input type="range" class="savak-dial" id="savak-dial" min="0" max="100" value="50">
+                        <div class="savak-dial-status" id="savak-dial-status">— Mové el control —</div>
+                        <div class="savak-dial-timer" id="savak-dial-timer"></div>
+                    </div>
+                    <div class="savak-msg" id="savak-msg-2"></div>
+                </div>
+
+                <!-- PASO 3: pregunta de lealtad -->
+                <div class="savak-paso" id="savak-paso-3" style="display:none">
+                    <div class="savak-paso-titulo">Paso 3 de 3 — Declaración Final</div>
+                    <div class="savak-instruccion">Completá la siguiente declaración para finalizar la verificación:</div>
+                    <div class="savak-declaracion">
+                        <p>Yo, el abajo firmante, declaro bajo juramento que:</p>
+                        <div class="savak-field">
+                            <label>¿Alguna vez asististe a una reunión del Partido Tudeh o simpatizaste con sus ideas?</label>
+                            <select id="savak-q1">
+                                <option value="">— Seleccionar —</option>
+                                <option value="no">No, nunca</option>
+                                <option value="maybe">Posiblemente sin saberlo</option>
+                                <option value="yes">Sí — estoy dispuesto a cooperar con la SAVAK</option>
+                            </select>
+                        </div>
+                        <div class="savak-field">
+                            <label>¿Conocés el paradero actual de Mohammad Mossadegh o sus colaboradores?</label>
+                            <select id="savak-q2">
+                                <option value="">— Seleccionar —</option>
+                                <option value="no">No tengo esa información</option>
+                                <option value="yes">Sí — solicito entrevista con agente SAVAK</option>
+                                <option value="maybe">Tengo información parcial</option>
+                            </select>
+                        </div>
+                        <div class="savak-field">
+                            <label>¿Leíste, poseíste o distribuíste alguna publicación contraria a la Corona Imperial en los últimos 12 meses?</label>
+                            <select id="savak-q3">
+                                <option value="">— Seleccionar —</option>
+                                <option value="no">No</option>
+                                <option value="yes">Sí — adjunto lista de publicaciones</option>
+                                <option value="unsure">No estoy seguro de la clasificación de los materiales leídos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="savak-msg" id="savak-msg-3"></div>
+                    <button class="savak-btn" id="savak-btn-3">ENVIAR DECLARACIÓN FINAL</button>
+                </div>
+
+                <div class="savak-stamp" id="savak-stamp" style="display:none">ACCESO DENEGADO</div>
+                <div class="savak-redirect" id="savak-redirect"></div>
+
+                <div class="savak-fine-print">
+                    Este formulario es propiedad de la Organización de Inteligencia y Seguridad Nacional (SAVAK). La información proporcionada será almacenada indefinidamente. La SAVAK opera bajo supervisión directa de la Oficina Imperial y con asistencia técnica del Buró Federal de Investigaciones de los Estados Unidos y el Mossad de Israel. Toda información falsa constituye un delito contra la Corona punible con arresto inmediato.
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+    <script src="js/pop-ups-iran.js"></script>
+    <script src="js/random-pais.js"></script>
+    <script src="js/tierra.js"></script>
+</body>
+</html>

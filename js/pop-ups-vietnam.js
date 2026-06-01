@@ -117,18 +117,7 @@ const POPUP_POOL = [
             </p>
         `
     },
-    {
-        title: 'Protest! — Washington D.C.',
-        html: `
-            <div class="popup-img-placeholder"><img src="imgs/vietnam/protest.jpg" alt="Protest DC"></div>
-            <p>
-                15 de octubre de 1969 — Vietnam Moratorium.<br>
-                La mayor protesta en la historia de EE.UU.<br>
-                <span class="blink">2 millones de personas en todo el país.</span><br>
-                Nixon: "No voy a dejar que me afecte."
-            </p>
-        `
-    },
+    
 ];
 
 // ── DOCUMENTOS DE LOS PAPELES DEL PENTÁGONO ──────────────────────
