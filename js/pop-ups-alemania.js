@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Alemania 1945–1952
 // Ocupación americana: Plan Marshall, Nuremberg, cultura pop años 40–50
 
@@ -154,7 +161,9 @@ function abrirPressekontrolle(etiqueta) {
     veredictoEl.className = 'pk-verdict';
     redirectEl.textContent = '';
 
-    document.getElementById('pk-overlay').classList.add('open');
+    const overlay = document.getElementById('pk-overlay');
+    overlay.style.display = 'flex';
+    overlay.classList.add('open');
 
     // construir items del checklist ocultos
     const items = CRITERIOS_REVISION.map((c, i) => {
@@ -227,7 +236,9 @@ function abrirPressekontrolle(etiqueta) {
                         cuenta--;
                         if (cuenta < 0) {
                             clearInterval(cuentaAtras);
-                            document.getElementById('pk-overlay').classList.remove('open');
+                            const ol = document.getElementById('pk-overlay');
+                            ol.classList.remove('open');
+                            ol.style.display = 'none';
                             if (document.startViewTransition) {
                                 document.startViewTransition(() => { window.location.href = 'japon.html'; });
                             } else {
@@ -239,7 +250,9 @@ function abrirPressekontrolle(etiqueta) {
                     veredictoEl.textContent = 'APROBADO';
                     veredictoEl.className = 'pk-verdict aprobado';
                     setTimeout(() => {
-                        document.getElementById('pk-overlay').classList.remove('open');
+                        const ol = document.getElementById('pk-overlay');
+                        ol.classList.remove('open');
+                        ol.style.display = 'none';
                     }, 1800);
                 }
             }, 600);
@@ -431,7 +444,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type !== 'audio' && img) {
+    if (type !== 'audio' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -445,7 +458,7 @@ document.querySelectorAll('.db-row').forEach(fila => {
     fila.addEventListener('click', () => {
         document.querySelectorAll('.db-row').forEach(f => f.classList.remove('active'));
         fila.classList.add('active');
-
+ 
         const datosFila = {
             type: fila.dataset.type || 'img',
             img: fila.dataset.img,
@@ -453,17 +466,22 @@ document.querySelectorAll('.db-row').forEach(fila => {
             caption: fila.dataset.caption,
             label: fila.dataset.label,
         };
-
+ 
+        // audio y placeholder: siempre abrir visor directamente
         if (datosFila.type === 'audio' || !datosFila.img) {
             abrirVisor(datosFila);
             return;
         }
-
-        // 50% Pressekontrolle, 50% popups
-        if (Math.random() < 0.5) {
-            abrirPressekontrolle(datosFila.label);
-        } else {
+ 
+        // si está desbloqueado: siempre visor directo, sin interrupciones
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
+            return;
         }
+ 
+        // comportamiento normal con interrupciones
+        
+        if (Math.random() < 0.5) { abrirPressekontrolle(datosFila.label); } else { abrirVisor(datosFila); }
+        
     });
 });

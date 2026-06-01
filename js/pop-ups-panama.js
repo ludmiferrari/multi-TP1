@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Panamá 1989
 // Primera guerra televisada en vivo por CNN
 // Cultura pop: fin de la Guerra Fría, caída del Muro, MTV, blockbusters
@@ -398,7 +405,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type !== 'audio' && img) {
+    if (type !== 'audio' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -423,6 +430,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
 
         // audio y placeholder: nunca interrupciones
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }

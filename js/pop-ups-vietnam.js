@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Vietnam 1955–1975
 // Movimiento hippie, Woodstock, alunizaje, cultura pop años 60–70
 
@@ -239,7 +246,7 @@ function intentarDesclasificar() {
         footer.className = 'penpapers-footer error';
         footer.textContent = '— ACCESO REVOCADO — REDIRIGIENDO —';
         setTimeout(() => {
-            document.getElementById('penpapers-overlay').classList.remove('open');
+            const ppov2 = document.getElementById('penpapers-overlay'); ppov2.classList.remove('open'); ppov2.style.display = 'none';
             if (document.startViewTransition) {
                 document.startViewTransition(() => { window.location.href = 'cuba.html'; });
             } else {
@@ -256,7 +263,7 @@ function abrirPapelesDelPentagono() {
     document.getElementById('penpapers-footer').className = 'penpapers-footer';
     document.getElementById('penpapers-footer').textContent = '— DOCUMENTO CLASIFICADO — DEPARTAMENTO DE DEFENSA EE.UU. —';
 
-    document.getElementById('penpapers-overlay').classList.add('open');
+    const ppov = document.getElementById('penpapers-overlay'); ppov.style.display = 'block'; ppov.classList.add('open');
     construirDocumento(documentoActual);
 }
 
@@ -444,7 +451,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type !== 'audio' && img) {
+    if (type !== 'audio' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -468,6 +475,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
         };
 
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }

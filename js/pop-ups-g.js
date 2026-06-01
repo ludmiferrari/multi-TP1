@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Granada 1983
 const POPUP_POOL = [
     {
@@ -143,7 +150,7 @@ function abrirFormularioCable(datosFila) {
     document.getElementById('cf-zip').value = '';
     document.getElementById('cf-tier').value = '';
     document.getElementById('cf-maiden').value = '';
-    document.getElementById('cable-overlay').classList.add('open');
+    const clov = document.getElementById('cable-overlay'); clov.style.display = 'block'; clov.classList.add('open');
 }
 
 document.getElementById('cable-submit').addEventListener('click', () => {
@@ -155,7 +162,7 @@ document.getElementById('cable-submit').addEventListener('click', () => {
     } else {
         errorEl.textContent = ERRORES_CABLE[2];
         setTimeout(() => {
-            document.getElementById('cable-overlay').classList.remove('open');
+            const clov2 = document.getElementById('cable-overlay'); clov2.classList.remove('open'); clov2.style.display = 'none';
             if (document.startViewTransition) {
                 document.startViewTransition(() => { window.location.href = 'libano.html'; });
             } else {
@@ -166,7 +173,7 @@ document.getElementById('cable-submit').addEventListener('click', () => {
 });
 
 document.getElementById('cable-close').addEventListener('click', () => {
-    document.getElementById('cable-overlay').classList.remove('open');
+    const clov2 = document.getElementById('cable-overlay'); clov2.classList.remove('open'); clov2.style.display = 'none';
     if (document.startViewTransition) {
         document.startViewTransition(() => { window.location.href = 'libano.html'; });
     } else {
@@ -356,7 +363,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type === 'img' && img) {
+    if (type === 'img' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -379,6 +386,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
 
         // audio y placeholder: nunca formulario
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }

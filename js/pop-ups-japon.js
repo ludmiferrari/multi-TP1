@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Japón 1945–1952
 // Ocupación americana: Hollywood, Pachinko, béisbol, moda estadounidense,
 // hula-hoops, revistas, electrodomésticos, cultura pop
@@ -131,7 +138,7 @@ const MENSAJES_LOG = [
 ];
 
 function abrirTraduccion() {
-    document.getElementById('translation-overlay').classList.add('open');
+    const trov = document.getElementById('translation-overlay'); trov.style.display = 'flex'; trov.classList.add('open');
     ejecutarBucleTraduccion();
 }
 
@@ -202,7 +209,7 @@ function ejecutarBucleTraduccionFinal() {
             document.getElementById('t-status-text').textContent = 'ACCESO DENEGADO — REDIRIGIENDO';
 
             setTimeout(() => {
-                document.getElementById('translation-overlay').classList.remove('open');
+                const trov2 = document.getElementById('translation-overlay'); trov2.classList.remove('open'); trov2.style.display = 'none';
                 redirigirTraduccion();
             }, 2000);
         }
@@ -229,7 +236,7 @@ function abrirConfiscacion(etiqueta) {
     document.getElementById('conf-grounds').textContent = motivo;
     document.getElementById('conf-redirect-msg').textContent = '';
 
-    document.getElementById('confiscation-overlay').classList.add('open');
+    const cov = document.getElementById('confiscation-overlay'); cov.style.display = 'flex'; cov.classList.add('open');
 
     let cuenta = 8;
     const intervaloContador = setInterval(() => {
@@ -238,7 +245,7 @@ function abrirConfiscacion(etiqueta) {
             `Redirigiendo en ${cuenta}s...`;
         if (cuenta <= 0) {
             clearInterval(intervaloContador);
-            document.getElementById('confiscation-overlay').classList.remove('open');
+            const cov2 = document.getElementById('confiscation-overlay'); cov2.classList.remove('open'); cov2.style.display = 'none';
             redirigirConfiscacion();
         }
     }, 1000);
@@ -426,7 +433,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type === 'img' && img) {
+    if (type === 'img' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -449,6 +456,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
 
         // audio y placeholder: nunca interrupciones
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }

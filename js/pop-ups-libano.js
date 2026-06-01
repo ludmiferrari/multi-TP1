@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Líbano 1982–1983
 // Base: mismos distractores de Granada 1983 con dos específicos de Líbano
 // y un popup de conexión con otro país
@@ -209,7 +216,7 @@ function abrirTelex() {
     statusEl.className = 'telex-status ok';
     statusEl.textContent = '— TRANSMITIENDO —';
 
-    document.getElementById('telex-overlay').classList.add('open');
+    const tlov = document.getElementById('telex-overlay'); tlov.style.display = 'flex'; tlov.classList.add('open');
 
     const texto = despacho.texto;
     let i = 0;
@@ -231,7 +238,7 @@ function abrirTelex() {
                 statusEl.textContent = '— ERROR — SEÑAL PERDIDA — REDIRIGIENDO —';
 
                 setTimeout(() => {
-                    document.getElementById('telex-overlay').classList.remove('open');
+                    const tlov2 = document.getElementById('telex-overlay'); tlov2.classList.remove('open'); tlov2.style.display = 'none';
                     redirigirG();
                 }, 3000);
             }
@@ -441,7 +448,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type === 'img' && img) {
+    if (type === 'img' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -464,6 +471,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
 
         // audio y placeholder: nunca interrupciones
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }

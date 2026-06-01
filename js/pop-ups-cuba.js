@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Cuba 1961
 const POPUP_POOL = [
     {
@@ -107,7 +114,7 @@ function abrirFormularioFbi() {
     fbiIntentos = 0;
     document.getElementById('fbi-error').textContent = '';
     document.getElementById('fbi-stamp').textContent = '';
-    document.getElementById('fbi-overlay').classList.add('open');
+    const fbov = document.getElementById('fbi-overlay'); fbov.style.display = 'block'; fbov.classList.add('open');
 }
 
 document.getElementById('fbi-submit').addEventListener('click', () => {
@@ -122,7 +129,7 @@ document.getElementById('fbi-submit').addEventListener('click', () => {
         errorEl.textContent = FBI_ERRORES[2];
         selloEl.textContent = 'DENEGADO';
         setTimeout(() => {
-            document.getElementById('fbi-overlay').classList.remove('open');
+            const fbov2 = document.getElementById('fbi-overlay'); fbov2.classList.remove('open'); fbov2.style.display = 'none';
             if (document.startViewTransition) {
                 document.startViewTransition(() => { window.location.href = 'vietnam.html'; });
             } else {
@@ -351,7 +358,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type === 'img' && img) {
+    if (type === 'img' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -375,6 +382,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
 
         // audio y placeholder: nunca formulario
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }

@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Corea 1950–1953
 // "La guerra olvidada" — cultura pop años 50, boom de posguerra, inicio Guerra Fría
 
@@ -135,7 +142,7 @@ function abrirFormularioPOW() {
     document.getElementById('pow-error').textContent = '';
     document.getElementById('pow-stamp').textContent = '';
     document.getElementById('pow-stamp').classList.remove('visible');
-    document.getElementById('pow-overlay').classList.add('open');
+    const pov = document.getElementById('pow-overlay'); pov.style.display = 'block'; pov.classList.add('open');
 }
 
 document.getElementById('pow-submit').addEventListener('click', () => {
@@ -152,7 +159,7 @@ document.getElementById('pow-submit').addEventListener('click', () => {
         selloEl.textContent = 'DENEGADO';
         selloEl.classList.add('visible');
         setTimeout(() => {
-            document.getElementById('pow-overlay').classList.remove('open');
+            const pov2 = document.getElementById('pow-overlay'); pov2.classList.remove('open'); pov2.style.display = 'none';
             if (document.startViewTransition) {
                 document.startViewTransition(() => { window.location.href = 'grecia.html'; });
             } else {
@@ -344,7 +351,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type !== 'audio' && img) {
+    if (type !== 'audio' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -368,6 +375,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
         };
 
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }

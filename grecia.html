@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/paginas.css">
     <link rel="stylesheet" href="css/telegrama-truman.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>Grecia</title>
 </head>
@@ -72,7 +73,7 @@
     <div id="popup-container"></div>
 
     <!-- TELEGRAMA TRUMAN -->
-    <div class="truman-overlay" id="truman-overlay">
+    <div class="truman-overlay" id="truman-overlay" style="display:none">
         <div class="truman-box">
             <div class="truman-bar">
                 <span>WESTERN UNION — DESPACHO URGENTE</span>
@@ -92,11 +93,13 @@
         </div>
     </div>
 
-    <footer>
-        <button>bloquear distractores</button>
+    <footer class="site-footer">
+        <button class="footer-unlock" id="footer-unlock">archivos sin mediacion</button>
+        <div class="footer-feedback" id="footer-feedback"></div>
     </footer>
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/pop-ups-grecia.js"></script>
     <script src="js/random-pais.js"></script>
     <script src="js/tierra.js"></script>

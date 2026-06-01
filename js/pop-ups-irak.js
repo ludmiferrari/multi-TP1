@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Irak 1991
 // Guerra del Golfo: primera guerra televisada 24hs, CNN, cultura pop 1991
 
@@ -160,7 +167,7 @@ function abrirFormularioPen() {
     document.getElementById('pen-error').textContent = '';
     document.getElementById('pen-stamp').textContent = '';
     document.getElementById('pen-stamp').classList.remove('visible');
-    document.getElementById('pen-overlay').classList.add('open');
+    const pov = document.getElementById('pen-overlay'); pov.style.display = 'block'; pov.classList.add('open');
 }
 
 document.getElementById('pen-submit').addEventListener('click', () => {
@@ -177,7 +184,7 @@ document.getElementById('pen-submit').addEventListener('click', () => {
         selloEl.textContent = 'DENEGADO';
         selloEl.classList.add('visible');
         setTimeout(() => {
-            document.getElementById('pen-overlay').classList.remove('open');
+            const pov2 = document.getElementById('pen-overlay'); pov2.classList.remove('open'); pov2.style.display = 'none';
             if (document.startViewTransition) {
                 document.startViewTransition(() => { window.location.href = 'japon.html'; });
             } else {
@@ -369,7 +376,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type !== 'audio' && img) {
+    if (type !== 'audio' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -393,6 +400,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
         };
 
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }

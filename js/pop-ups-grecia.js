@@ -1,3 +1,10 @@
+// ── DESBLOQUEO ───────────────────────────────────────────────────
+if (typeof window.estaDesbloqueado === 'undefined') {
+    window.estaDesbloqueado = function() {
+        return window.ACCESO_DESBLOQUEADO === true;
+    };
+}
+
 // POOL DE DISTRACTORES — Grecia 1947–1949
 // Guerra Civil griega, Doctrina Truman, cultura pop años 40
 
@@ -195,7 +202,7 @@ function abrirTelegrama() {
     statusEl.textContent = '— TRANSMITIENDO —';
     cursorEl.style.display = 'inline';
 
-    document.getElementById('truman-overlay').classList.add('open');
+    const tov = document.getElementById('truman-overlay'); tov.style.display = 'flex'; tov.classList.add('open');
 
     let i = 0;
     if (intervaloTruman) clearInterval(intervaloTruman);
@@ -217,7 +224,7 @@ function abrirTelegrama() {
                 statusEl.textContent = '— ERROR — ARCHIVO CLASIFICADO — REDIRIGIENDO —';
 
                 setTimeout(() => {
-                    document.getElementById('truman-overlay').classList.remove('open');
+                    const tov2 = document.getElementById('truman-overlay'); tov2.classList.remove('open'); tov2.style.display = 'none';
                     if (document.startViewTransition) {
                         document.startViewTransition(() => { window.location.href = 'corea.html'; });
                     } else {
@@ -413,7 +420,7 @@ function abrirVisor(datosFila) {
 
     visor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (type !== 'audio' && img) {
+    if (type !== 'audio' && img && !window.estaDesbloqueado()) {
         lanzarPopups();
     } else {
         popupsActivos.forEach(p => p.remove());
@@ -437,6 +444,12 @@ document.querySelectorAll('.db-row').forEach(fila => {
         };
 
         if (datosFila.type === 'audio' || !datosFila.img) {
+            abrirVisor(datosFila);
+            return;
+        }
+
+        // si está desbloqueado: visor directo
+        if (window.estaDesbloqueado()) {
             abrirVisor(datosFila);
             return;
         }
