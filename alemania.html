@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paginas.css">
+    <link rel="stylesheet" href="css/pressekontrolle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Alemania</title>
+</head>
+<body>
+
+    <nav class="nav-tierra">
+        <model-viewer
+            src="earth/scene.gltf"
+            camera-controls
+            auto-rotate
+            interaction-prompt="none"
+            shadow-intensity="1"
+            environment-image="neutral"
+            exposure="1">
+        </model-viewer>
+    </nav>
+
+    <div class="page-header">
+        <div class="label">Ocupación Militar EE.UU.</div>
+        <h1>Alemania — 1945–1952</h1>
+        <div class="meta">Ocupación Aliada &nbsp;/&nbsp; May 1945 – May 1955 &nbsp;/&nbsp; Zona Americana &nbsp;/&nbsp; OMGUS — Gral. Lucius D. Clay</div>
+    </div>
+
+    <div class="db-container">
+        <div class="db-cols">
+            <span>Fuente</span>
+            <span>Tipo</span>
+            <span>Fecha</span>
+            <span>Descripción</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/alemania/nuremberg.webp" data-caption="Juicios de Nuremberg — noviembre de 1945 a octubre de 1946. 24 líderes nazis juzgados por el Tribunal Militar Internacional." data-label="AP WIRE FOTO — Juicios de Nuremberg">
+            <span class="source">BBC</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">NOV 1945</span>
+            <span class="desc">Juicios de Nuremberg — 24 líderes nazis ante el Tribunal Militar Internacional</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/alemania/paperclip.jpg" data-caption="Operación Paperclip — científicos nazis reclutados por EE.UU. tras la guerra. Más de 1.600 científicos alemanes trasladados a Estados Unidos entre 1945 y 1959." data-label="FOTOGRAFÍA — Operación Paperclip">
+            <span class="source"> Administración Nacional de Aeronáutica y del Espacio (NASA) </span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">1945–1959</span>
+            <span class="desc">Operación Paperclip — 1.600 científicos nazis reclutados por EE.UU.</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/alemania/fragebogen.jpg" data-caption="Fragebogen — cuestionario de desnazificación de 131 preguntas que todo adulto alemán debía completar bajo la ocupación americana. Más de 13 millones de formularios procesados." data-label="OMGUS — Fragebogen">
+            <span class="source">OMGUS / Archivo Nacional EE.UU.</span>
+            <span class="type">DOCUMENTO</span>
+            <span class="date">1945–1948</span>
+            <span class="desc">Fragebogen — 131 preguntas, 13 millones de formularios — desnazificación</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/alemania/berlin-divided.jpg" data-caption="Berlín dividida en cuatro zonas de ocupación — americana, británica, francesa y soviética — 1945. La ciudad permanecería dividida hasta 1989." data-label="MAPA — Berlín Dividida 1945">
+            <span class="source">Archiv für Kunst und Geschichte / OMGUS</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">1945</span>
+            <span class="desc">Berlín dividida en cuatro zonas — la división que duró 44 años</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/alemania/neue-zeitung.jpg" data-caption="Die Neue Zeitung — periódico fundado y controlado por la OMGUS en la zona americana, 1945. Todos los medios en la zona americana requerían licencia de la OMGUS para operar." data-label="DIE NEUE ZEITUNG — Prensa OMGUS">
+            <span class="source">OMGUS / Die Neue Zeitung</span>
+            <span class="type">PRIMERA PLANA</span>
+            <span class="date">18 OCT 1945</span>
+            <span class="desc">Die Neue Zeitung — el periódico americano para Alemania ocupada</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/alemania/airlift.avif" data-caption="Puente Aéreo de Berlín — junio de 1948 a mayo de 1949. EE.UU. y Reino Unido abastecieron Berlín Occidental durante el bloqueo soviético. 278.000 vuelos." data-label="FOTOGRAFÍA — Puente Aéreo de Berlín">
+            <span class="source">U.S. Air Force / Archivo Nacional</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">JUN 1948</span>
+            <span class="desc">Puente Aéreo de Berlín — 278.000 vuelos durante el bloqueo soviético</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/alemania/documento.png" data-caption="Directiva JCS 1067 — política de ocupación americana en Alemania, abril de 1945. Prohibía a los soldados americanos fraternizar con civiles alemanes y ordenaba el desmantelamiento de la industria alemana." data-label="JCS 1067 — Directiva de Ocupación">
+            <span class="source">Joint Chiefs of Staff / FOIA</span>
+            <span class="type">DOCUMENTO</span>
+            <span class="date">ABR 1945</span>
+            <span class="desc">JCS 1067 — directiva de ocupación: desmantelamiento industrial, prohibición de fraternización</span>
+        </div>
+
+    </div>
+
+    <div class="viewer" id="viewer">
+        <div class="db-container" style="padding-top:0">
+            <div class="viewer-header" id="viewer-label">— ELEGÍ UN ARCHIVO —</div>
+            <div class="viewer-placeholder" id="viewer-placeholder">[IMAGEN NO DISPONIBLE]</div>
+            <img class="viewer-img" id="viewer-img" src="" alt="" style="display:none">
+            <div class="viewer-caption" id="viewer-caption"></div>
+        </div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <!-- PRESSEKONTROLLE OMGUS -->
+    <div class="pk-overlay" id="pk-overlay">
+        <div class="pk-box">
+            <div class="pk-bar">
+                <span>OMGUS — Information Control Division</span>
+                <span>ICD/PRESSEKONTROLLE</span>
+            </div>
+            <div class="pk-header">
+                <div class="pk-seal">★</div>
+                <div class="pk-agency">Office of Military Government, United States &nbsp;/&nbsp; Zona Americana</div>
+                <h2>Pressekontrolle — Revisión de Contenido</h2>
+                <div class="pk-docnum">Formulario ICD-7 &nbsp;/&nbsp; Revisado octubre 1945 &nbsp;/&nbsp; OMGUS Frankfurt</div>
+            </div>
+            <div class="pk-body">
+                <div class="pk-material" id="pk-material"></div>
+                <div class="pk-checklist" id="pk-checklist"></div>
+                <div class="pk-progress-wrap">
+                    <div class="pk-progress-label">Estado de revisión:</div>
+                    <div class="pk-bar-outer">
+                        <div class="pk-bar-fill" id="pk-bar-fill"></div>
+                    </div>
+                    <div class="pk-percent" id="pk-percent">0%</div>
+                </div>
+                <div class="pk-verdict" id="pk-verdict"></div>
+                <div class="pk-redirect" id="pk-redirect"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+    <script src="js/pop-ups-alemania.js"></script>
+    <script src="js/random-pais.js"></script>
+    <script src="js/tierra.js"></script>
+</body>
+</html>

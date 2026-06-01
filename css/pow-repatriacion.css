@@ -1,0 +1,220 @@
+/* ── POW REPATRIACIÓN — Corea 1950–1953 ── */
+
+.pow-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: rgba(0, 0, 0, 0.88);
+    overflow-y: auto;
+    padding: 40px 20px;
+}
+
+.pow-overlay.open {
+    display: block;
+}
+
+.pow-form {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #eae4d4;
+    border: 2px solid #3a3020;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.pow-form-bar {
+    background: #3a3020;
+    color: #c8b870;
+    padding: 10px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.pow-seal {
+    font-size: 1.1rem;
+}
+
+.pow-form-body {
+    padding: 32px 36px 40px;
+    color: #2a2010;
+}
+
+.pow-header {
+    border-bottom: 2px solid #3a3020;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.pow-doc-number {
+    font-size: 0.63rem;
+    letter-spacing: 0.16em;
+    color: #6a5a30;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.pow-header h2 {
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2a2010;
+    margin: 0 0 8px;
+    font-weight: normal;
+}
+
+.pow-subtitle {
+    font-size: 0.67rem;
+    color: #6a5a30;
+    letter-spacing: 0.08em;
+}
+
+.pow-preamble {
+    font-size: 0.71rem;
+    line-height: 1.8;
+    color: #3a3020;
+    background: #ddd8c4;
+    border-left: 3px solid #3a3020;
+    padding: 14px 18px;
+    margin-bottom: 28px;
+}
+
+.pow-section-title {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #eae4d4;
+    background: #3a3020;
+    padding: 6px 12px;
+    margin: 28px 0 18px;
+}
+
+.pow-field {
+    margin-bottom: 18px;
+}
+
+.pow-field label {
+    display: block;
+    font-size: 0.69rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2a2010;
+    margin-bottom: 6px;
+}
+
+.pow-field input,
+.pow-field textarea,
+.pow-field select {
+    width: 100%;
+    background: #f5f0e2;
+    border: 1px solid #3a3020;
+    color: #2a2010;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.77rem;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    outline: none;
+    appearance: none;
+}
+
+.pow-field textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+.pow-note {
+    font-size: 0.61rem;
+    color: #7a6a40;
+    margin-top: 5px;
+    letter-spacing: 0.07em;
+    font-style: italic;
+}
+
+.pow-checkbox-field {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    font-size: 0.71rem;
+    line-height: 1.7;
+    color: #2a2010;
+}
+
+.pow-checkbox-field input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: #3a3020;
+    cursor: pointer;
+}
+
+.pow-error {
+    font-size: 0.71rem;
+    color: #7a0000;
+    background: #f5e0e0;
+    border: 1px solid #7a0000;
+    padding: 10px 14px;
+    margin: 20px 0 0;
+    min-height: 0;
+    letter-spacing: 0.07em;
+    line-height: 1.7;
+    display: none;
+}
+
+.pow-error:not(:empty) {
+    display: block;
+}
+
+.pow-submit {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding: 13px;
+    background: #3a3020;
+    color: #c8b870;
+    border: none;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.77rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.pow-submit:hover {
+    background: #c8b870;
+    color: #3a3020;
+}
+
+.pow-stamp {
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: #7a0000;
+    border: 4px solid #7a0000;
+    display: inline-block;
+    padding: 4px 16px;
+    letter-spacing: 0.18em;
+    transform: rotate(-7deg);
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pow-stamp.visible {
+    opacity: 1;
+}
+
+.pow-fine-print {
+    font-size: 0.59rem;
+    color: #9a8a60;
+    line-height: 1.7;
+    margin-top: 28px;
+    border-top: 1px solid #c8b870;
+    padding-top: 14px;
+    letter-spacing: 0.04em;
+}

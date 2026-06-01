@@ -279,13 +279,3 @@ a {
         from { transform: translateX(100%); }
         to { transform: translateX(-100%); }
     }
-
-@keyframes blink { 50% { opacity: 0; } }
-
-@view-transition { navigation: auto; }
-
-    ::view-transition-old(root) { animation: salida 0.4s ease-in; }
-    ::view-transition-new(root) { animation: entrada 0.4s ease-out; }
-
-@keyframes salida { to { opacity: 0; transform: translateX(-30px); } }
-@keyframes entrada { from { opacity: 0; transform: translateX(30px); } }

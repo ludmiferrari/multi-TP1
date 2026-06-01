@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paginas.css">
+    <link rel="stylesheet" href="css/pow-repatriacion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Corea</title>
+</head>
+<body>
+
+    <nav class="nav-tierra">
+        <model-viewer
+            src="earth/scene.gltf"
+            camera-controls
+            auto-rotate
+            interaction-prompt="none"
+            shadow-intensity="1"
+            environment-image="neutral"
+            exposure="1">
+        </model-viewer>
+    </nav>
+
+    <div class="page-header">
+        <div class="label">Intervención Militar EE.UU.</div>
+        <h1>Corea — 1950–1953</h1>
+        <div class="meta">Guerra de Corea &nbsp;/&nbsp; 25 Jun 1950 – 27 Jul 1953 &nbsp;/&nbsp; Paralelo 38 &nbsp;/&nbsp; "La Guerra Olvidada"</div>
+    </div>
+
+    <div class="db-container">
+        <div class="db-cols">
+            <span>Fuente</span>
+            <span>Tipo</span>
+            <span>Fecha</span>
+            <span>Descripción</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/corea/macarthur-inchon.jpg" data-caption="General Douglas MacArthur observa el bombardeo naval durante el desembarco de Inchon, 15 de septiembre de 1950. La operación fue considerada un golpe maestro táctico." data-label="AP WIRE FOTO — MacArthur en Inchon">
+            <span class="source">Associated Press</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">15 SEP 1950</span>
+            <span class="desc">MacArthur en Inchon — el desembarco que cambió la guerra</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/corea/napalm-corea.jpg" data-caption="Ataque de napalm sobre posiciones norcoreanas, 1950. EE.UU. utilizó 32.357 toneladas de napalm en Corea — más que en toda la Segunda Guerra Mundial." data-label="USAF — Napalm en Corea">
+            <span class="source">BBC</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">1950</span>
+            <span class="desc">32.357 toneladas de napalm — más que en toda la Segunda Guerra Mundial</span>
+        </div>
+
+
+        <div class="db-row" data-img="imgs/corea/paralelo-38.jpg" data-caption="El paralelo 38 — línea de armisticio. La frontera final entre Corea del Norte y Corea del Sur es casi idéntica a la que existía antes de la guerra. Tres años de combate. Resultado: cero cambios territoriales." data-label="MAPA — Paralelo 38">
+            <span class="source">Encyclopedia Britannica</span>
+            <span class="type">MAPA</span>
+            <span class="date">27 JUL 1953</span>
+            <span class="desc">Tres años de guerra. La frontera final: casi idéntica a la inicial</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/corea/new-york-times-corea.jpg" data-caption="The New York Times, primera plana, 26 de junio de 1950. 'EE.UU. ordena a la flota y la fuerza aérea combatir en Corea'." data-label="THE NEW YORK TIMES — Primera Plana">
+            <span class="source">The New York Times</span>
+            <span class="type">PRIMERA PLANA</span>
+            <span class="date">26 JUN 1950</span>
+            <span class="desc">EE.UU. entra en la guerra sin declaración formal del Congreso</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/corea/pow-panmunjom.jpg" data-caption="Negociaciones de armisticio en Panmunjom, 1951–1953. El tema de los prisioneros de guerra bloqueó el acuerdo de paz durante dos años." data-label="FOTOGRAFÍA — Negociaciones Panmunjom">
+            <span class="source">U.S. Army / Archivo Nacional</span>
+            <span class="type">FOTOGRAFÍA</span>
+            <span class="date">1951–1953</span>
+            <span class="desc">Panmunjom — el tema POW bloqueó el armisticio dos años</span>
+        </div>
+
+        <div class="db-row" data-img="imgs/corea/documento.jpg" data-caption="Memorando clasificado del NSC-68 — abril de 1950. El documento que cuadruplicó el presupuesto militar de EE.UU. y definió la política de contención global. Desclasificado en 1975." data-label="NSC-68 — Documento Clasificado">
+            <span class="source">Consejo de Seguridad Nacional / FOIA</span>
+            <span class="type">DOCUMENTO</span>
+            <span class="date">ABR 1950</span>
+            <span class="desc">NSC-68 — el documento que cuadruplicó el presupuesto militar americano</span>
+        </div>
+
+    </div>
+
+    <div class="viewer" id="viewer">
+        <div class="db-container" style="padding-top:0">
+            <div class="viewer-header" id="viewer-label">— ELEGÍ UN ARCHIVO —</div>
+            <div class="viewer-placeholder" id="viewer-placeholder">[IMAGEN NO DISPONIBLE]</div>
+            <img class="viewer-img" id="viewer-img" src="" alt="" style="display:none">
+            <div class="viewer-caption" id="viewer-caption"></div>
+        </div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <!-- FORMULARIO DE REPATRIACIÓN POW -->
+    <div class="pow-overlay" id="pow-overlay">
+        <div class="pow-form">
+            <div class="pow-form-bar">
+                <span>Comando de las Naciones Unidas — Verificación de Repatriación POW</span>
+                <span class="pow-seal">★</span>
+            </div>
+            <div class="pow-form-body">
+
+                <div class="pow-header">
+                    <div class="pow-doc-number">Formulario UNC-POW-4 &nbsp;/&nbsp; Revisado marzo 1952 &nbsp;/&nbsp; Panmunjom, Corea</div>
+                    <h2>Declaración de Voluntad de Repatriación</h2>
+                    <div class="pow-subtitle">Requerido bajo el Artículo 118 del Convenio de Ginebra — Comisión Neutral de Supervisión de Repatriación</div>
+                </div>
+
+                <div class="pow-preamble">
+                    En virtud del Artículo 118 del Convenio de Ginebra de 1949 relativo al Trato de los Prisioneros de Guerra, y de conformidad con los términos del Acuerdo de Armisticio de Panmunjom, todo prisionero de guerra bajo custodia del Comando de las Naciones Unidas o de las Fuerzas de Corea del Norte/China deberá completar el presente formulario para determinar su voluntad de repatriación. La negativa a completar este formulario o la declaración de voluntad de no repatriación será registrada y comunicada a la Comisión Neutral de Supervisión integrada por Suecia, Suiza, Polonia, Checoslovaquia e India. El procesamiento puede demorar entre 90 y 540 días hábiles.
+                </div>
+
+                <div class="pow-section-title">Sección I — Identificación del Prisionero</div>
+
+                <div class="pow-field">
+                    <label>Nombre Completo y Rango</label>
+                    <input type="text" id="pow-name" placeholder="Tal como figura en sus placas de identificación militares">
+                </div>
+
+                <div class="pow-field">
+                    <label>Número de Prisionero de Guerra (UNC)</label>
+                    <input type="text" id="pow-number" placeholder="Asignado en el momento de la captura — ver reverso de formulario de registro">
+                </div>
+
+                <div class="pow-field">
+                    <label>Unidad Militar de Origen y País</label>
+                    <input type="text" id="pow-unit" placeholder="Ejército Popular de Corea / Ejército de Voluntarios del Pueblo Chino / Fuerzas ONU">
+                </div>
+
+                <div class="pow-field">
+                    <label>Fecha y Lugar de Captura</label>
+                    <input type="text" id="pow-capture" placeholder="DD/MM/AAAA — Sector / Coordenadas del mapa militar">
+                </div>
+
+                <div class="pow-field">
+                    <label>Campo de Prisioneros Actual</label>
+                    <select id="pow-camp">
+                        <option value="">— Seleccionar —</option>
+                        <option value="koje">Campo de Koje-do — Isla Koje</option>
+                        <option value="pusan">Campo de Pusan — Zona Sur</option>
+                        <option value="cheju">Campo de Cheju-do — Isla Cheju</option>
+                        <option value="panmunjom">Zona de Panmunjom — Custodia temporal</option>
+                        <option value="other">Otro — especificar en observaciones</option>
+                    </select>
+                </div>
+
+                <div class="pow-section-title">Sección II — Verificación de Lealtad e Ideología</div>
+
+                <div class="pow-field">
+                    <label>¿Es usted miembro del Partido Comunista de Corea del Norte, del Partido Comunista Chino o de cualquier organización afiliada?</label>
+                    <select id="pow-party">
+                        <option value="">— Seleccionar —</option>
+                        <option value="no">No soy ni he sido miembro</option>
+                        <option value="yes">Sí — su solicitud será derivada a revisión especial de la CNSR</option>
+                        <option value="forced">Fui obligado a afiliarme — provea detalles en Sección IV</option>
+                    </select>
+                </div>
+
+                <div class="pow-field">
+                    <label>¿Participó voluntariamente en actividades de adoctrinamiento político dentro del campo de prisioneros?</label>
+                    <select id="pow-indoc">
+                        <option value="">— Seleccionar —</option>
+                        <option value="no">No</option>
+                        <option value="yes">Sí — detalle naturaleza y frecuencia de participación</option>
+                        <option value="coerced">Fui coaccionado — adjunte declaración de testigos</option>
+                    </select>
+                </div>
+
+                <div class="pow-field">
+                    <label>¿Conoce la ubicación de instalaciones militares, túneles o depósitos de armamento en territorio norcoreano?</label>
+                    <select id="pow-intel">
+                        <option value="">— Seleccionar —</option>
+                        <option value="no">No poseo dicha información</option>
+                        <option value="yes">Sí — será entrevistado por personal de inteligencia antes de procesamiento</option>
+                        <option value="partial">Información parcial — requiere evaluación</option>
+                    </select>
+                </div>
+
+                <div class="pow-field">
+                    <label>¿Fue testigo o participó en actos contrarios al Convenio de Ginebra durante su cautiverio o servicio activo?</label>
+                    <textarea id="pow-violations" placeholder="Describa cualquier incidente. Su declaración puede ser utilizada en procedimientos judiciales posteriores."></textarea>
+                    <div class="pow-note">Esta declaración es voluntaria pero su omisión puede demorar el procesamiento de su caso indefinidamente.</div>
+                </div>
+
+                <div class="pow-section-title">Sección III — Declaración de Voluntad</div>
+
+                <div class="pow-field">
+                    <label>Declaro que mi voluntad respecto a la repatriación es</label>
+                    <select id="pow-will">
+                        <option value="">— Seleccionar —</option>
+                        <option value="repatriate">Ser repatriado a mi país de origen</option>
+                        <option value="refuse">No ser repatriado — solicito asilo en país neutral</option>
+                        <option value="taiwan">No ser repatriado — solicito traslado a la República de China (Taiwán)</option>
+                        <option value="undecided">No he podido tomar una decisión libre — solicito entrevista con la CNSR</option>
+                    </select>
+                    <div class="pow-note">Nota: La decisión de no repatriación fue el motivo principal por el que las negociaciones de armisticio se extendieron desde julio de 1951 hasta julio de 1953.</div>
+                </div>
+
+                <div class="pow-field">
+                    <label>Nombre completo de un familiar en su país de origen que pueda verificar su identidad</label>
+                    <input type="text" id="pow-family" placeholder="Esta información será comunicada a la Cruz Roja Internacional">
+                </div>
+
+                <div class="pow-section-title">Sección IV — Declaración Jurada</div>
+
+                <div class="pow-checkbox-field">
+                    <input type="checkbox" id="pow-check-1">
+                    <label for="pow-check-1">Declaro que completo este formulario de manera libre y voluntaria, sin coerción de ningún tipo por parte del personal del Comando de las Naciones Unidas ni de ninguna otra parte.</label>
+                </div>
+
+                <div class="pow-checkbox-field">
+                    <input type="checkbox" id="pow-check-2">
+                    <label for="pow-check-2">Entiendo que una declaración falsa sobre mi voluntad de repatriación puede resultar en procesamiento legal bajo la legislación militar aplicable.</label>
+                </div>
+
+                <div class="pow-checkbox-field">
+                    <input type="checkbox" id="pow-check-3">
+                    <label for="pow-check-3">Consiento que esta declaración sea comunicada a mi gobierno de origen, a la Comisión Neutral de Supervisión de Repatriación y al Comité Internacional de la Cruz Roja.</label>
+                </div>
+
+                <div class="pow-checkbox-field">
+                    <input type="checkbox" id="pow-check-4">
+                    <label for="pow-check-4">Entiendo que el procesamiento de este formulario puede demorar entre 90 y 540 días hábiles y que durante ese período permaneceré bajo custodia del Comando de las Naciones Unidas.</label>
+                </div>
+
+                <div class="pow-error" id="pow-error"></div>
+
+                <button class="pow-submit" id="pow-submit">ENVIAR DECLARACIÓN DE VOLUNTAD</button>
+
+                <div class="pow-stamp" id="pow-stamp"></div>
+
+                <div class="pow-fine-print">
+                    Este formulario es propiedad del Comando de las Naciones Unidas. El procesamiento está sujeto a las disposiciones del Acuerdo de Armisticio de Panmunjom del 27 de julio de 1953. La Comisión Neutral de Supervisión de Repatriación (CNSR) tiene jurisdicción final sobre todos los casos en disputa. El UNC no garantiza la seguridad del prisionero tras la repatriación. Los casos de prisioneros que declaren voluntad de no repatriación serán transferidos a la CNSR para entrevista individual. Tiempo estimado de procesamiento desde la firma del armisticio: indefinido.
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+    <script src="js/pop-ups-corea.js"></script>
+    <script src="js/random-pais.js"></script>
+    <script src="js/tierra.js"></script>
+</body>
+</html>
