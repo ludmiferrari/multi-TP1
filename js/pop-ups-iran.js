@@ -417,7 +417,7 @@ function lanzarPopups() {
         const popup = construirPopup(data, posiciones[i], i);
         contenedor.appendChild(popup);
         popupsActivos.push(popup);
-        setTimeout(() => popup.classList.add('visible'), i * 1000);
+        setTimeout(() => popup.classList.add('visible'), i * 400);
     });
 }
 
