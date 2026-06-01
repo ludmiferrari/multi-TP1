@@ -315,8 +315,8 @@ function cerrarPopup(el, posicionInicial) {
         setTimeout(() => {
             el.classList.remove('returning');
             el.classList.add('visible');
-        }, 500);
-    }, 500);
+        }, 200);
+    }, 200);
 }
 
 function hacerArrastrable(popup, posicionInicial) {
