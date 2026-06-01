@@ -101,7 +101,7 @@ const POPUP_POOL = [
     {
         title: 'Marlboro — El Cigarrillo Americano',
         html: `
-            <div class="popup-img-placeholder"><img src="imgs/alemania/malboro.webp alt="Marlboro"></div>
+            <div class="popup-img-placeholder"><img src="imgs/alemania/malboro.webp" alt="Marlboro"></div>
             <p>
                 Marlboro — el cigarrillo americano.<br>
                 En el mercado negro de posguerra:<br>

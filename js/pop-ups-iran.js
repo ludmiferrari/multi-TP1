@@ -93,7 +93,11 @@ const POPUP_POOL = [
     {
         title: 'Chevrolet 1953 — Lo Mejor de América',
         html: `
-            <div class="popup-img-placeholder"><img src="imgs/iran/chevrolet53.jpg" alt="Chevrolet 1953"></div>
+            <div class="popup-img-placeholder">
+            <video width="640" height="360" controls autoplay muted loop>
+                    <source src="imgs/iran/chevrolet53.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="popup-marquee"><span>★ CHEVROLET 1953 ★ EL AUTO DE AMERICA ★ DESDE $1.613 ★</span></div>
             <p>
                 El nuevo Chevrolet 1953.<br>
