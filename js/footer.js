@@ -1,6 +1,5 @@
 // ── FOOTER — acceso sin mediación ──
 
-// definir global inmediatamente, no dentro de DOMContentLoaded
 window.ACCESO_DESBLOQUEADO = false;
 
 window.estaDesbloqueado = function() {
@@ -13,15 +12,25 @@ window.activarAcceso = function(conFeedback) {
     if (conFeedback) {
         const feedback = document.getElementById('footer-feedback');
         if (!feedback) return;
-        feedback.textContent = '— el archivo no documenta la historia, la produce  —';
+        feedback.textContent = '— el archivo no documenta la historia, la produce —';
         feedback.classList.add('visible');
 
+        // después de que desaparece el texto, titila el primer renglón
         setTimeout(() => {
             feedback.classList.remove('visible');
             feedback.classList.add('desvanece');
             setTimeout(() => {
                 feedback.textContent = '';
                 feedback.classList.remove('desvanece');
+
+                // titila el primer db-row
+                const primerRenglon = document.querySelector('.db-row');
+                if (!primerRenglon) return;
+                primerRenglon.classList.add('row-blink');
+                setTimeout(() => {
+                    primerRenglon.classList.remove('row-blink');
+                }, 3000);
+
             }, 800);
         }, 2400);
     }

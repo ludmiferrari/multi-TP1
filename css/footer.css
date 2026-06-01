@@ -52,3 +52,14 @@
 .footer-feedback.desvanece {
     opacity: 0;
 }
+
+/* ── TITILADO PRIMER RENGLÓN ── */
+
+@keyframes rowBlink {
+    0%, 100% { background: transparent; }
+    50%       { background: #1a0305; border-left: 2px solid var(--red, #c1121f); }
+}
+
+.db-row.row-blink {
+    animation: rowBlink 0.8s steps(1) infinite;
+}
