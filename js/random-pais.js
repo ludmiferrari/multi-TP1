@@ -1,6 +1,5 @@
-const paises = ['japon', 'libano', 'granada', 'vietnam',  'cuba', 'index', 
-//'argentina', 'corea', 'alemania', 'grecia', 'iran', 
-//'guatemala', 'siria', 'venezuela', 'pakistan','irak', 'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait', 
+const paises = ['japon', 'libano', 'granada', 'vietnam',  'cuba', 'index', 'corea', 'alemania', 'grecia', 'iran', 'irak', 'panama'
+//'argentina','guatemala', 'siria', 'venezuela', 'pakistan', 'afganistan', 'panama', 'china', 'libia', 'somalia', 'kuwait', 
 //'republica-dominicana', 'cambodia', 'laos', 'haiti', 'yemen', 
 //'yugoslavia', 'kosovo', 'chile'
 ];
