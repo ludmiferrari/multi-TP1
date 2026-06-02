@@ -105,23 +105,12 @@ const POPUP_POOL = [
     {
         title: 'Revista LIFE',
         html: `
-            <div class="popup-img-placeholder"><img src="imgs/corea/life-corea.jpg" alt="LIFE Corea"></div>
+            <div class="popup-img-placeholder"><img src="imgs/corea/life-corea.png" alt="LIFE Corea"></div>
             <p>
                 Revista LIFE — Septiembre 1950<br>
             </p>
         `
-    },
-    {
-        title: 'Camel — Lo Fuma el Ejército',
-        html: `
-            <div class="popup-img-placeholder"><img src="imgs/corea/camel-army.jpg" alt="Camel Army"></div>
-            <p>
-                Camel — el cigarrillo del soldado americano.<br>
-                Incluido en las raciones de campaña K.<br>
-                <span class="blink">"Más médicos fuman Camel<br>que cualquier otra marca."</span>
-            </p>
-        `
-    },
+    }
 ];
 
 // ── MENSAJES DE ERROR DEL FORMULARIO POW ─────────────────────────
